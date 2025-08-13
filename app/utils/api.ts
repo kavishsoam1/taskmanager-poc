@@ -129,15 +129,21 @@ export const apiMiddleware = {
 export async function createTask(taskData: Omit<Task, 'id' | 'status' | 'dateSubmitted'>): Promise<any> {
   try {
     // Transform data to match Camunda API format
+    const variables: Record<string, any> = {
+      name: taskData.name,
+      age: parseInt(taskData.age, 10),
+      gender: taskData.gender,
+      address: taskData.address,
+      aadhaar: taskData.aadharNo,
+    };
+    
+    // Only add document if PDF file exists
+    if (taskData.pdfFilePath) {
+      variables.document = taskData.pdfFilePath;
+    }
+    
     const camundaData = {
-      variables: {
-        name: taskData.name,
-        age: parseInt(taskData.age, 10),
-        gender: taskData.gender,
-        address: taskData.address,
-        aadhaar: taskData.aadharNo,
-        document: taskData.pdfFilePath || '../../',
-      },
+      variables
     };
 
     // Call Camunda API

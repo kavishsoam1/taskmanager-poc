@@ -86,9 +86,10 @@ export default function NewTaskPage() {
       newErrors.aadharNo = 'Aadhar number must be 12 digits';
     }
     
-    if (!formData.pdfFile) {
-      newErrors.pdfFile = 'Please upload a PDF document';
-    }
+    // PDF is now optional, so no validation required
+    // if (!formData.pdfFile) {
+    //   newErrors.pdfFile = 'Please upload a PDF document';
+    // }
     
     return newErrors;
   };
