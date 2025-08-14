@@ -147,10 +147,28 @@ export async function createTask(taskData: Omit<Task, 'id' | 'status' | 'dateSub
     };
 
     // Call Camunda API
-    const response = await apiMiddleware.post<any>(
-      `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`,
-      camundaData
-    );
+    // Using direct fetch with POST method to avoid CORS preflight OPTIONS request
+    const url = `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`;
+    const authString = `${CAMUNDA_API.auth.username}:${CAMUNDA_API.auth.password}`;
+    
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Basic ${btoa(authString)}`,
+        // Add mode and credentials to handle CORS
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify(camundaData),
+      mode: 'cors',
+      credentials: 'include'
+    }).then(res => {
+      if (!res.ok) {
+        console.error('API error status:', res.status);
+        throw new Error(`API error: ${res.status}`);
+      }
+      return res.json();
+    });
 
     // For now, we'll also add it to our mock list for display
     const mockTask: Task = {
