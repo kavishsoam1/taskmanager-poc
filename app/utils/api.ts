@@ -15,14 +15,19 @@ export interface Task {
   dateSubmitted?: string;
 }
 
-// Camunda API config
-const CAMUNDA_API = {
+// Camunda API configuration - Direct Access (not used with proxy)
+export const CAMUNDA_API = {
   baseUrl: 'http://localhost:8085',
   inboundEndpoint: '/inbound/fcsrt1265',
   auth: {
     username: 'demo',
     password: 'demo'
   }
+};
+
+// Proxy API endpoints
+export const PROXY_API = {
+  camunda: '/api/proxy/camunda'
 };
 
 // Mock API for tasks (to be replaced with real API)
@@ -146,22 +151,13 @@ export async function createTask(taskData: Omit<Task, 'id' | 'status' | 'dateSub
       variables
     };
 
-    // Call Camunda API
-    // Using direct fetch with POST method to avoid CORS preflight OPTIONS request
-    const url = `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`;
-    const authString = `${CAMUNDA_API.auth.username}:${CAMUNDA_API.auth.password}`;
-    
-    const response = await fetch(url, {
+    // Call Camunda API through our Next.js proxy to avoid CORS issues
+    const response = await fetch(PROXY_API.camunda, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Basic ${btoa(authString)}`,
-        // Add mode and credentials to handle CORS
-        'X-Requested-With': 'XMLHttpRequest'
       },
-      body: JSON.stringify(camundaData),
-      mode: 'cors',
-      credentials: 'include'
+      body: JSON.stringify(camundaData)
     }).then(res => {
       if (!res.ok) {
         console.error('API error status:', res.status);
