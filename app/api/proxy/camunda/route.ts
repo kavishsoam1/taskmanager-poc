@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const CAMUNDA_API = {
   baseUrl: 'http://localhost:8085',
-  inboundEndpoint: '/inbound/fcsrt1265',
+  inboundEndpoint: '/inbound/start_process',
   auth: {
     username: 'demo',
     password: 'demo'
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(camundaPayload)
     });
 
-    console.log('📥 Camunda response status:', response.status);
+    console.log('📥 Camunda response status:', response);
     console.log('📥 Camunda response statusText:', response.statusText);
     console.log('📥 Camunda response headers:', Object.fromEntries(response.headers.entries()));
 

@@ -1,0 +1,33 @@
+{
+  "type": "default",
+  "id": "decision",
+  "components": [
+    {
+      "label": "Approve",
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0alrd1p",
+        "columns": null
+      },
+      "id": "Field_1x2tgb",
+      "key": "approve",
+      "description": "approval",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "versionTag": "1"
+}
