@@ -23,7 +23,7 @@
           <zeebe:property name="inbound.responseExpression" value="={ status: 200, message: &#34;Edit request processed&#34; } " />
           <zeebe:property name="consumeUnmatchedEvents" value="true" />
           <zeebe:property name="correlationRequired" value="required" />
-          <zeebe:property name="correlationKeyExpression" value="=request.body.processInstanceKey" />
+          <zeebe:property name="correlationKeyExpression" value="=request.body.correlationId" />
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="editedData" />
@@ -36,7 +36,7 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_00rkfu5" sourceRef="Event_0wxz6qa" targetRef="Event_approval_webhook" />
     <bpmn:sequenceFlow id="Flow_0cer5ek" sourceRef="Gateway_14arcxl" targetRef="Event_edit_webhook">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= approvalResult.approve = "false" </bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= approvalResult.request.body.approve  = "false" </bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_edit_to_approval" sourceRef="Event_edit_webhook" targetRef="Event_approval_webhook" />
     <bpmn:intermediateCatchEvent id="Event_approval_webhook" name="Await Approval">
@@ -52,7 +52,7 @@
           <zeebe:property name="inbound.responseExpression" value="={ status: 200, message: &#34;Approval request processed&#34; }" />
           <zeebe:property name="consumeUnmatchedEvents" value="true" />
           <zeebe:property name="correlationRequired" value="required" />
-          <zeebe:property name="correlationKeyExpression" value="=request.body.processInstanceKey" />
+          <zeebe:property name="correlationKeyExpression" value="=request.body.correlationId" />
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="approvalResult" />
@@ -78,13 +78,13 @@
           <zeebe:property name="inbound.auth.type" value="BASIC" />
           <zeebe:property name="inbound.auth.username" value="demo" />
           <zeebe:property name="inbound.auth.password" value="demo" />
-          <zeebe:property name="inbound.responseExpression" value="={ body:{processInstanceKey: correlation, correlationId: string(now())}, status: 200 }" />
+          <zeebe:property name="inbound.responseExpression" value="={ body:{processInstanceKey: correlation, correlationId: request.body.correlationId}, status: 200 }" />
           <zeebe:property name="consumeUnmatchedEvents" value="true" />
           <zeebe:property name="correlationRequired" value="notRequired" />
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="requestData" />
-          <zeebe:property name="resultExpression" value="{correlationId: string(now()),variables: request.body.variables, processInstanceKey: correlation.messageKey }" />
+          <zeebe:property name="resultExpression" value="{correlationId: request.body.correlationId,variables: request.body.variables, processInstanceKey: correlation.messageKey }" />
         </zeebe:properties>
       </bpmn:extensionElements>
       <bpmn:outgoing>Flow_00rkfu5</bpmn:outgoing>
@@ -99,7 +99,7 @@
   <bpmn:message id="Message_1ecywtq" name="a7f871cf-2ed7-41f7-8f02-e3bf68c3e939" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorStartMessage.v1" />
   <bpmn:message id="Message_edit_webhook" name="edit_resubmit">
     <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=request.body.processInstanceKey" />
+      <zeebe:subscription correlationKey="=correlationId" />
     </bpmn:extensionElements>
   </bpmn:message>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
