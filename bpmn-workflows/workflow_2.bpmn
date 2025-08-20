@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0ik1nb4" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.36.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.7.0">
-  <bpmn:process id="Process_0mg687d" name="workflow_2" isExecutable="true">
+  <bpmn:process id="workflow_2" name="workflow_2" isExecutable="true">
     <bpmn:extensionElements />
     <bpmn:exclusiveGateway id="Gateway_14arcxl" name="Approval Decision">
       <bpmn:incoming>Flow_approval_webhook</bpmn:incoming>
@@ -36,7 +36,7 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_00rkfu5" sourceRef="Event_0wxz6qa" targetRef="Event_approval_webhook" />
     <bpmn:sequenceFlow id="Flow_0cer5ek" sourceRef="Gateway_14arcxl" targetRef="Event_edit_webhook">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= approvalResult.request.body.approve  = "false" </bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= approvalResult.request.body.approve = "false" </bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_edit_to_approval" sourceRef="Event_edit_webhook" targetRef="Event_approval_webhook" />
     <bpmn:intermediateCatchEvent id="Event_approval_webhook" name="Await Approval">
@@ -103,7 +103,7 @@
     </bpmn:extensionElements>
   </bpmn:message>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0mg687d">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="workflow_2">
       <bpmndi:BPMNShape id="Gateway_14arcxl_di" bpmnElement="Gateway_14arcxl" isMarkerVisible="true">
         <dc:Bounds x="455" y="105" width="50" height="50" />
         <bpmndi:BPMNLabel>
