@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import crypto from 'crypto';
 
 const CAMUNDA_API = {
   baseUrl: 'http://localhost:8085',
-  inboundEndpoint: '/inbound/start_process',
+  approvalEndpoint: '/inbound/approval_webhook',
   auth: {
     username: 'demo',
     password: 'demo'
@@ -11,43 +10,31 @@ const CAMUNDA_API = {
 };
 
 export async function POST(request: NextRequest) {
-  console.log('🚀 Webhook proxy called');
+  console.log('🚀 Approval webhook proxy called');
   
   try {
     const body = await request.json();
     const authString = `${CAMUNDA_API.auth.username}:${CAMUNDA_API.auth.password}`;
-    const url = `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`;
+    const url = `${CAMUNDA_API.baseUrl}${CAMUNDA_API.approvalEndpoint}`;
     
-    console.log('📤 Proxying request to:', url);
+    console.log('📤 Proxying approval request to:', url);
     console.log('📤 Auth string:', authString);
     console.log('📤 Request headers from client:', Object.fromEntries(request.headers.entries()));
     console.log('📤 Original request body:', JSON.stringify(body, null, 2));
 
-    // Ensure the payload has the correct structure with "variables" wrapper
-    // Generate a unique correlationId (UUID v4)
-    const correlationId = crypto.randomUUID();
-    console.log('📤 Generated correlationId:', correlationId);
-    
-    let camundaPayload;
-    if (body.variables) {
-      camundaPayload = {
-        ...body,
-        correlationId
-      };
-    } else {
-      camundaPayload = { 
-        variables: body,
-        correlationId
-      };
+    // Ensure the payload has correlationId and variables
+    if (!body.correlationId) {
+      return NextResponse.json(
+        { error: 'Missing correlationId in request body' },
+        { status: 400 }
+      );
     }
-    
-    console.log('📤 Camunda payload:', JSON.stringify(camundaPayload, null, 2));
 
-    // Create exact headers as curl command
+    // Create headers with authorization
     const headers = {
       'Content-Type': 'application/json',
       'Authorization': `Basic ${btoa(authString)}`,
-      'User-Agent': 'Node.js'  // Add explicit User-Agent
+      'User-Agent': 'Node.js'
     };
     
     console.log('📤 Request headers to Camunda:', headers);
@@ -56,7 +43,7 @@ export async function POST(request: NextRequest) {
     const response = await fetch(url, {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify(camundaPayload)
+      body: JSON.stringify(body)
     });
 
     console.log('📥 Camunda response status:', response);
@@ -111,9 +98,9 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json(
       { 
-        error: 'Failed to proxy request to Camunda API',
+        error: 'Failed to proxy approval request to Camunda API',
         details: error instanceof Error ? error.message : 'Unknown error',
-        camundaUrl: `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`
+        camundaUrl: `${CAMUNDA_API.baseUrl}${CAMUNDA_API.approvalEndpoint}`
       },
       { 
         status: 500,

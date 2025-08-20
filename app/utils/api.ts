@@ -1,10 +1,14 @@
 // API base URL - replace with actual URL when deployed
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
 
+// Zeebe API URL
+const ZEEBE_API_URL = 'http://localhost:8080';
+
 // Task type definition
 export interface Task {
   _id?: string;
   id?: string;
+  correlationId?: string;
   name: string;
   age: string;
   gender: string;
@@ -13,6 +17,30 @@ export interface Task {
   pdfFilePath?: string;
   status: 'pending' | 'approved' | 'rejected' | 'completed';
   dateSubmitted?: string;
+  processInstanceKey?: string; // Added for Zeebe integration
+}
+
+// Process instance definition
+export interface ProcessInstance {
+  key: number;
+  processVersion: number;
+  bpmnProcessId: string;
+  startTime: string; // Updated from startDate to match API response
+  state: string;
+  incident: boolean;
+  processDefinitionKey: number;
+  tenantId: string;
+}
+
+// Process variable definition
+export interface ProcessVariable {
+  key: number;
+  processInstanceKey: number;
+  scopeKey: number;
+  name: string;
+  value: string;
+  truncated: boolean;
+  tenantId: string;
 }
 
 // Camunda API configuration - Direct Access (not used with proxy)
@@ -27,7 +55,11 @@ export const CAMUNDA_API = {
 
 // Proxy API endpoints
 export const PROXY_API = {
-  camunda: '/api/proxy/camunda'
+  camunda: '/api/proxy/camunda',
+  camundaApproval: '/api/proxy/camunda-approval',
+  camundaGetAllList: 'http://localhost:8085/inbound/getAllList',
+  zeebeProcessInstances: '/api/proxy/zeebe-process-instances',
+  zeebeVariables: '/api/proxy/zeebe-variables'
 };
 
 // Mock API for tasks (to be replaced with real API)
@@ -183,10 +215,126 @@ export async function createTask(taskData: Omit<Task, 'id' | 'status' | 'dateSub
   }
 }
 
-// Get all tasks (using mock data for now)
+// Get all process instances from Zeebe API via proxy
+export async function getAllProcessInstances(): Promise<Task[]> {
+  try {
+    // Call the Zeebe API through our proxy to get process instances
+    const response = await fetch(PROXY_API.zeebeProcessInstances, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        filter: {
+          bpmnProcessId: "workflow_2"
+        },
+        size: 1000
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch process instances: ${response.status}`);
+    }
+
+    const data = await response.json();
+    
+    // Map all process instances to tasks format
+    const processInstances: ProcessInstance[] = data.items || [];
+    
+    // Filter out tasks with state ACTIVE and incident true
+    const filteredInstances = processInstances.filter(instance => {
+      return !(instance.state === 'ACTIVE' && instance.incident === true);
+    });
+      
+    // Map filtered process instances to tasks format with proper status mapping
+    return filteredInstances.map(instance => {
+      // Determine status based on state and incident
+      let status: 'pending' | 'approved' | 'rejected' | 'completed';
+      if (instance.state === 'COMPLETED' && instance.incident === false) {
+        status = 'completed'; // If state is COMPLETED and no incident, mark as completed
+      } else if (instance.state === 'ACTIVE' && instance.incident === false) {
+        status = 'pending'; // If state is ACTIVE and no incident, mark as pending
+      } else {
+        status = 'rejected'; // Any other combination (like having an incident) mark as rejected
+      }
+      
+      // Create a basic task structure that matches the Task interface
+      return {
+        _id: instance.key.toString(),
+        id: instance.key.toString(),
+        name: `Process ${instance.key}`,
+        age: '',  // Will be populated when task is selected
+        gender: '',  // Will be populated when task is selected
+        address: '',  // Will be populated when task is selected
+        aadharNo: '',  // Will be populated when task is selected
+        dateSubmitted: new Date(instance.startTime || Date.now()).toISOString(),
+        status: status,
+        processInstanceKey: instance.key.toString(),
+        state: instance.state // Store the original state for reference
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching process instances from Zeebe:', error);
+    // Fallback to mock data if the API call fails
+    return [...MOCK_API.tasks];
+  }
+}
+
+// Get all tasks (maintains backward compatibility)
 export async function getAllTasks(): Promise<Task[]> {
-  // Return mock data
-  return Promise.resolve([...MOCK_API.tasks]);
+  return getAllProcessInstances();
+}
+
+// Get process variables by process instance key via proxy
+export async function getProcessVariables(processInstanceKey: string): Promise<any> {
+  try {
+    // Call the Zeebe API through our proxy to get variables for a process instance
+    const response = await fetch(PROXY_API.zeebeVariables, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        filter: {
+          processInstanceKey: Number(processInstanceKey)
+        },
+        size: 1000
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch process variables: ${response.status}`);
+    }
+
+    const data = await response.json();
+    
+    // Find the variables object in the response
+    const variablesItem = data.items.find((item: ProcessVariable) => item.name === 'variables');
+    
+    if (!variablesItem) {
+      throw new Error('Variables not found in response');
+    }
+    
+    // Parse the variables value (it's a JSON string)
+    try {
+      const variables = JSON.parse(variablesItem.value);
+      
+      // Find the correlationId object
+      const correlationIdItem = data.items.find((item: ProcessVariable) => item.name === 'correlationId');
+      const correlationId = correlationIdItem ? JSON.parse(correlationIdItem.value) : null;
+      
+      return {
+        ...variables,
+        correlationId
+      };
+    } catch (e) {
+      console.error('Error parsing variables:', e);
+      return null;
+    }
+  } catch (error) {
+    console.error(`Error fetching process variables for ${processInstanceKey}:`, error);
+    return null;
+  }
 }
 
 // Get task by ID (using mock data for now)
@@ -200,17 +348,68 @@ export async function getTaskById(taskId: string): Promise<Task> {
   return Promise.resolve({...task});
 }
 
-// Update task status (using mock data for now)
+// Send task approval to Camunda
+export async function sendTaskApproval(
+  correlationId: string, 
+  approve: boolean, 
+  message: string
+): Promise<any> {
+  try {
+    // Prepare the payload for the approval webhook
+    const payload = {
+      correlationId,
+      variables: {
+        approve,
+        message
+      }
+    };
+
+    // Call the approval webhook via our proxy
+    const response = await fetch(PROXY_API.camundaApproval, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to send approval: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error sending task approval:', error);
+    throw error;
+  }
+}
+
+// Update task status and notify Camunda
 export async function updateTaskStatus(taskId: string, status: 'approved' | 'completed' | 'rejected'): Promise<Task> {
-  // Update mock data
+  // Find the task in our local data
   const taskIndex = MOCK_API.tasks.findIndex(t => t._id === taskId || t.id === taskId);
   
   if (taskIndex === -1) {
     throw new Error(`Task with ID ${taskId} not found`);
   }
   
+  // Update local data
   MOCK_API.tasks[taskIndex].status = status;
-  return Promise.resolve({...MOCK_API.tasks[taskIndex]});
+  const updatedTask = {...MOCK_API.tasks[taskIndex]};
+  
+  // If the task has a correlationId, send the update to Camunda
+  const correlationId = updatedTask.correlationId;
+  if (correlationId) {
+    try {
+      await sendTaskApproval(correlationId, status === 'approved', 
+        status === 'approved' ? 'Approved' : 'Rejected');
+    } catch (error) {
+      console.error('Failed to notify Camunda of status change:', error);
+      // Continue even if Camunda notification fails
+    }
+  }
+  
+  return updatedTask;
 }
 
 // Get all tasks

@@ -1,67 +1,39 @@
 import { NextRequest, NextResponse } from 'next/server';
-import crypto from 'crypto';
 
-const CAMUNDA_API = {
-  baseUrl: 'http://localhost:8085',
-  inboundEndpoint: '/inbound/start_process',
-  auth: {
-    username: 'demo',
-    password: 'demo'
-  }
+const ZEEBE_API = {
+  baseUrl: 'http://localhost:8080',
+  variablesEndpoint: '/v1/variables/search'
 };
 
 export async function POST(request: NextRequest) {
-  console.log('🚀 Webhook proxy called');
+  console.log('🚀 Zeebe Variables proxy called');
   
   try {
     const body = await request.json();
-    const authString = `${CAMUNDA_API.auth.username}:${CAMUNDA_API.auth.password}`;
-    const url = `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`;
+    const url = `${ZEEBE_API.baseUrl}${ZEEBE_API.variablesEndpoint}`;
     
-    console.log('📤 Proxying request to:', url);
-    console.log('📤 Auth string:', authString);
+    console.log('📤 Proxying variables request to:', url);
     console.log('📤 Request headers from client:', Object.fromEntries(request.headers.entries()));
     console.log('📤 Original request body:', JSON.stringify(body, null, 2));
 
-    // Ensure the payload has the correct structure with "variables" wrapper
-    // Generate a unique correlationId (UUID v4)
-    const correlationId = crypto.randomUUID();
-    console.log('📤 Generated correlationId:', correlationId);
-    
-    let camundaPayload;
-    if (body.variables) {
-      camundaPayload = {
-        ...body,
-        correlationId
-      };
-    } else {
-      camundaPayload = { 
-        variables: body,
-        correlationId
-      };
-    }
-    
-    console.log('📤 Camunda payload:', JSON.stringify(camundaPayload, null, 2));
-
-    // Create exact headers as curl command
+    // Create headers
     const headers = {
       'Content-Type': 'application/json',
-      'Authorization': `Basic ${btoa(authString)}`,
-      'User-Agent': 'Node.js'  // Add explicit User-Agent
+      'User-Agent': 'Node.js'
     };
     
-    console.log('📤 Request headers to Camunda:', headers);
+    console.log('📤 Request headers to Zeebe:', headers);
 
-    // Forward the request to Camunda API with Basic Auth
+    // Forward the request to Zeebe API
     const response = await fetch(url, {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify(camundaPayload)
+      body: JSON.stringify(body)
     });
 
-    console.log('📥 Camunda response status:', response);
-    console.log('📥 Camunda response statusText:', response.statusText);
-    console.log('📥 Camunda response headers:', Object.fromEntries(response.headers.entries()));
+    console.log('📥 Zeebe response status:', response);
+    console.log('📥 Zeebe response statusText:', response.statusText);
+    console.log('📥 Zeebe response headers:', Object.fromEntries(response.headers.entries()));
 
     // Try to get response body regardless of content type
     let data;
@@ -69,20 +41,20 @@ export async function POST(request: NextRequest) {
     
     try {
       responseText = await response.text();
-      console.log('📥 Camunda raw response text:', responseText);
+      console.log('📥 Zeebe raw response text:', responseText);
       
       if (responseText) {
         try {
           data = JSON.parse(responseText);
-          console.log('📥 Camunda parsed JSON:', JSON.stringify(data, null, 2));
+          console.log('📥 Zeebe parsed JSON:', JSON.stringify(data, null, 2));
         } catch (e) {
           console.log('⚠️ Response is not JSON, treating as text');
           data = { message: responseText, status: response.status };
         }
       } else {
-        console.log('⚠️ Empty response body from Camunda');
+        console.log('⚠️ Empty response body from Zeebe');
         data = { 
-          message: 'Empty response from Camunda', 
+          message: 'Empty response from Zeebe', 
           status: response.status,
           statusText: response.statusText 
         };
@@ -90,7 +62,7 @@ export async function POST(request: NextRequest) {
     } catch (e) {
       console.error('❌ Error reading response:', e);
       data = { 
-        error: 'Failed to read Camunda response',
+        error: 'Failed to read Zeebe response',
         status: response.status,
         statusText: response.statusText 
       };
@@ -111,9 +83,9 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json(
       { 
-        error: 'Failed to proxy request to Camunda API',
+        error: 'Failed to proxy variables request to Zeebe API',
         details: error instanceof Error ? error.message : 'Unknown error',
-        camundaUrl: `${CAMUNDA_API.baseUrl}${CAMUNDA_API.inboundEndpoint}`
+        zeebeUrl: `${ZEEBE_API.baseUrl}${ZEEBE_API.variablesEndpoint}`
       },
       { 
         status: 500,
