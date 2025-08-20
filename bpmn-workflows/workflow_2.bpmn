@@ -20,9 +20,10 @@
           <zeebe:property name="inbound.auth.type" value="BASIC" />
           <zeebe:property name="inbound.auth.username" value="demo" />
           <zeebe:property name="inbound.auth.password" value="demo" />
-          <zeebe:property name="inbound.responseExpression" value="={ status: 200, message: &#39;Edit request processed&#39; }" />
+          <zeebe:property name="inbound.responseExpression" value="={ status: 200, message: &#34;Edit request processed&#34; } " />
           <zeebe:property name="consumeUnmatchedEvents" value="true" />
           <zeebe:property name="correlationRequired" value="required" />
+          <zeebe:property name="correlationKeyExpression" value="=request.body.processInstanceKey" />
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="editedData" />
@@ -65,7 +66,7 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:sequenceFlow id="Flow_approval_webhook" sourceRef="Event_approval_webhook" targetRef="Gateway_14arcxl" />
     <bpmn:sequenceFlow id="Flow_1r8ao0d" sourceRef="Gateway_14arcxl" targetRef="Event_1u2xwd1">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= approvalResult.approve = "true" </bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= approvalResult.request.body.approve = "true" </bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:startEvent id="Event_0wxz6qa" name="Start" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorStartMessage.v1" zeebe:modelerTemplateVersion="13" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyBpZD0naWNvbicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nMTgnIGhlaWdodD0nMTgnIHZpZXdCb3g9JzAgMCAzMiAzMic+CiAgPGRlZnM+CiAgICA8c3R5bGU+LmNscy0xIHsgZmlsbDogbm9uZTsgfTwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoCiAgICBkPSdNMjQsMjZhMywzLDAsMSwwLTIuODE2NC00SDEzdjFhNSw1LDAsMSwxLTUtNVYxNmE3LDcsMCwxLDAsNi45Mjg3LDhoNi4yNTQ5QTIuOTkxNCwyLjk5MTQsMCwwLDAsMjQsMjZaJy8+CiAgPHBhdGgKICAgIGQ9J00yNCwxNmE3LjAyNCw3LjAyNCwwLDAsMC0yLjU3LjQ4NzNsLTMuMTY1Ni01LjUzOTVhMy4wNDY5LDMuMDQ2OSwwLDEsMC0xLjczMjYuOTk4NWw0LjExODksNy4yMDg1Ljg2ODYtLjQ5NzZhNS4wMDA2LDUuMDAwNiwwLDEsMS0xLjg1MSw2Ljg0MThMMTcuOTM3LDI2LjUwMUE3LjAwMDUsNy4wMDA1LDAsMSwwLDI0LDE2WicvPgogIDxwYXRoCiAgICBkPSdNOC41MzIsMjAuMDUzN2EzLjAzLDMuMDMsMCwxLDAsMS43MzI2Ljk5ODVDMTEuNzQsMTguNDcsMTMuODYsMTQuNzYwNywxMy44OSwxNC43MDhsLjQ5NzYtLjg2ODItLjg2NzctLjQ5N2E1LDUsMCwxLDEsNi44MTItMS44NDM4bDEuNzMxNSwxLjAwMmE3LjAwMDgsNy4wMDA4LDAsMSwwLTEwLjM0NjIsMi4wMzU2Yy0uNDU3Ljc0MjctMS4xMDIxLDEuODcxNi0yLjA3MzcsMy41NzI4WicvPgogIDxyZWN0IGlkPSdfVHJhbnNwYXJlbnRfUmVjdGFuZ2xlXycgZGF0YS1uYW1lPScmbHQ7VHJhbnNwYXJlbnQgUmVjdGFuZ2xlJmd0OycgY2xhc3M9J2Nscy0xJwogICAgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJy8+Cjwvc3ZnPg==">
       <bpmn:extensionElements>
@@ -77,13 +78,13 @@
           <zeebe:property name="inbound.auth.type" value="BASIC" />
           <zeebe:property name="inbound.auth.username" value="demo" />
           <zeebe:property name="inbound.auth.password" value="demo" />
-          <zeebe:property name="inbound.responseExpression" value="={ body:{processInstanceKey: correlation}, status: 200 }" />
+          <zeebe:property name="inbound.responseExpression" value="={ body:{processInstanceKey: correlation, correlationId: string(now())}, status: 200 }" />
           <zeebe:property name="consumeUnmatchedEvents" value="true" />
           <zeebe:property name="correlationRequired" value="notRequired" />
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="requestData" />
-          <zeebe:property name="resultExpression" value="=request.body.variables" />
+          <zeebe:property name="resultExpression" value="{correlationId: string(now()),variables: request.body.variables, processInstanceKey: correlation.messageKey }" />
         </zeebe:properties>
       </bpmn:extensionElements>
       <bpmn:outgoing>Flow_00rkfu5</bpmn:outgoing>
@@ -92,7 +93,7 @@
   </bpmn:process>
   <bpmn:message id="Message_approval_webhook" name="approval_webhook">
     <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=request.body.processInstanceKey" />
+      <zeebe:subscription correlationKey="=correlationId" />
     </bpmn:extensionElements>
   </bpmn:message>
   <bpmn:message id="Message_1ecywtq" name="a7f871cf-2ed7-41f7-8f02-e3bf68c3e939" zeebe:modelerTemplate="io.camunda.connectors.webhook.WebhookConnectorStartMessage.v1" />
