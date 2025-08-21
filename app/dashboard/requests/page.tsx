@@ -35,6 +35,7 @@ export default function RequestsPage() {
   const [isEditEnabled, setIsEditEnabled] = useState<boolean>(false);
   const [originalFormData, setOriginalFormData] = useState<any>(null);
   const [formData, setFormData] = useState<any>(null);
+  const [approvalRequested, setApprovalRequested] = useState<boolean>(false);
   
   // Filter state
   const [statusFilter, setStatusFilter] = useState<string>('all');
@@ -195,6 +196,7 @@ export default function RequestsPage() {
       setIsEditEnabled(false);
       setOriginalFormData(null);
       setFormData(null);
+      setApprovalRequested(false);
     }
     
     try {
@@ -212,6 +214,12 @@ export default function RequestsPage() {
           
           // Check if the task was rejected based on the isRejected flag from our API
           const wasRejected = variables.isRejected || false;
+          
+          // Check if approval is requested
+          const isApprovalRequested = variables.approvalRequested || false;
+          setApprovalRequested(isApprovalRequested);
+          
+          console.log('Approval requested:', isApprovalRequested);
           
           if (wasRejected) {
             console.log('This task was rejected - detected from API response');
@@ -376,6 +384,31 @@ export default function RequestsPage() {
           }
           
           // Store the original data and set form data
+          // If we have editedData and approval is requested, use the edited data for form fields
+          if (variables.approvalRequested && variables.editedData) {
+            try {
+              // Try to parse if it's a string, otherwise use directly
+              const editedData = typeof variables.editedData === 'string' 
+                ? JSON.parse(variables.editedData) 
+                : variables.editedData;
+              
+              // Extract the edited fields
+              const editedFields = editedData.request?.body?.variables || editedData;
+              
+              // Update form data with edited values
+              formData = {
+                name: editedFields.name || formData.name,
+                age: String(editedFields.age || formData.age),
+                gender: editedFields.gender || formData.gender,
+                address: editedFields.address || formData.address,
+                aadhaar: editedFields.aadhaar || formData.aadhaar
+              };
+              console.log('Using edited data for form fields:', formData);
+            } catch (e) {
+              console.error('Error processing editedData during approval request:', e);
+            }
+          }
+          
           setOriginalFormData(formData);
           setFormData({...formData});
           setIsRejected(wasRejected);
@@ -454,6 +487,46 @@ export default function RequestsPage() {
       console.log('Approval successfully sent to Camunda');
       alert('Task approved successfully!');
       
+      // Helper function to delay execution
+      const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+      
+      // Refetch the process variables after a delay to allow backend processing
+      if (task.processInstanceKey) {
+        console.log(`Waiting 3 seconds before refetching variables...`);
+        try {
+          // Wait for 3 seconds before fetching to allow backend to process
+          await delay(3000);
+          
+          console.log(`Refetching variables for process instance ${task.processInstanceKey} after approval`);
+          const updatedVariables = await getProcessVariables(task.processInstanceKey);
+          if (updatedVariables) {
+            console.log('Updated process variables after approval:', updatedVariables);
+            
+            // Update UI state with new data
+            setApprovalRequested(updatedVariables.approvalRequested || false);
+            setIsRejected(updatedVariables.isRejected || false);
+            
+            // Update task data with the latest values if needed
+            if (updatedVariables.editedData) {
+              // Extract edited data and update form if necessary
+              // Similar to handleTaskSelect logic
+              let formData = {
+                name: updatedVariables.name || '',
+                age: String(updatedVariables.age || ''),
+                gender: updatedVariables.gender || '',
+                address: updatedVariables.address || '',
+                aadhaar: updatedVariables.aadhaar || ''
+              };
+              
+              setFormData(formData);
+              setOriginalFormData(formData);
+            }
+          }
+        } catch (err) {
+          console.error('Error refetching process variables after approval:', err);
+        }
+      }
+      
     } catch (err) {
       console.error('Error approving task:', err);
       alert('Failed to approve task. Please try again.');
@@ -517,6 +590,45 @@ export default function RequestsPage() {
       
       console.log('Rejection successfully sent to Camunda');
       alert('Task rejected successfully!');
+      
+      // Helper function to delay execution
+      const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+      
+      // Refetch the process variables after a delay to allow backend processing
+      if (task.processInstanceKey) {
+        console.log(`Waiting 3 seconds before refetching variables...`);
+        try {
+          // Wait for 3 seconds before fetching to allow backend to process
+          await delay(3000);
+          
+          console.log(`Refetching variables for process instance ${task.processInstanceKey} after rejection`);
+          const updatedVariables = await getProcessVariables(task.processInstanceKey);
+          if (updatedVariables) {
+            console.log('Updated process variables after rejection:', updatedVariables);
+            
+            // Update UI state with new data
+            setApprovalRequested(updatedVariables.approvalRequested || false);
+            // Note: we already set isRejected to true above, but update from API as well
+            setIsRejected(updatedVariables.isRejected || true);
+            
+            // If we have edited data after rejection, update the form
+            if (updatedVariables.editedData) {
+              let formData = {
+                name: updatedVariables.name || '',
+                age: String(updatedVariables.age || ''),
+                gender: updatedVariables.gender || '',
+                address: updatedVariables.address || '',
+                aadhaar: updatedVariables.aadhaar || ''
+              };
+              
+              setFormData(formData);
+              setOriginalFormData(formData);
+            }
+          }
+        } catch (err) {
+          console.error('Error refetching process variables after rejection:', err);
+        }
+      }
       
     } catch (err) {
       console.error('Error rejecting task:', err);
@@ -872,21 +984,21 @@ export default function RequestsPage() {
 
                   {/* Action buttons */}
                   <div className="flex gap-3">
-                    {selectedTask.status === 'pending' && !isRejected && !isEditing ? (
+                    {((selectedTask.status === 'pending' && !isRejected) || approvalRequested) && !isEditing ? (
                       <>
                         <button
                           type="button"
                           className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md"
                           onClick={handleApprove}
                         >
-                          Approve Request
+                          {approvalRequested ? 'Approve Changes' : 'Approve Request'}
                         </button>
                         <button
                           type="button"
                           className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md"
                           onClick={handleReject}
                         >
-                          Reject Request
+                          {approvalRequested ? 'Reject Changes' : 'Reject Request'}
                         </button>
                       </>
                     ) : (selectedTask.status === 'rejected' || isRejected) && !isEditing ? (
