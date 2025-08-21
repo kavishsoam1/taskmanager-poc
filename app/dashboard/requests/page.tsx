@@ -132,6 +132,8 @@ export default function RequestsPage() {
                         gender: existingTask.gender,
                         address: existingTask.address,
                         aadharNo: existingTask.aadharNo,
+                        // CRITICAL: Always preserve the correlationId if it exists
+                        correlationId: existingTask.correlationId || newTask.correlationId,
                       };
                     }
                   }
@@ -432,14 +434,22 @@ export default function RequestsPage() {
         throw new Error(`Failed to send approval: ${response.status}`);
       }
       
-      // Update UI regardless of API response
+      // Update UI regardless of API response - ensure correlationId is preserved
       setTasks(prevTasks => 
         prevTasks.map(t => 
           (t.id === taskId || t._id === taskId) 
-            ? { ...t, status: 'approved' } 
+            ? { 
+                ...t, 
+                status: 'approved',
+                // Explicitly preserve the correlationId
+                correlationId: t.correlationId || task.correlationId
+              } 
             : t
         )
       );
+      
+      // Store the task with correlationId in currentTaskDetails for reference
+      setCurrentTaskDetails(task);
       
       console.log('Approval successfully sent to Camunda');
       alert('Task approved successfully!');
@@ -487,14 +497,22 @@ export default function RequestsPage() {
         throw new Error(`Failed to send rejection: ${response.status}`);
       }
       
-      // Update UI regardless of API response
+      // Update UI regardless of API response - ensure correlationId is preserved
       setTasks(prevTasks => 
         prevTasks.map(t => 
           (t.id === taskId || t._id === taskId) 
-            ? { ...t, status: 'rejected' } 
+            ? { 
+                ...t, 
+                status: 'rejected',
+                // Explicitly preserve the correlationId
+                correlationId: t.correlationId || task.correlationId
+              } 
             : t
         )
       );
+      
+      // Store the task with correlationId in currentTaskDetails for reference
+      setCurrentTaskDetails(task);
       setIsRejected(true);
       
       console.log('Rejection successfully sent to Camunda');
@@ -550,8 +568,25 @@ export default function RequestsPage() {
     }
     
     try {
-      const task = tasks.find(t => t._id === selectedTaskId || t.id === selectedTaskId);
+      // First, check the currently selected task in the tasks array
+      let task = tasks.find(t => t._id === selectedTaskId || t.id === selectedTaskId);
       
+      // If no correlationId is found, try to get it from currentTaskDetails which we stored during rejection
+      if (!task?.correlationId && currentTaskDetails?.correlationId) {
+        console.log('Using correlationId from currentTaskDetails');
+        if (task) {
+          // Just add the correlationId to existing task
+          task = {
+            ...task,
+            correlationId: currentTaskDetails.correlationId
+          };
+        } else if (currentTaskDetails) {
+          // If we have no task but we do have currentTaskDetails, use that
+          task = currentTaskDetails;
+        }
+      }
+      
+      // Final check to make sure we have a correlationId before proceeding
       if (!task?.correlationId) {
         console.warn('Task is missing correlationId, cannot send to Camunda');
         alert('This task has no correlationId. Please try again.');
