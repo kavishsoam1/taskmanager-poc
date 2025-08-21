@@ -56,7 +56,7 @@
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="approvalResult" />
-          <zeebe:property name="resultExpression" value="={result: request.body, approval_requested:false}" />
+          <zeebe:property name="resultExpression" value="={result: request.body, approval_requested:false, approve: request.body.approve}" />
         </zeebe:properties>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_00rkfu5</bpmn:incoming>
