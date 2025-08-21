@@ -319,29 +319,39 @@ export async function getProcessVariables(processInstanceKey: string, returnRawR
     const variablesItem = data.items.find((item: ProcessVariable) => item.name === 'variables');
     
     // Check for approve item to see if it's approved
-    const approveItem = data.items.find((item: ProcessVariable) => item.name === 'approve');
-    const isApproved = approveItem && approveItem.value === '"true"';
+    const resultItem = data.items.find((item: ProcessVariable) => item.name === 'result');
+    let isApproved = false;
+    let isRejected = false;
     
-    // Check if there's an editedData item when approved
-    let editedData = null;
-    if (isApproved) {
-      console.log('Task is approved, looking for edited data');
-      const editedDataItem = data.items.find((item: ProcessVariable) => item.name === 'editedData');
-      if (editedDataItem && editedDataItem.value) {
-        try {
-          const parsedEditedData = JSON.parse(editedDataItem.value);
-          if (parsedEditedData.request?.body?.variables) {
-            editedData = parsedEditedData.request.body.variables;
-            console.log('Found edited data:', editedData);
-          }
-        } catch (e) {
-          console.error('Error parsing editedData:', e);
-        }
+    if (resultItem) {
+      try {
+        const resultValue = JSON.parse(resultItem.value);
+        isApproved = resultValue.approve === 'true';
+        isRejected = resultValue.approve === 'false';
+      } catch (e) {
+        console.error('Error parsing result item:', e);
       }
     }
     
-    // Check if request was rejected
-    const isRejected = approveItem && approveItem.value === '"false"';
+    // Check for approval_requested flag
+    const approvalRequestedItem = data.items.find((item: ProcessVariable) => item.name === 'approval_requested');
+    const approvalRequested = approvalRequestedItem && approvalRequestedItem.value === 'true';
+    
+    // Get edited data from the editedData item
+    let editedData = null;
+    const editedDataItem = data.items.find((item: ProcessVariable) => item.name === 'editedData');
+    
+    if (editedDataItem && editedDataItem.value) {
+      try {
+        const parsedEditedData = JSON.parse(editedDataItem.value);
+        if (parsedEditedData.request?.body?.variables) {
+          editedData = parsedEditedData.request.body.variables;
+          console.log('Found edited data:', editedData);
+        }
+      } catch (e) {
+        console.error('Error parsing editedData:', e);
+      }
+    }
     
     if (!variablesItem) {
       throw new Error('Variables not found in response');
@@ -355,28 +365,29 @@ export async function getProcessVariables(processInstanceKey: string, returnRawR
       const correlationIdItem = data.items.find((item: ProcessVariable) => item.name === 'correlationId');
       const correlationId = correlationIdItem ? JSON.parse(correlationIdItem.value) : null;
       
-      // If task is approved and we have edited data, use the edited data values
-      if (isApproved && editedData) {
-        return {
-          ...variables,
+      // Prepare the data to return
+      let resultData = { ...variables };
+      
+      // If we have edited data, use those values (regardless of approval status)
+      if (editedData) {
+        resultData = {
+          ...resultData,
           name: editedData.name || variables.name,
           age: editedData.age || variables.age,
           gender: editedData.gender || variables.gender,
           address: editedData.address || variables.address,
           aadhaar: editedData.aadhaar || variables.aadhaar,
-          aadharNo: editedData.aadhaar || variables.aadhaar, // Support both spellings
-          correlationId,
-          isRejected,
-          isApproved
+          aadharNo: editedData.aadhaar || variables.aadhaar // Support both spellings
         };
       }
       
-      // Otherwise return the original variables
+      // Add approval status and correlation ID
       return {
-        ...variables,
+        ...resultData,
         correlationId,
         isRejected,
-        isApproved
+        isApproved,
+        approvalRequested  // Include the approval_requested flag to control button visibility
       };
     } catch (e) {
       console.error('Error parsing variables:', e);
