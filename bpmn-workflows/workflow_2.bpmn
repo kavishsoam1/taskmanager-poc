@@ -27,7 +27,7 @@
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="editedData" />
-          <zeebe:property name="resultExpression" value="=request.body.variables" />
+          <zeebe:property name="resultExpression" value="{variables : request.body.variables, approval_requested:true }" />
         </zeebe:properties>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0cer5ek</bpmn:incoming>
@@ -56,7 +56,7 @@
           <zeebe:property name="deduplicationModeManualFlag" value="false" />
           <zeebe:property name="deduplicationMode" value="AUTO" />
           <zeebe:property name="resultVariable" value="approvalResult" />
-          <zeebe:property name="resultExpression" value="=request.body" />
+          <zeebe:property name="resultExpression" value="={result: request.body, approval_requested:false}" />
         </zeebe:properties>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_00rkfu5</bpmn:incoming>
