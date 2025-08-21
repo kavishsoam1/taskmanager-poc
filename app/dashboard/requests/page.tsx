@@ -4,6 +4,7 @@
 /* eslint-disable */
 import { useState, useEffect, useMemo } from 'react';
 import { getAllTasks, getProcessVariables, Task, PROXY_API } from '../../utils/api';
+import Toast from '../../components/Toast';
 
 // Use Task type from API utilities
 
@@ -37,6 +38,9 @@ export default function RequestsPage() {
   const [formData, setFormData] = useState<any>(null);
   const [approvalRequested, setApprovalRequested] = useState<boolean>(false);
   
+  // Toast notification state
+  const [toast, setToast] = useState({ message: '', type: 'info', visible: false });
+
   // Filter state
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [processIdFilter, setProcessIdFilter] = useState<string>('');
@@ -442,7 +446,11 @@ export default function RequestsPage() {
       // Only proceed if we have a correlationId
       if (!task?.correlationId) {
         console.warn('Task is missing correlationId, cannot send to Camunda');
-        alert('This task has no correlationId. Please select the task again to load details or try another task.');
+        setToast({
+          message: 'This task has no correlationId. Please select the task again to load details.',
+          type: 'error',
+          visible: true
+        });
         return;
       }
       
@@ -485,7 +493,13 @@ export default function RequestsPage() {
       setCurrentTaskDetails(task);
       
       console.log('Approval successfully sent to Camunda');
-      alert('Task approved successfully!');
+      
+      // Show toast notification instead of alert
+      setToast({
+        message: 'Task approved successfully!',
+        type: 'success',
+        visible: true
+      });
       
       // Helper function to delay execution
       const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -529,7 +543,11 @@ export default function RequestsPage() {
       
     } catch (err) {
       console.error('Error approving task:', err);
-      alert('Failed to approve task. Please try again.');
+      setToast({
+        message: 'Failed to approve task. Please try again.',
+        type: 'error',
+        visible: true
+      });
     }
   };
   
@@ -545,7 +563,11 @@ export default function RequestsPage() {
       // Only proceed if we have a correlationId
       if (!task?.correlationId) {
         console.warn('Task is missing correlationId, cannot send to Camunda');
-        alert('This task has no correlationId. Please select the task again to load details or try another task.');
+        setToast({
+          message: 'This task has no correlationId. Please select the task again to load details.',
+          type: 'error',
+          visible: true
+        });
         return;
       }
       
@@ -589,7 +611,13 @@ export default function RequestsPage() {
       setIsRejected(true);
       
       console.log('Rejection successfully sent to Camunda');
-      alert('Task rejected successfully!');
+      
+      // Show toast notification instead of alert
+      setToast({
+        message: 'Task rejected successfully!',
+        type: 'info', 
+        visible: true
+      });
       
       // Helper function to delay execution
       const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -632,7 +660,11 @@ export default function RequestsPage() {
       
     } catch (err) {
       console.error('Error rejecting task:', err);
-      alert('Failed to reject task. Please try again.');
+      setToast({
+        message: 'Failed to reject task. Please try again.',
+        type: 'error',
+        visible: true
+      });
     }
   };
   
@@ -675,7 +707,11 @@ export default function RequestsPage() {
     const validationErrors = validateFormData();
     if (Object.keys(validationErrors).length > 0) {
       // Display validation errors
-      alert(Object.values(validationErrors).join('\n'));
+      setToast({
+        message: Object.values(validationErrors).join(', '),
+        type: 'error',
+        visible: true
+      });
       return;
     }
     
@@ -701,7 +737,11 @@ export default function RequestsPage() {
       // Final check to make sure we have a correlationId before proceeding
       if (!task?.correlationId) {
         console.warn('Task is missing correlationId, cannot send to Camunda');
-        alert('This task has no correlationId. Please try again.');
+        setToast({
+          message: 'This task has no correlationId. Please try again.',
+          type: 'error',
+          visible: true
+        });
         return;
       }
       
@@ -755,11 +795,19 @@ export default function RequestsPage() {
       setIsRejected(false);
       
       console.log('Edit successfully sent to Camunda');
-      alert('Request edited and resubmitted successfully!');
+      setToast({
+        message: 'Request edited and resubmitted successfully!',
+        type: 'success',
+        visible: true
+      });
       
     } catch (err) {
       console.error('Error submitting edit:', err);
-      alert('Failed to submit edit. Please try again.');
+      setToast({
+        message: 'Failed to submit edit. Please try again.',
+        type: 'error',
+        visible: true
+      });
     }
   };
 
@@ -773,6 +821,13 @@ export default function RequestsPage() {
   
   return (
     <div className="container mx-auto">
+      <Toast 
+        message={toast.message} 
+        type={toast.type as 'success' | 'error' | 'info'} 
+        isVisible={toast.visible} 
+        onClose={() => setToast(prev => ({...prev, visible: false}))} 
+        duration={2000} 
+      />
       <h1 className="text-2xl font-bold mb-6">Task Requests</h1>
       
       <div className="flex flex-col md:flex-row gap-6">
@@ -794,7 +849,7 @@ export default function RequestsPage() {
                 <option value="all">All Statuses</option>
                 <option value="pending">Pending</option>
                 <option value="completed">Completed</option>
-                <option value="rejected">Rejected</option>
+                {/* <option value="rejected">Rejected</option> */}
               </select>
             </div>
             
@@ -831,8 +886,9 @@ export default function RequestsPage() {
                       <p className="text-sm text-gray-500">ID: {((task._id || task.id) || '').substring(0, 8)}...</p>
                       <div className="flex justify-between items-center mt-1">
                         <span className="text-xs text-gray-500">{formatDate(task.dateSubmitted)}</span>
-                        <span className={`text-xs px-2 py-1 rounded-full ${task.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : task.status === 'approved' ? 'bg-green-100 text-green-800' : task.status == 'completed' ? 'bg-green-100 text-green-800' : task.status == 'rejected' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
-                          {task.status.charAt(0).toUpperCase() + task.status.slice(1)}
+                        <span className={`text-xs px-2 py-1 rounded-full ${task.status === 'approved' || task.status === 'completed' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'}`}>
+                          {/* Always show only Completed or Pending based on status */}
+                          {task.status === 'approved' || task.status === 'completed' ? 'Completed' : 'Pending'}
                         </span>
                       </div>
                     </li>
@@ -957,86 +1013,83 @@ export default function RequestsPage() {
                   {isEditing && <p className="text-xs text-gray-500 mt-1">Must be exactly 12 digits</p>}
                 </div>
                 
-                <div className="pt-4 border-t flex justify-between">
-                  {/* Status tags */}
-                  <div>
-                    {(selectedTask.status === 'rejected' || isRejected) && !isEditing && (
-                      <span className="inline-flex items-center px-4 py-2 bg-red-100 text-red-800 rounded-md">
-                        Request Rejected
-                      </span>
-                    )}
-                    {isEditing && (
-                      <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-md">
-                        Editing Request
-                      </span>
-                    )}
-                    {selectedTask.status === 'approved' && !isRejected && (
-                      <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-md">
-                        Request Approved
-                      </span>
-                    )}
-                    {selectedTask.status === 'completed' && !isRejected && (
-                      <span className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-800 rounded-md">
-                        Task Completed
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Action buttons */}
-                  <div className="flex gap-3">
-                    {((selectedTask.status === 'pending' && !isRejected) || approvalRequested) && !isEditing ? (
-                      <>
-                        <button
-                          type="button"
-                          className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md"
-                          onClick={handleApprove}
-                        >
-                          {approvalRequested ? 'Approve Changes' : 'Approve Request'}
-                        </button>
-                        <button
-                          type="button"
-                          className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md"
-                          onClick={handleReject}
-                        >
-                          {approvalRequested ? 'Reject Changes' : 'Reject Request'}
-                        </button>
-                      </>
-                    ) : (selectedTask.status === 'rejected' || isRejected) && !isEditing ? (
-                      <div className="flex gap-3">
-                        <button
-                          type="button"
-                          className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md"
-                          onClick={() => setIsEditing(true)}
-                        >
-                          Edit Request
-                        </button>
-                        <button
-                          type="button"
-                          className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md"
-                          onClick={() => {}}
-                        >
-                          Cancel
-                        </button>
-                      </div>
-                    ) : isEditing ? (
-                      <div className="flex gap-3">
-                        <button
-                          type="button"
-                          className={`${isEditEnabled ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-400 cursor-not-allowed'} text-white font-medium py-2 px-4 rounded-md`}
-                          onClick={handleEditSubmit}
-                          disabled={!isEditEnabled}
-                        >
-                          Submit Edit
-                        </button>
-                        <button
-                          type="button"
-                          className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md"
-                          onClick={handleCancelEdit}
-                        >
-                          Cancel
-                        </button>
-                      </div>
-                    ) : null}
+                {/* Button section with proper structure */}
+                <div className="pt-4 border-t">
+                  {/* Container for status indicators (left) and action buttons (right) */}
+                  <div className="flex justify-between items-center">
+                    {/* Status indicators on left */}
+                    <div>
+                      {(selectedTask.status === 'rejected' || isRejected) && !isEditing && (
+                        <span className="inline-flex items-center px-4 py-2 bg-red-100 text-red-800 rounded-md">
+                          Request Rejected
+                        </span>
+                      )}
+                      {isEditing && (
+                        <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-md">
+                          Editing Request
+                        </span>
+                      )}
+                      {/* Empty placeholder for when there's no status to show */}
+                      {!isEditing && !(selectedTask.status === 'rejected' || isRejected) && 
+                        <div className="h-10"></div>}
+                    </div>
+                  
+                    {/* Action buttons on right */}
+                    <div>
+                      {((selectedTask.status === 'pending' && !isRejected) || approvalRequested) && !isEditing ? (
+                        <div className="flex gap-3 justify-end">
+                          <button
+                            type="button"
+                            className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md"
+                            onClick={handleApprove}
+                          >
+                            {approvalRequested ? 'Approve Changes' : 'Approve Request'}
+                          </button>
+                          <button
+                            type="button"
+                            className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md"
+                            onClick={handleReject}
+                          >
+                            {approvalRequested ? 'Reject Changes' : 'Reject Request'}
+                          </button>
+                        </div>
+                      ) : (selectedTask.status === 'rejected' || isRejected) && !isEditing ? (
+                        <div className="flex gap-4 justify-end">
+                          <button
+                            type="button"
+                            className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-md"
+                            onClick={() => setIsEditing(true)}
+                          >
+                            Edit Request
+                          </button>
+                          <button
+                            type="button"
+                            className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-6 rounded-md"
+                            onClick={() => {}}
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : isEditing ? (
+                        <div className="flex gap-4 justify-end">
+                          <button
+                            type="button"
+                            className={`${isEditEnabled ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-400 cursor-not-allowed'} text-white font-medium py-2 px-6 rounded-md`}
+                            onClick={handleEditSubmit}
+                            disabled={!isEditEnabled}
+                          >
+                            Submit Edit
+                          </button>
+                          <button
+                            type="button"
+                            className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-6 rounded-md"
+                            onClick={handleCancelEdit}
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : null}
+                    </div>
                   </div>
                 </div>
               </form>
