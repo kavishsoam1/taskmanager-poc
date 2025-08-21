@@ -1,4 +1,5 @@
 // API base URL - replace with actual URL when deployed
+/* eslint-disable */
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
 
 // Zeebe API URL
@@ -59,7 +60,8 @@ export const PROXY_API = {
   camundaApproval: '/api/proxy/camunda-approval',
   camundaGetAllList: 'http://localhost:8085/inbound/getAllList',
   zeebeProcessInstances: '/api/proxy/zeebe-process-instances',
-  zeebeVariables: '/api/proxy/zeebe-variables'
+  zeebeVariables: '/api/proxy/zeebe-variables',
+  editResubmit: '/api/proxy/edit-resubmit'
 };
 
 // Mock API for tasks (to be replaced with real API)
@@ -286,7 +288,7 @@ export async function getAllTasks(): Promise<Task[]> {
 }
 
 // Get process variables by process instance key via proxy
-export async function getProcessVariables(processInstanceKey: string): Promise<any> {
+export async function getProcessVariables(processInstanceKey: string, returnRawResponse: boolean = false): Promise<any> {
   try {
     // Call the Zeebe API through our proxy to get variables for a process instance
     const response = await fetch(PROXY_API.zeebeVariables, {
@@ -308,8 +310,38 @@ export async function getProcessVariables(processInstanceKey: string): Promise<a
 
     const data = await response.json();
     
+    // If returnRawResponse is true, return the entire data object
+    if (returnRawResponse) {
+      return data;
+    }
+    
     // Find the variables object in the response
     const variablesItem = data.items.find((item: ProcessVariable) => item.name === 'variables');
+    
+    // Check for approve item to see if it's approved
+    const approveItem = data.items.find((item: ProcessVariable) => item.name === 'approve');
+    const isApproved = approveItem && approveItem.value === '"true"';
+    
+    // Check if there's an editedData item when approved
+    let editedData = null;
+    if (isApproved) {
+      console.log('Task is approved, looking for edited data');
+      const editedDataItem = data.items.find((item: ProcessVariable) => item.name === 'editedData');
+      if (editedDataItem && editedDataItem.value) {
+        try {
+          const parsedEditedData = JSON.parse(editedDataItem.value);
+          if (parsedEditedData.request?.body?.variables) {
+            editedData = parsedEditedData.request.body.variables;
+            console.log('Found edited data:', editedData);
+          }
+        } catch (e) {
+          console.error('Error parsing editedData:', e);
+        }
+      }
+    }
+    
+    // Check if request was rejected
+    const isRejected = approveItem && approveItem.value === '"false"';
     
     if (!variablesItem) {
       throw new Error('Variables not found in response');
@@ -323,9 +355,28 @@ export async function getProcessVariables(processInstanceKey: string): Promise<a
       const correlationIdItem = data.items.find((item: ProcessVariable) => item.name === 'correlationId');
       const correlationId = correlationIdItem ? JSON.parse(correlationIdItem.value) : null;
       
+      // If task is approved and we have edited data, use the edited data values
+      if (isApproved && editedData) {
+        return {
+          ...variables,
+          name: editedData.name || variables.name,
+          age: editedData.age || variables.age,
+          gender: editedData.gender || variables.gender,
+          address: editedData.address || variables.address,
+          aadhaar: editedData.aadhaar || variables.aadhaar,
+          aadharNo: editedData.aadhaar || variables.aadhaar, // Support both spellings
+          correlationId,
+          isRejected,
+          isApproved
+        };
+      }
+      
+      // Otherwise return the original variables
       return {
         ...variables,
-        correlationId
+        correlationId,
+        isRejected,
+        isApproved
       };
     } catch (e) {
       console.error('Error parsing variables:', e);

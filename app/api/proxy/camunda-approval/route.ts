@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
           data = JSON.parse(responseText);
           console.log('📥 Camunda parsed JSON:', JSON.stringify(data, null, 2));
         } catch (e) {
-          console.log('⚠️ Response is not JSON, treating as text');
+          console.log('⚠️ Response is not JSON, treating as text',e);
           data = { message: responseText, status: response.status };
         }
       } else {

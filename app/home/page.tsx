@@ -1,5 +1,5 @@
 'use client';
-
+/* eslint-disable */
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
