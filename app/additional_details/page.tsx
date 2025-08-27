@@ -169,18 +169,25 @@ export default function AdditionalDetailsPage() {
               try {
                 const parsedVariables = JSON.parse(variablesItem.value);
                 
+                // Log the variables we find for debugging
+                console.log('Found variables JSON object:', parsedVariables);
+                console.log('Aadhaar value in variables:', parsedVariables.aadhaar || parsedVariables.aadhar);
+                
                 // Fill the form with data from variables
-                setFormData({
+                const formDataToSet = {
                   name: parsedVariables.name || '',
                   age: parsedVariables.age ? parsedVariables.age.toString() : '',
                   gender: parsedVariables.gender || '',
                   address: parsedVariables.address || '',
-                  aadharNo: parsedVariables.aadhar || parsedVariables.aadhaar || '',
+                  aadharNo: parsedVariables.aadhaar || parsedVariables.aadhar || '',
                   extraDetails1: parsedVariables.extraDetails1 || '',
                   extraDetails2: parsedVariables.extraDetails2 || '',
                   extraDetails3: parsedVariables.extraDetails3 || '',
                   extraDetails4: parsedVariables.extraDetails4 || '',
-                });
+                };
+                
+                console.log('Setting formData with aadharNo:', formDataToSet.aadharNo);
+                setFormData(formDataToSet);
               } catch (error) {
                 console.error('Error parsing variables:', error);
               }
@@ -194,6 +201,7 @@ export default function AdditionalDetailsPage() {
                 {key: 'age', aliases: ['age']},
                 {key: 'gender', aliases: ['gender']},
                 {key: 'address', aliases: ['address']},
+                // Use aadharNo as the key to match the formData structure
                 {key: 'aadharNo', aliases: ['aadhaar', 'aadhar']},
                 {key: 'extraDetails1', aliases: ['extraDetails1', 'textfield_s2njz']},
                 {key: 'extraDetails2', aliases: ['extraDetails2', 'textfield_7j7qyi']},
@@ -215,6 +223,12 @@ export default function AdditionalDetailsPage() {
                     // API values come with surrounding quotes that need to be parsed
                     const parsedValue = JSON.parse(foundVariable.value);
                     console.log(`Parsed ${key} from ${foundVariable.name}:`, parsedValue);
+                    
+                    // For aadharNo specifically, add extra logging
+                    if (key === 'aadharNo') {
+                      console.log('Found aadharNo value:', parsedValue, 'from variable:', foundVariable.name);
+                    }
+                    
                     appData[key] = parsedValue;
                   } catch (e) {
                     console.warn(`Error parsing ${key} from ${foundVariable.name}:`, e);
@@ -228,17 +242,22 @@ export default function AdditionalDetailsPage() {
               if (Object.keys(appData).length > 0) {
                 console.log('Constructed application data from individual variables:', appData);
                 // Use the constructed data
-                setFormData({
+                const formDataToSet = {
                   name: appData.name || '',
                   age: appData.age ? appData.age.toString() : '',
                   gender: appData.gender || '',
                   address: appData.address || '',
-                  aadharNo: appData.aadhaar || appData.aadhar || '',
+                  // Fix Aadhaar binding by checking all possible keys
+                  aadharNo: appData.aadharNo || appData.aadhaar || appData.aadhar || '',
                   extraDetails1: appData.extraDetails1 || '',
                   extraDetails2: appData.extraDetails2 || '',
                   extraDetails3: appData.extraDetails3 || '',
                   extraDetails4: appData.extraDetails4 || '',
-                });
+                };
+                
+                console.log('Final appData:', appData);
+                console.log('Setting formData with aadharNo from appData:', formDataToSet.aadharNo);
+                setFormData(formDataToSet);
               }
             }
             break;
