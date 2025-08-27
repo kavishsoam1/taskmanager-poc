@@ -12,6 +12,10 @@ export default function NewTaskPage() {
     address: '',
     aadharNo: '',
     pdfFile: null as File | null,
+    extraDetails1: '',
+    extraDetails2: '',
+    extraDetails3: '',
+    extraDetails4: '',
   });
   
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -113,6 +117,10 @@ export default function NewTaskPage() {
           address: formData.address,
           aadharNo: formData.aadharNo,
           pdfFilePath: formData.pdfFile ? `/uploads/${formData.pdfFile.name}` : '',
+          extraDetails1: formData.extraDetails1,
+          extraDetails2: formData.extraDetails2,
+          extraDetails3: formData.extraDetails3,
+          extraDetails4: formData.extraDetails4,
         });
         
         console.log('Task created successfully:', result);
@@ -128,6 +136,10 @@ export default function NewTaskPage() {
           address: '',
           aadharNo: '',
           pdfFile: null,
+          extraDetails1: '',
+          extraDetails2: '',
+          extraDetails3: '',
+          extraDetails4: '',
         });
       } catch (error) {
         console.error('Error creating task:', error);
@@ -256,6 +268,66 @@ export default function NewTaskPage() {
             accept="application/pdf"
           />
           {errors.pdfFile && <p className="text-red-500 text-xs italic mt-1">{errors.pdfFile}</p>}
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails1">
+            Extra Details 1
+          </label>
+          <textarea
+            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
+            id="extraDetails1"
+            name="extraDetails1"
+            value={formData.extraDetails1}
+            onChange={handleChange}
+            placeholder="Enter extra details 1"
+            rows={2}
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails2">
+            Extra Details 2
+          </label>
+          <textarea
+            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
+            id="extraDetails2"
+            name="extraDetails2"
+            value={formData.extraDetails2}
+            onChange={handleChange}
+            placeholder="Enter extra details 2"
+            rows={2}
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails3">
+            Extra Details 3
+          </label>
+          <textarea
+            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
+            id="extraDetails3"
+            name="extraDetails3"
+            value={formData.extraDetails3}
+            onChange={handleChange}
+            placeholder="Enter extra details 3"
+            rows={2}
+          />
+        </div>
+
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails4">
+            Extra Details 4
+          </label>
+          <textarea
+            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
+            id="extraDetails4"
+            name="extraDetails4"
+            value={formData.extraDetails4}
+            onChange={handleChange}
+            placeholder="Enter extra details 4"
+            rows={2}
+          />
         </div>
         
         <div className="flex items-center justify-end">

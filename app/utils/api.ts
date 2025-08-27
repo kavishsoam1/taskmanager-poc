@@ -16,6 +16,10 @@ export interface Task {
   address: string;
   aadharNo: string;
   pdfFilePath?: string;
+  extraDetails1?: string;
+  extraDetails2?: string;
+  extraDetails3?: string;
+  extraDetails4?: string;
   status: 'pending' | 'approved' | 'rejected' | 'completed';
   dateSubmitted?: string;
   processInstanceKey?: string; // Added for Zeebe integration
@@ -61,7 +65,8 @@ export const PROXY_API = {
   camundaGetAllList: 'http://localhost:8085/inbound/getAllList',
   zeebeProcessInstances: '/api/proxy/zeebe-process-instances',
   zeebeVariables: '/api/proxy/zeebe-variables',
-  editResubmit: '/api/proxy/edit-resubmit'
+  editResubmit: '/api/proxy/edit-resubmit',
+  additionalDetails: '/api/proxy/additional-details'
 };
 
 // Mock API for tasks (to be replaced with real API)
@@ -174,6 +179,10 @@ export async function createTask(taskData: Omit<Task, 'id' | 'status' | 'dateSub
       gender: taskData.gender,
       address: taskData.address,
       aadhaar: taskData.aadharNo,
+      extraDetails1: taskData.extraDetails1 || '',
+      extraDetails2: taskData.extraDetails2 || '',
+      extraDetails3: taskData.extraDetails3 || '',
+      extraDetails4: taskData.extraDetails4 || '',
     };
     
     // Only add document if PDF file exists
