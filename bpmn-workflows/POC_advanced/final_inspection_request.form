@@ -1,0 +1,181 @@
+{
+  "components": [
+    {
+      "label": "Final Inspection Request",
+      "type": "text",
+      "id": "Field_0klzmxf",
+      "text": "Please complete this form to request the final inspection before permission to trade."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxmf",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Tenant Name",
+      "type": "textfield",
+      "id": "Field_0kamzxf",
+      "key": "tenantName",
+      "readonly": true
+    },
+    {
+      "label": "Space Reference",
+      "type": "textfield",
+      "id": "Field_9klzmxf",
+      "key": "spaceReference",
+      "readonly": true
+    },
+    {
+      "label": "Requested Inspection Date",
+      "type": "textfield",
+      "id": "Field_1axqkmf",
+      "key": "requestedInspectionDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Preferred Time Slot",
+      "type": "select",
+      "id": "Field_0klzqmf",
+      "key": "preferredTimeSlot",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Morning (9am-12pm)",
+          "value": "morning"
+        },
+        {
+          "label": "Afternoon (1pm-5pm)",
+          "value": "afternoon"
+        }
+      ]
+    },
+    {
+      "label": "Contact Person on Site",
+      "type": "textfield",
+      "id": "Field_1pakqmf",
+      "key": "contactPerson",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Contact Phone",
+      "type": "textfield",
+      "id": "Field_0kamqzf",
+      "key": "contactPhone",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Fit-out Completion Confirmation",
+      "type": "textfield",
+      "id": "Field_9klzmxf_1",
+      "key": "completionChecklist",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "All Construction Work Complete",
+          "value": "construction"
+        },
+        {
+          "label": "All MEP Systems Installed & Tested",
+          "value": "mepSystems"
+        },
+        {
+          "label": "All Finishes Complete",
+          "value": "finishes"
+        },
+        {
+          "label": "Store Fixtures & Fittings Installed",
+          "value": "fixtures"
+        },
+        {
+          "label": "Signage Installed",
+          "value": "signage"
+        },
+        {
+          "label": "Site Cleaned",
+          "value": "cleaning"
+        }
+      ]
+    },
+    {
+      "label": "Completion Photos",
+      "type": "textfield",
+      "id": "Field_0klmzqf_1",
+      "key": "completionPhotos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Certificate Submissions",
+      "type": "textfield",
+      "id": "Field_1pakqmf_1",
+      "key": "certificateSubmissions",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Electrical Completion Certificate",
+          "value": "electrical"
+        },
+        {
+          "label": "HVAC Testing & Commissioning Report",
+          "value": "hvac"
+        },
+        {
+          "label": "Fire Safety System Certificate",
+          "value": "fireSafety"
+        },
+        {
+          "label": "Plumbing & Drainage Certificate",
+          "value": "plumbing"
+        }
+      ]
+    },
+    {
+      "label": "Upload Certificates",
+      "type": "textfield",
+      "id": "Field_0kamqzf_1",
+      "key": "certificateFiles",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Additional Comments",
+      "type": "textarea",
+      "id": "Field_9klzmxf_2",
+      "key": "additionalComments"
+    },
+    {
+      "label": "I confirm that all work is complete and ready for final inspection",
+      "type": "checkbox",
+      "id": "Field_0klmzqf_2",
+      "key": "completionConfirmation",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "final_inspection_request_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

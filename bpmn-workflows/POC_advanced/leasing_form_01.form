@@ -1,0 +1,126 @@
+{
+  "components": [
+    {
+      "label": "Tenant Name",
+      "type": "textfield",
+      "id": "Field_0l3jmvq",
+      "key": "tenantName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Space Reference Number",
+      "type": "textfield",
+      "id": "Field_0csnvzj",
+      "key": "spaceReference",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Lease Start Date (YYYY-MM-DD)",
+      "type": "textfield",
+      "id": "Field_1hodz3p",
+      "key": "leaseStartDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Tenant Contact Person",
+      "type": "textfield",
+      "id": "Field_0hdmzex",
+      "key": "tenantContact",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Contact Email",
+      "type": "textfield",
+      "id": "Field_1ur785u",
+      "key": "contactEmail",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Contact Phone",
+      "type": "textfield",
+      "id": "Field_1cgahve",
+      "key": "contactPhone",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Retail Category",
+      "type": "select",
+      "id": "Field_1knw58l",
+      "key": "retailCategory",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Fashion",
+          "value": "fashion"
+        },
+        {
+          "label": "Food & Beverage",
+          "value": "food"
+        },
+        {
+          "label": "Electronics",
+          "value": "electronics"
+        },
+        {
+          "label": "Home & Living",
+          "value": "home"
+        },
+        {
+          "label": "Services",
+          "value": "services"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    {
+      "label": "Space Size (sqm)",
+      "type": "number",
+      "id": "Field_0mm5wz4",
+      "key": "spaceSize",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Additional Notes",
+      "type": "textarea",
+      "id": "Field_0v7129a",
+      "key": "additionalNotes"
+    },
+    {
+      "label": "I confirm all information provided is accurate",
+      "type": "checkbox",
+      "id": "Field_0dpow1s",
+      "key": "confirmationCheck",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "leasing_form_01",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.36.1"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

@@ -1,0 +1,197 @@
+{
+  "components": [
+    {
+      "label": "Inspection Performance Record",
+      "type": "text",
+      "id": "Field_0klzmxn",
+      "text": "Complete this form to record the results of the inspection."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxmn",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Inspection Date",
+      "type": "textfield",
+      "id": "Field_0kamzxn",
+      "key": "inspectionDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Inspector Name",
+      "type": "textfield",
+      "id": "Field_9klzmxn",
+      "key": "inspectorName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Inspection Type",
+      "type": "select",
+      "id": "Field_1axqkmn",
+      "key": "inspectionType",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Pre-Ceiling Closure",
+          "value": "preCeiling"
+        },
+        {
+          "label": "MEP Systems",
+          "value": "mep"
+        },
+        {
+          "label": "Fire & Safety",
+          "value": "fireSafety"
+        },
+        {
+          "label": "Structural",
+          "value": "structural"
+        }
+      ]
+    },
+    {
+      "label": "Areas Inspected",
+      "type": "textfield",
+      "id": "Field_0klzqmn",
+      "key": "areasInspected",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "HVAC Systems",
+          "value": "hvac"
+        },
+        {
+          "label": "Electrical Systems",
+          "value": "electrical"
+        },
+        {
+          "label": "Plumbing Systems",
+          "value": "plumbing"
+        },
+        {
+          "label": "Fire Safety Systems",
+          "value": "fireSafety"
+        },
+        {
+          "label": "Building Services Integration",
+          "value": "services"
+        }
+      ]
+    },
+    {
+      "label": "Inspection Findings",
+      "type": "textfield",
+      "id": "Field_1pakqmn",
+      "key": "inspectionFindings",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "All Systems Compliant",
+          "value": "compliant"
+        },
+        {
+          "label": "Minor Issues Found",
+          "value": "minorIssues"
+        },
+        {
+          "label": "Major Issues Found",
+          "value": "majorIssues"
+        },
+        {
+          "label": "Critical Issues Found",
+          "value": "criticalIssues"
+        }
+      ]
+    },
+    {
+      "label": "Inspection Comments",
+      "type": "textarea",
+      "id": "Field_0kamqzn",
+      "key": "inspectionComments",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Non-Compliance Details",
+      "type": "textarea",
+      "id": "Field_9klzmxn_1",
+      "key": "nonComplianceDetails",
+      "conditional": {
+        "hide": "=inspectionFindings.includes(\"compliant\")"
+      }
+    },
+    {
+      "label": "Inspection Photos",
+      "type": "textfield",
+      "id": "Field_0klmzqn",
+      "key": "inspectionPhotos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Approval Decision",
+      "type": "select",
+      "id": "Field_1pakqmn_1",
+      "key": "inspectionApproval",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approved - Work Can Continue",
+          "value": "approved"
+        },
+        {
+          "label": "Conditional Approval - Minor Issues to Fix",
+          "value": "conditional"
+        },
+        {
+          "label": "Rejected - Requires Rectification",
+          "value": "rejected"
+        }
+      ]
+    },
+    {
+      "label": "Re-inspection Required",
+      "type": "checkbox",
+      "id": "Field_0kamqzn_1",
+      "key": "reinspectionRequired",
+      "conditional": {
+        "hide": "=inspectionApproval == \"approved\""
+      }
+    },
+    {
+      "label": "Rectification Deadline",
+      "type": "textfield",
+      "id": "Field_9klzmxn_2",
+      "key": "rectificationDeadline",
+      "conditional": {
+        "hide": "=inspectionApproval == \"approved\""
+      }
+    }
+  ],
+  "type": "default",
+  "id": "inspection_performance_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

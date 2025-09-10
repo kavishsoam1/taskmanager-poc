@@ -1,0 +1,171 @@
+{
+  "components": [
+    {
+      "label": "MEP Design Review",
+      "type": "text",
+      "id": "Field_0klzmxr",
+      "text": "Please complete the review of the MEP design submission."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxmr",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "MEP Documentation Review",
+      "type": "checklist",
+      "id": "Field_0kamzxr",
+      "key": "mepDocChecklist",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Electrical Drawings Complete",
+          "value": "electrical"
+        },
+        {
+          "label": "HVAC Drawings Complete",
+          "value": "hvac"
+        },
+        {
+          "label": "Plumbing Drawings Complete",
+          "value": "plumbing"
+        },
+        {
+          "label": "Fire Safety Drawings Complete",
+          "value": "fireSafety"
+        }
+      ]
+    },
+    {
+      "label": "Technical Compliance Check",
+      "type": "checklist",
+      "id": "Field_9klzmxr",
+      "key": "technicalChecklist",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Electrical Load Within Limits",
+          "value": "electricalLoad"
+        },
+        {
+          "label": "HVAC Requirements Acceptable",
+          "value": "hvacReq"
+        },
+        {
+          "label": "Plumbing Requirements Acceptable",
+          "value": "plumbingReq"
+        },
+        {
+          "label": "Fire & Safety Compliance",
+          "value": "fireCompliance"
+        }
+      ]
+    },
+    {
+      "label": "Technical Assessment",
+      "type": "select",
+      "id": "Field_1axqkmr",
+      "key": "technicalAssessment",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Fully Compliant",
+          "value": "fullyCompliant"
+        },
+        {
+          "label": "Minor Issues",
+          "value": "minorIssues"
+        },
+        {
+          "label": "Major Issues",
+          "value": "majorIssues"
+        },
+        {
+          "label": "Non-Compliant",
+          "value": "nonCompliant"
+        }
+      ]
+    },
+    {
+      "label": "Technical Review Comments",
+      "type": "textarea",
+      "id": "Field_0klzqmr",
+      "key": "technicalComments",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "MEP Approval Decision",
+      "type": "select",
+      "id": "Field_1pakqmr",
+      "key": "mepApproval",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approved",
+          "value": "approved"
+        },
+        {
+          "label": "Approved with Conditions",
+          "value": "approvedConditions"
+        },
+        {
+          "label": "Revisions Required",
+          "value": "revisionsRequired"
+        },
+        {
+          "label": "Rejected",
+          "value": "rejected"
+        }
+      ]
+    },
+    {
+      "label": "Required Revisions",
+      "type": "textarea",
+      "id": "Field_0kamqzr",
+      "key": "requiredRevisions",
+      "conditional": {
+        "hide": "=mepApproval != \"revisionsRequired\" && mepApproval != \"rejected\" && mepApproval != \"approvedConditions\""
+      }
+    },
+    {
+      "label": "Reviewer Name",
+      "type": "textfield",
+      "id": "Field_9klzmxr_reviewer",
+      "key": "reviewerName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Review Date",
+      "type": "datetime",
+      "id": "Field_0klmzqr",
+      "key": "reviewDate",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "mep_review_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "versionTag": "0.1",
+  "schemaVersion": 18
+}

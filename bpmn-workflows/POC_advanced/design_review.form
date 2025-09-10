@@ -1,0 +1,151 @@
+{
+  "components": [
+    {
+      "label": "Concept Design Review",
+      "type": "text",
+      "id": "Field_0kqlzxe",
+      "text": "Please complete the design review for this tenant submission."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxma",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Design Compliance Review",
+      "type": "textfield",
+      "id": "Field_0kamzxl",
+      "key": "complianceChecklist",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Complies with Mall Design Guidelines",
+          "value": "guidelines"
+        },
+        {
+          "label": "Appropriate Material Selection",
+          "value": "materials"
+        },
+        {
+          "label": "Signage Requirements Met",
+          "value": "signage"
+        },
+        {
+          "label": "Storefront Design Acceptable",
+          "value": "storefront"
+        },
+        {
+          "label": "Layout Functionality Acceptable",
+          "value": "layout"
+        }
+      ]
+    },
+    {
+      "label": "Design Quality Assessment",
+      "type": "select",
+      "id": "Field_1axqkmz",
+      "key": "designQuality",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Excellent",
+          "value": "excellent"
+        },
+        {
+          "label": "Good",
+          "value": "good"
+        },
+        {
+          "label": "Acceptable",
+          "value": "acceptable"
+        },
+        {
+          "label": "Needs Improvement",
+          "value": "needsImprovement"
+        },
+        {
+          "label": "Unacceptable",
+          "value": "unacceptable"
+        }
+      ]
+    },
+    {
+      "label": "Detailed Feedback",
+      "type": "textarea",
+      "id": "Field_9klzmxa",
+      "key": "designFeedback",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Design Approval Decision",
+      "type": "select",
+      "id": "Field_0klmzqx",
+      "key": "designApproval",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approved",
+          "value": "approved"
+        },
+        {
+          "label": "Approved with Comments",
+          "value": "approvedWithComments"
+        },
+        {
+          "label": "Revisions Required",
+          "value": "revisionsRequired"
+        },
+        {
+          "label": "Rejected",
+          "value": "rejected"
+        }
+      ]
+    },
+    {
+      "label": "Revision Requirements",
+      "type": "textarea",
+      "id": "Field_1pakqmz",
+      "key": "revisionRequirements",
+      "conditional": {
+        "hide": "=designApproval != \"revisionsRequired\" && designApproval != \"rejected\""
+      }
+    },
+    {
+      "label": "Reviewer Name",
+      "type": "textfield",
+      "id": "Field_0kamqzl",
+      "key": "reviewerName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Review Date",
+      "type": "textfield",
+      "id": "Field_9klzmxq",
+      "key": "reviewDate",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "design_review_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

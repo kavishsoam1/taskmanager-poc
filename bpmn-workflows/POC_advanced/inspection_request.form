@@ -1,0 +1,136 @@
+{
+  "components": [
+    {
+      "label": "Pre-Ceiling Closure Inspection Request",
+      "type": "text",
+      "id": "Field_0klzmxi",
+      "text": "Please complete this form to request a pre-ceiling closure inspection."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxmi",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Requested Inspection Date",
+      "type": "textfield",
+      "id": "Field_0kamzxi",
+      "key": "requestedInspectionDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Preferred Time Slot",
+      "type": "select",
+      "id": "Field_9klzmxi",
+      "key": "preferredTimeSlot",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Morning (9am-12pm)",
+          "value": "morning"
+        },
+        {
+          "label": "Afternoon (1pm-5pm)",
+          "value": "afternoon"
+        }
+      ]
+    },
+    {
+      "label": "Contact Person on Site",
+      "type": "textfield",
+      "id": "Field_1axqkmi",
+      "key": "contactPerson",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Contact Phone",
+      "type": "textfield",
+      "id": "Field_0klzqmi",
+      "key": "contactPhone",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Areas Ready for Inspection",
+      "type": "textfield",
+      "id": "Field_1pakqmi",
+      "key": "inspectionAreas",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "HVAC Systems",
+          "value": "hvac"
+        },
+        {
+          "label": "Electrical Installations",
+          "value": "electrical"
+        },
+        {
+          "label": "Plumbing Installations",
+          "value": "plumbing"
+        },
+        {
+          "label": "Fire Safety Systems",
+          "value": "fireSafety"
+        },
+        {
+          "label": "Building Services Integration",
+          "value": "services"
+        }
+      ]
+    },
+    {
+      "label": "Progress Photos (before ceiling closure)",
+      "type": "textfield",
+      "id": "Field_0kamqzi",
+      "key": "progressPhotos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Ceiling Plan Indicating Ready Areas",
+      "type": "textfield",
+      "id": "Field_9klzmxi_1",
+      "key": "ceilingPlan",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Special Instructions for Inspector",
+      "type": "textarea",
+      "id": "Field_0klmzqi",
+      "key": "specialInstructions"
+    },
+    {
+      "label": "I confirm all systems are ready for inspection and that no ceiling will be closed before approval",
+      "type": "checkbox",
+      "id": "Field_1pakqmi_1",
+      "key": "confirmationCheck",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "inspection_request_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

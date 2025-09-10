@@ -1,0 +1,232 @@
+{
+  "components": [
+    {
+      "label": "Final Inspection Performance",
+      "type": "text",
+      "id": "Field_0klzmxg",
+      "text": "Complete this form to record the results of the final inspection."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxmg",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Tenant Name",
+      "type": "textfield",
+      "id": "Field_0kamzxg",
+      "key": "tenantName",
+      "readonly": true
+    },
+    {
+      "label": "Inspection Date",
+      "type": "textfield",
+      "id": "Field_9klzmxg",
+      "key": "inspectionDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Inspector Name",
+      "type": "textfield",
+      "id": "Field_1axqkmg",
+      "key": "inspectorName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "System Verification",
+      "type": "textfield",
+      "id": "Field_0klzqmg",
+      "key": "systemVerification",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "HVAC Systems Working Correctly",
+          "value": "hvac"
+        },
+        {
+          "label": "Electrical Systems Working Correctly",
+          "value": "electrical"
+        },
+        {
+          "label": "Plumbing Systems Working Correctly",
+          "value": "plumbing"
+        },
+        {
+          "label": "Fire Safety Systems Working Correctly",
+          "value": "fireSafety"
+        },
+        {
+          "label": "Building Services Integration Complete",
+          "value": "services"
+        }
+      ]
+    },
+    {
+      "label": "Fit-out Verification",
+      "type": "textfield",
+      "id": "Field_1pakqmg",
+      "key": "fitoutVerification",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "All Construction Work Complete",
+          "value": "construction"
+        },
+        {
+          "label": "All Finishes Complete",
+          "value": "finishes"
+        },
+        {
+          "label": "Store Fixtures & Fittings Installed",
+          "value": "fixtures"
+        },
+        {
+          "label": "Signage Installed Correctly",
+          "value": "signage"
+        },
+        {
+          "label": "Site Clean & Ready for Trade",
+          "value": "cleaning"
+        }
+      ]
+    },
+    {
+      "label": "Documentation Verification",
+      "type": "textfield",
+      "id": "Field_0kamqzg",
+      "key": "documentationVerification",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "All Required Certificates Submitted",
+          "value": "certificates"
+        },
+        {
+          "label": "As-Built Drawings Submitted",
+          "value": "asBuilt"
+        },
+        {
+          "label": "Operation & Maintenance Manuals Submitted",
+          "value": "manuals"
+        },
+        {
+          "label": "Warranties Submitted",
+          "value": "warranties"
+        }
+      ]
+    },
+    {
+      "label": "Compliance Verification",
+      "type": "textfield",
+      "id": "Field_9klzmxg_1",
+      "key": "complianceVerification",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Complies with Approved Design",
+          "value": "design"
+        },
+        {
+          "label": "Complies with Mall Technical Guidelines",
+          "value": "technical"
+        },
+        {
+          "label": "Complies with Building Codes",
+          "value": "codes"
+        },
+        {
+          "label": "Complies with Fire & Safety Regulations",
+          "value": "fireSafety"
+        }
+      ]
+    },
+    {
+      "label": "Inspection Notes",
+      "type": "textarea",
+      "id": "Field_0klmzqg_2",
+      "key": "inspectionNotes",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Outstanding Items",
+      "type": "textarea",
+      "id": "Field_1pakqmg_1",
+      "key": "outstandingItems"
+    },
+    {
+      "label": "Inspection Photos",
+      "type": "textfield",
+      "id": "Field_0kamqzg_1",
+      "key": "inspectionPhotos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Final Approval Decision",
+      "type": "select",
+      "id": "Field_9klzmxg_2",
+      "key": "finalApproval",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approved - Ready for Permission to Trade",
+          "value": "approved"
+        },
+        {
+          "label": "Conditionally Approved - Minor Items to Address",
+          "value": "conditional"
+        },
+        {
+          "label": "Rejected - Major Items to Address",
+          "value": "rejected"
+        }
+      ]
+    },
+    {
+      "label": "Conditions for Approval",
+      "type": "textarea",
+      "id": "Field_0klmzqg_1",
+      "key": "approvalConditions",
+      "conditional": {
+        "hide": "=finalApproval == \"approved\""
+      }
+    },
+    {
+      "label": "Re-inspection Required",
+      "type": "checkbox",
+      "id": "Field_1pakqmg_2",
+      "key": "reinspectionRequired",
+      "conditional": {
+        "hide": "=finalApproval == \"approved\""
+      }
+    }
+  ],
+  "type": "default",
+  "id": "final_inspection_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

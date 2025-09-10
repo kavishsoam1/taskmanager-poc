@@ -1,0 +1,146 @@
+{
+  "components": [
+    {
+      "label": "Pre-Mobilization Documentation Review",
+      "type": "text",
+      "id": "Field_0klzmxv",
+      "text": "Please review the pre-mobilization documentation submitted by the tenant."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxmv",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Contractor Name",
+      "type": "textfield",
+      "id": "Field_0kamzxv",
+      "key": "contractorName",
+      "readonly": true
+    },
+    {
+      "label": "Document Check",
+      "type": "checklist",
+      "id": "Field_9klzmxv",
+      "key": "documentCheck",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Valid Contractor License",
+          "value": "license"
+        },
+        {
+          "label": "Adequate Insurance Coverage",
+          "value": "insurance"
+        },
+        {
+          "label": "Comprehensive Method Statement",
+          "value": "methodStatement"
+        },
+        {
+          "label": "Appropriate Risk Assessment",
+          "value": "riskAssessment"
+        },
+        {
+          "label": "Complete Worker ID Documentation",
+          "value": "workerId"
+        }
+      ]
+    },
+    {
+      "label": "Proposed Schedule Assessment",
+      "type": "select",
+      "id": "Field_1axqkmv",
+      "key": "scheduleAssessment",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Acceptable",
+          "value": "acceptable"
+        },
+        {
+          "label": "Requires Adjustment",
+          "value": "adjustment"
+        },
+        {
+          "label": "Unrealistic",
+          "value": "unrealistic"
+        }
+      ]
+    },
+    {
+      "label": "Schedule Comments",
+      "type": "textarea",
+      "id": "Field_0klzqmv",
+      "key": "scheduleComments",
+      "conditional": {
+        "hide": "=scheduleAssessment == \"acceptable\""
+      }
+    },
+    {
+      "label": "Pre-Mobilization Decision",
+      "type": "select",
+      "id": "Field_1pakqmv",
+      "key": "preMobilizationApproval",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approved - Ready for Site Mobilization",
+          "value": "approved"
+        },
+        {
+          "label": "Conditionally Approved",
+          "value": "conditional"
+        },
+        {
+          "label": "Rejected - Requires Revisions",
+          "value": "rejected"
+        }
+      ]
+    },
+    {
+      "label": "Conditions or Revisions Required",
+      "type": "textarea",
+      "id": "Field_0kamqzv",
+      "key": "conditionsRequired",
+      "conditional": {
+        "hide": "=preMobilizationApproval == \"approved\""
+      }
+    },
+    {
+      "label": "Reviewer Name",
+      "type": "textfield",
+      "id": "Field_9klzmxv_reviewer",
+      "key": "reviewerName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Review Date",
+      "type": "textfield",
+      "id": "Field_0klmzqv",
+      "key": "reviewDate",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "pre_mobilization_review_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

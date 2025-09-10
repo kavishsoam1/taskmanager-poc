@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0fr9mxs" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.12.0">
+  <bpmn:process id="rdd_workflow" name="Retail Design &amp; Delivery Workflow" isExecutable="true" camunda:historyTimeToLive="180">
+    <bpmn:startEvent id="StartEvent_1" name="Process Start">
+      <bpmn:outgoing>Flow_1nh9fh0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1nh9fh0" sourceRef="StartEvent_1" targetRef="Activity_LeaseFormSubmission" />
+    
+    <bpmn:userTask id="Activity_LeaseFormSubmission" name="Leasing Team Form Submission" camunda:formKey="camunda-forms:deployment:leasing_form_01.form">
+      <bpmn:documentation>Leasing team completes Form-01 with tenant and space details</bpmn:documentation>
+      <bpmn:incoming>Flow_1nh9fh0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0k3g44w</bpmn:outgoing>
+      <bpmn:property id="Property_1pxg9mm" name="__targetRef_placeholder" />
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0k3g44w" sourceRef="Activity_LeaseFormSubmission" targetRef="Activity_RDDVerification" />
+    
+    <bpmn:userTask id="Activity_RDDVerification" name="RDD Team Verification" camunda:formKey="camunda-forms:deployment:rdd_verification.form">
+      <bpmn:documentation>RDD team verifies form and document submissions from leasing team</bpmn:documentation>
+      <bpmn:incoming>Flow_0k3g44w</bpmn:incoming>
+      <bpmn:outgoing>Flow_0bcy36h</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0bcy36h" sourceRef="Activity_RDDVerification" targetRef="Gateway_Verification" />
+    
+    <bpmn:exclusiveGateway id="Gateway_Verification" name="Is verification successful?">
+      <bpmn:incoming>Flow_0bcy36h</bpmn:incoming>
+      <bpmn:outgoing>Flow_1p3sht7</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0gfp1uw</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_1p3sht7" name="Yes" sourceRef="Gateway_Verification" targetRef="Activity_TenantPortalAccess">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${verification == 'approved'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_0gfp1uw" name="No" sourceRef="Gateway_Verification" targetRef="Activity_LeaseFormSubmission">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${verification == 'rejected'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:serviceTask id="Activity_TenantPortalAccess" name="Create Portal Access and Send Notification to Tenant">
+      <bpmn:documentation>System creates portal access for tenant and sends automated email with login details</bpmn:documentation>
+      <bpmn:incoming>Flow_1p3sht7</bpmn:incoming>
+      <bpmn:outgoing>Flow_1kcw22x</bpmn:outgoing>
+    </bpmn:serviceTask>
+    
+    <bpmn:sequenceFlow id="Flow_1kcw22x" sourceRef="Activity_TenantPortalAccess" targetRef="Activity_ConceptDesignSubmission" />
+    
+    <bpmn:userTask id="Activity_ConceptDesignSubmission" name="Tenant Concept Design Submission" camunda:formKey="camunda-forms:deployment:concept_design.form">
+      <bpmn:documentation>Tenant uploads concept design documents through portal</bpmn:documentation>
+      <bpmn:incoming>Flow_1kcw22x</bpmn:incoming>
+      <bpmn:outgoing>Flow_1kf257l</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_1kf257l" sourceRef="Activity_ConceptDesignSubmission" targetRef="Activity_DesignReview" />
+    
+    <bpmn:userTask id="Activity_DesignReview" name="RDD Design Review" camunda:formKey="camunda-forms:deployment:design_review.form">
+      <bpmn:documentation>RDD team reviews concept design submission</bpmn:documentation>
+      <bpmn:incoming>Flow_1kf257l</bpmn:incoming>
+      <bpmn:outgoing>Flow_0zyufyh</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0zyufyh" sourceRef="Activity_DesignReview" targetRef="Gateway_DesignApproval" />
+    
+    <bpmn:exclusiveGateway id="Gateway_DesignApproval" name="Is design approved?">
+      <bpmn:incoming>Flow_0zyufyh</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jthhf5</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0qbf9j5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_0jthhf5" name="No" sourceRef="Gateway_DesignApproval" targetRef="Activity_ConceptDesignSubmission">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${designApproval == 'rejected'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_0qbf9j5" name="Yes" sourceRef="Gateway_DesignApproval" targetRef="Activity_MEPDesignSubmission">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${designApproval == 'approved'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:userTask id="Activity_MEPDesignSubmission" name="MEP Design Submission" camunda:formKey="camunda-forms:deployment:mep_design.form">
+      <bpmn:documentation>Tenant submits MEP design documents</bpmn:documentation>
+      <bpmn:incoming>Flow_0qbf9j5</bpmn:incoming>
+      <bpmn:outgoing>Flow_10okzn4</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_10okzn4" sourceRef="Activity_MEPDesignSubmission" targetRef="Activity_MEPReview" />
+    
+    <bpmn:userTask id="Activity_MEPReview" name="MEP Design Review" camunda:formKey="camunda-forms:deployment:mep_review.form">
+      <bpmn:documentation>MEP team reviews design submission</bpmn:documentation>
+      <bpmn:incoming>Flow_10okzn4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1s308ze</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_1s308ze" sourceRef="Activity_MEPReview" targetRef="Gateway_MEPApproval" />
+    
+    <bpmn:exclusiveGateway id="Gateway_MEPApproval" name="Is MEP design approved?">
+      <bpmn:incoming>Flow_1s308ze</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fr53ky</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0tkh8u6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_0fr53ky" name="No" sourceRef="Gateway_MEPApproval" targetRef="Activity_MEPDesignSubmission">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${mepApproval == 'rejected'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_0tkh8u6" name="Yes" sourceRef="Gateway_MEPApproval" targetRef="Activity_PreMobilization">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${mepApproval == 'approved'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:userTask id="Activity_PreMobilization" name="Pre-Mobilization Documentation" camunda:formKey="camunda-forms:deployment:pre_mobilization.form">
+      <bpmn:documentation>Tenant submits pre-mobilization requirements (insurance, contractor details)</bpmn:documentation>
+      <bpmn:incoming>Flow_0tkh8u6</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yftu5d</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0yftu5d" sourceRef="Activity_PreMobilization" targetRef="Activity_PreMobilizationReview" />
+    
+    <bpmn:userTask id="Activity_PreMobilizationReview" name="RDD Pre-Mobilization Review" camunda:formKey="camunda-forms:deployment:pre_mobilization_review.form">
+      <bpmn:documentation>RDD team reviews pre-mobilization documents</bpmn:documentation>
+      <bpmn:incoming>Flow_0yftu5d</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fxgjfw</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0fxgjfw" sourceRef="Activity_PreMobilizationReview" targetRef="Gateway_PreMobilizationApproval" />
+    
+    <bpmn:exclusiveGateway id="Gateway_PreMobilizationApproval" name="Is pre-mobilization approved?">
+      <bpmn:incoming>Flow_0fxgjfw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0mqw223</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0jaat02</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_0mqw223" name="No" sourceRef="Gateway_PreMobilizationApproval" targetRef="Activity_PreMobilization">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${preMobilizationApproval == 'rejected'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_0jaat02" name="Yes" sourceRef="Gateway_PreMobilizationApproval" targetRef="Activity_SiteMobilization">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${preMobilizationApproval == 'approved'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:userTask id="Activity_SiteMobilization" name="Site Mobilization" camunda:formKey="camunda-forms:deployment:site_mobilization.form">
+      <bpmn:documentation>Tenant starts site mobilization and construction</bpmn:documentation>
+      <bpmn:incoming>Flow_0jaat02</bpmn:incoming>
+      <bpmn:outgoing>Flow_0stfebk</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0stfebk" sourceRef="Activity_SiteMobilization" targetRef="Activity_InspectionRequest" />
+    
+    <bpmn:userTask id="Activity_InspectionRequest" name="Pre-Ceiling Closure Inspection Request" camunda:formKey="camunda-forms:deployment:inspection_request.form">
+      <bpmn:documentation>Tenant requests pre-ceiling closure inspection</bpmn:documentation>
+      <bpmn:incoming>Flow_0stfebk</bpmn:incoming>
+      <bpmn:outgoing>Flow_1kugyd1</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_1kugyd1" sourceRef="Activity_InspectionRequest" targetRef="Activity_InspectionPerformance" />
+    
+    <bpmn:userTask id="Activity_InspectionPerformance" name="Inspection Performance" camunda:formKey="camunda-forms:deployment:inspection_performance.form">
+      <bpmn:documentation>RDD team performs inspection and records findings</bpmn:documentation>
+      <bpmn:incoming>Flow_1kugyd1</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xliuak</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_1xliuak" sourceRef="Activity_InspectionPerformance" targetRef="Gateway_InspectionApproval" />
+    
+    <bpmn:exclusiveGateway id="Gateway_InspectionApproval" name="Is inspection approved?">
+      <bpmn:incoming>Flow_1xliuak</bpmn:incoming>
+      <bpmn:outgoing>Flow_0m5j9zg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1tdl9cy</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_0m5j9zg" name="No" sourceRef="Gateway_InspectionApproval" targetRef="Activity_InspectionRequest">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${inspectionApproval == 'rejected'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_1tdl9cy" name="Yes" sourceRef="Gateway_InspectionApproval" targetRef="Activity_FinalInspectionRequest">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${inspectionApproval == 'approved'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:userTask id="Activity_FinalInspectionRequest" name="Final Inspection Request" camunda:formKey="camunda-forms:deployment:final_inspection_request.form">
+      <bpmn:documentation>Tenant requests final inspection</bpmn:documentation>
+      <bpmn:incoming>Flow_1tdl9cy</bpmn:incoming>
+      <bpmn:outgoing>Flow_02j95k3</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_02j95k3" sourceRef="Activity_FinalInspectionRequest" targetRef="Activity_FinalInspection" />
+    
+    <bpmn:userTask id="Activity_FinalInspection" name="Final Inspection Performance" camunda:formKey="camunda-forms:deployment:final_inspection.form">
+      <bpmn:documentation>RDD team performs final inspection</bpmn:documentation>
+      <bpmn:incoming>Flow_02j95k3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0n7rzvs</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_0n7rzvs" sourceRef="Activity_FinalInspection" targetRef="Gateway_FinalApproval" />
+    
+    <bpmn:exclusiveGateway id="Gateway_FinalApproval" name="Is final inspection approved?">
+      <bpmn:incoming>Flow_0n7rzvs</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wecjwo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_08vt750</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    
+    <bpmn:sequenceFlow id="Flow_0wecjwo" name="No" sourceRef="Gateway_FinalApproval" targetRef="Activity_FinalInspectionRequest">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${finalApproval == 'rejected'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:sequenceFlow id="Flow_08vt750" name="Yes" sourceRef="Gateway_FinalApproval" targetRef="Activity_PermissionToTrade">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${finalApproval == 'approved'}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    
+    <bpmn:userTask id="Activity_PermissionToTrade" name="Issue Permission to Trade" camunda:formKey="camunda-forms:deployment:permission_to_trade.form">
+      <bpmn:documentation>RDD issues Permission to Trade document</bpmn:documentation>
+      <bpmn:incoming>Flow_08vt750</bpmn:incoming>
+      <bpmn:outgoing>Flow_1t3y7dv</bpmn:outgoing>
+    </bpmn:userTask>
+    
+    <bpmn:sequenceFlow id="Flow_1t3y7dv" sourceRef="Activity_PermissionToTrade" targetRef="Event_WorkflowComplete" />
+    
+    <bpmn:endEvent id="Event_WorkflowComplete" name="Process Complete">
+      <bpmn:incoming>Flow_1t3y7dv</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+</bpmn:definitions>

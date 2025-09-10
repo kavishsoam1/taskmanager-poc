@@ -1,0 +1,125 @@
+{
+  "components": [
+    {
+      "label": "Tenant Name",
+      "type": "textfield",
+      "id": "Field_0wgjklm",
+      "key": "tenantName",
+      "readonly": true
+    },
+    {
+      "label": "Space Reference",
+      "type": "textfield",
+      "id": "Field_1hqkmze",
+      "key": "spaceReference",
+      "readonly": true
+    },
+    {
+      "label": "Document Checklist",
+      "type": "textfield",
+      "id": "Field_0l3mvje",
+      "key": "documentChecklist",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Lease Agreement",
+          "value": "lease"
+        },
+        {
+          "label": "Tenant Company Documents",
+          "value": "company"
+        },
+        {
+          "label": "Space Layout",
+          "value": "layout"
+        }
+      ]
+    },
+    {
+      "label": "Information Accuracy Check",
+      "type": "textfield",
+      "id": "Field_1ajvklm",
+      "key": "accuracyCheck",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Contact Details Correct",
+          "value": "contact"
+        },
+        {
+          "label": "Space Details Accurate",
+          "value": "space"
+        },
+        {
+          "label": "Lease Terms Match Agreement",
+          "value": "terms"
+        }
+      ]
+    },
+    {
+      "label": "Verification Decision",
+      "type": "select",
+      "id": "Field_0klpzje",
+      "key": "verification",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Approved - Ready for Portal Access",
+          "value": "approved"
+        },
+        {
+          "label": "Rejected - Needs Correction",
+          "value": "rejected"
+        }
+      ]
+    },
+    {
+      "label": "Rejection Reason (if applicable)",
+      "type": "textarea",
+      "id": "Field_09mzcvb",
+      "key": "rejectionReason",
+      "conditional": {
+        "hide": "=verification != \"rejected\""
+      }
+    },
+    {
+      "label": "Reviewer Comments",
+      "type": "textarea",
+      "id": "Field_1pqkfje",
+      "key": "reviewerComments"
+    },
+    {
+      "label": "Reviewer Name",
+      "type": "textfield",
+      "id": "Field_0jklqpz",
+      "key": "reviewerName",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Review Date",
+      "type": "textfield",
+      "id": "Field_1lkmzqa",
+      "key": "reviewDate",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "rdd_verification_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "schemaVersion": 8
+}

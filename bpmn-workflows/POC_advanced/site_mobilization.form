@@ -1,0 +1,137 @@
+{
+  "components": [
+    {
+      "label": "Site Mobilization Record",
+      "type": "text",
+      "id": "Field_0klzmxs",
+      "text": "Please complete this form to record the start of site mobilization."
+    },
+    {
+      "label": "Project Name",
+      "type": "textfield",
+      "id": "Field_1klzxms",
+      "key": "projectName",
+      "readonly": true
+    },
+    {
+      "label": "Actual Mobilization Date",
+      "type": "textfield",
+      "id": "Field_0kamzxs",
+      "key": "actualMobilizationDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Site Supervisor Name",
+      "type": "textfield",
+      "id": "Field_9klzmxs",
+      "key": "siteSupervisor",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Supervisor Contact Number",
+      "type": "textfield",
+      "id": "Field_1axqkms",
+      "key": "supervisorContact",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Number of Workers on Site",
+      "type": "number",
+      "id": "Field_0klzqms",
+      "key": "workerCount",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Expected Completion Date",
+      "type": "textfield",
+      "id": "Field_1pakqms",
+      "key": "expectedCompletionDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Site Safety Induction Completed",
+      "type": "checkbox",
+      "id": "Field_0kamqzs",
+      "key": "safetyInduction",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Mall Rules & Regulations Acknowledged",
+      "type": "checkbox",
+      "id": "Field_9klzmxs_1",
+      "key": "rulesAcknowledged",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Working Hours Agreement",
+      "type": "select",
+      "id": "Field_0klmzqs",
+      "key": "workingHours",
+      "validate": {
+        "required": true
+      },
+      "values": [
+        {
+          "label": "Standard Hours (8am-5pm)",
+          "value": "standard"
+        },
+        {
+          "label": "Night Works (10pm-6am)",
+          "value": "night"
+        },
+        {
+          "label": "Mixed Hours (Approved Schedule)",
+          "value": "mixed"
+        }
+      ]
+    },
+    {
+      "label": "Hoarding Installed As Per Requirements",
+      "type": "checkbox",
+      "id": "Field_1pakqms_1",
+      "key": "hoardingInstalled",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Site Photos",
+      "type": "textfield",
+      "id": "Field_0kamqzs_1",
+      "key": "sitePhotos",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Additional Comments",
+      "type": "textarea",
+      "id": "Field_9klzmxs_2",
+      "key": "additionalComments"
+    }
+  ],
+  "type": "default",
+  "id": "site_mobilization_form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "versionTag": "0.1",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.36.1"
+  },
+  "schemaVersion": 18
+}
