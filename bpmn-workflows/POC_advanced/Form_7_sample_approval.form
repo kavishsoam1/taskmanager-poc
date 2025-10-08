@@ -1,0 +1,189 @@
+{
+  "components": [
+    {
+      "text": "## Tenants details Approval",
+      "type": "text",
+      "layout": {
+        "row": "Row_1dnwb8h",
+        "columns": 5
+      },
+      "id": "Field_0z6ywys"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1mfzdrv",
+        "columns": null
+      },
+      "id": "Field_06yzgc0"
+    },
+    {
+      "text": "### Al Bahar al mutawaist rest llc",
+      "type": "text",
+      "layout": {
+        "row": "Row_18g32gt",
+        "columns": 6
+      },
+      "id": "Field_1ynqs1q"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0wpbibo",
+        "columns": null
+      },
+      "id": "Field_0gtrmc0"
+    },
+    {
+      "label": "Critical",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_170k7lp",
+        "columns": null
+      },
+      "id": "Field_1ywcdk5"
+    },
+    {
+      "label": "tanents Appts",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_170k7lp",
+        "columns": null
+      },
+      "id": "Field_0fnv27y"
+    },
+    {
+      "label": "Conceptal design",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_170k7lp",
+        "columns": null
+      },
+      "id": "Field_0sjs0bh"
+    },
+    {
+      "label": "Arch design",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_170k7lp",
+        "columns": null
+      },
+      "id": "Field_1p4m1a1"
+    },
+    {
+      "label": "MEP design",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_170k7lp",
+        "columns": null
+      },
+      "id": "Field_1mbp2rc"
+    },
+    {
+      "label": "Sample approval",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_170k7lp",
+        "columns": null
+      },
+      "id": "Field_03fjm9v"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1rphw7l",
+        "columns": null
+      },
+      "id": "Field_1w6monv"
+    },
+    {
+      "text": "### Sample approval",
+      "type": "text",
+      "layout": {
+        "row": "Row_0rutqrr",
+        "columns": 3
+      },
+      "id": "Field_1olb9xu"
+    },
+    {
+      "text": "#### Attach",
+      "type": "text",
+      "layout": {
+        "row": "Row_0m8nxog",
+        "columns": null
+      },
+      "id": "Field_0bc2cu9"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0m8nxog",
+        "columns": null
+      },
+      "id": "Field_09kfann",
+      "dataSource": "=f7_sampleDoc1"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_06ahczi",
+        "columns": null
+      },
+      "id": "Field_0k0v9vx"
+    },
+    {
+      "text": "#### Comments",
+      "type": "text",
+      "layout": {
+        "row": "Row_0uqfgln",
+        "columns": null
+      },
+      "id": "Field_0jtaq8n"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0uqfgln",
+        "columns": null
+      },
+      "id": "Field_1cmc70q",
+      "key": "f7_general_comments",
+      "defaultValue": "Comments...."
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1r13chm",
+        "columns": null
+      },
+      "id": "Field_0jp8lv0"
+    },
+    {
+      "label": "Approve",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_11xve0k",
+        "columns": 3
+      },
+      "id": "Field_0ocl0rp",
+      "key": "form_7_approved"
+    }
+  ],
+  "type": "default",
+  "id": "Form_7_sample_approval",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

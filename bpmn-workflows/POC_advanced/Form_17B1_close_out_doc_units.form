@@ -1,0 +1,728 @@
+{
+  "components": [
+    {
+      "text": "#### Al Bahar al mutawasit rtest llc",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ju7poy",
+        "columns": null
+      },
+      "id": "Field_0bhxkzl"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_04d5lqg",
+        "columns": null
+      },
+      "id": "Field_00a5obs"
+    },
+    {
+      "text": "#### Close-out documents checklist for F&B units",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ljq254",
+        "columns": null
+      },
+      "id": "Field_0udrt65"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1eqv0md",
+        "columns": null
+      },
+      "id": "Field_1cvh40s"
+    },
+    {
+      "text": "#### Items",
+      "type": "text",
+      "layout": {
+        "row": "Row_0u0askv",
+        "columns": 6
+      },
+      "id": "Field_03z9ix5"
+    },
+    {
+      "text": "#### Attachments",
+      "type": "text",
+      "layout": {
+        "row": "Row_0u0askv",
+        "columns": null
+      },
+      "id": "Field_1gjjtaw"
+    },
+    {
+      "text": "#### comments on  24-apr-2025",
+      "type": "text",
+      "layout": {
+        "row": "Row_0u0askv",
+        "columns": null
+      },
+      "id": "Field_0sug4hg"
+    },
+    {
+      "text": "#### Current comments",
+      "type": "text",
+      "layout": {
+        "row": "Row_0u0askv",
+        "columns": null
+      },
+      "id": "Field_1r7b6vo"
+    },
+    {
+      "content": "Design Based Snag list\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0fvelqc",
+        "columns": null
+      },
+      "id": "Field_16if6z8"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_0fvelqc",
+        "columns": null
+      },
+      "id": "Field_0lykcm5"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0fvelqc",
+        "columns": null
+      },
+      "id": "Field_10445rd",
+      "key": "f17b1_attach1_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_0fvelqc",
+        "columns": null
+      },
+      "id": "Field_0nyngy9"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0fvelqc",
+        "columns": null
+      },
+      "id": "Field_012l37d",
+      "key": "f17b1_current_comments_design_sang_list"
+    },
+    {
+      "content": "SM Grease Trap/Drainage NOC\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_09ls0z9",
+        "columns": null
+      },
+      "id": "Field_0daway4"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_09ls0z9",
+        "columns": null
+      },
+      "id": "Field_13og6tq"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_09ls0z9",
+        "columns": null
+      },
+      "id": "Field_0qceq7d",
+      "key": "f17b1_attach2_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_09ls0z9",
+        "columns": null
+      },
+      "id": "Field_0fxv6qr"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09ls0z9",
+        "columns": null
+      },
+      "id": "Field_1fco8p0",
+      "key": "f17b1_current_comments_sm_noc"
+    },
+    {
+      "content": "Food/Health Inspection Approval Report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0vug534",
+        "columns": null
+      },
+      "id": "Field_1h4x4oh"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_0vug534",
+        "columns": null
+      },
+      "id": "Field_0astcrr"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0vug534",
+        "columns": null
+      },
+      "id": "Field_0y5cani",
+      "key": "f17b1_attach3_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_0vug534",
+        "columns": null
+      },
+      "id": "Field_1sdftfw"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0vug534",
+        "columns": null
+      },
+      "id": "Field_1mc6aa9",
+      "key": "f17b1_current_comments_food_health"
+    },
+    {
+      "content": "Tenancy Contract\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_13181jj",
+        "columns": null
+      },
+      "id": "Field_1es06i8"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_13181jj",
+        "columns": null
+      },
+      "id": "Field_0sp2f03"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_13181jj",
+        "columns": null
+      },
+      "id": "Field_0vzfk1w",
+      "key": "f17b1_attach4_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_13181jj",
+        "columns": null
+      },
+      "id": "Field_13v62wp"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_13181jj",
+        "columns": null
+      },
+      "id": "Field_0prxcn8",
+      "key": "f17b1_current_comments_tenancy_contract"
+    },
+    {
+      "content": "Trade License\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1y0q27u",
+        "columns": null
+      },
+      "id": "Field_15q8lzj"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_1y0q27u",
+        "columns": null
+      },
+      "id": "Field_0rk7uho"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1y0q27u",
+        "columns": null
+      },
+      "id": "Field_1fbjbjn",
+      "key": "f17b1_attach5_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_1y0q27u",
+        "columns": null
+      },
+      "id": "Field_1tins03"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1y0q27u",
+        "columns": null
+      },
+      "id": "Field_0jlqiwp",
+      "key": "f17b1_current_comments_trade_license"
+    },
+    {
+      "content": "SM Décor Completion Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_145e2nl",
+        "columns": null
+      },
+      "id": "Field_1l9h1sx"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_145e2nl",
+        "columns": null
+      },
+      "id": "Field_11lm3yw"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_145e2nl",
+        "columns": null
+      },
+      "id": "Field_1pj9s7u",
+      "key": "f17b1_attach6_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_145e2nl",
+        "columns": null
+      },
+      "id": "Field_1axmdhk"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_145e2nl",
+        "columns": null
+      },
+      "id": "Field_1ifahdt",
+      "key": "f17b1_current_comments_sm_decor_certificate"
+    },
+    {
+      "content": "SCD Completion Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_09su8ha",
+        "columns": null
+      },
+      "id": "Field_0ofth9s"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_09su8ha",
+        "columns": null
+      },
+      "id": "Field_03wl7qv"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_09su8ha",
+        "columns": null
+      },
+      "id": "Field_0zhj4z2",
+      "key": "f17b1_attach7_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_09su8ha",
+        "columns": null
+      },
+      "id": "Field_1jhbcr7"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09su8ha",
+        "columns": null
+      },
+      "id": "Field_0kq8txw",
+      "key": "f17b1_current_comments_scd_certificate"
+    },
+    {
+      "content": "SCD/HOE Safety Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_16ystjh",
+        "columns": null
+      },
+      "id": "Field_0cdjta8"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_16ystjh",
+        "columns": null
+      },
+      "id": "Field_0br24lr"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_16ystjh",
+        "columns": null
+      },
+      "id": "Field_1k6cbzq",
+      "key": "f17b1_attach8_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_16ystjh",
+        "columns": null
+      },
+      "id": "Field_02injqa"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_16ystjh",
+        "columns": null
+      },
+      "id": "Field_1n32dwj",
+      "key": "f17b1_current_comments_scd_hoe_safety"
+    },
+    {
+      "content": "SEWA Natural Gas (NG) Certificate\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1ehidyy",
+        "columns": null
+      },
+      "id": "Field_18of9z2"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_1ehidyy",
+        "columns": null
+      },
+      "id": "Field_1r1bzzu"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1ehidyy",
+        "columns": null
+      },
+      "id": "Field_19b9z77",
+      "key": "f17b1_attach9_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_1ehidyy",
+        "columns": null
+      },
+      "id": "Field_0b1rgvz"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ehidyy",
+        "columns": null
+      },
+      "id": "Field_114ry8x",
+      "key": "f17b1_current_comments_sewa_certificate"
+    },
+    {
+      "content": "SED Approval (SED Form with Signage approval stamped)\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0gfu6uw",
+        "columns": null
+      },
+      "id": "Field_12ykc83"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_0gfu6uw",
+        "columns": null
+      },
+      "id": "Field_12ep9eh"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0gfu6uw",
+        "columns": null
+      },
+      "id": "Field_1mb8i9n",
+      "key": "f17b1_attach10_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_0gfu6uw",
+        "columns": null
+      },
+      "id": "Field_0prdnap"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0gfu6uw",
+        "columns": null
+      },
+      "id": "Field_1u314zp",
+      "key": "f17b1_current_comment_sed_approval"
+    },
+    {
+      "content": "Local Authority (SM/SCD/SEWA/Food Control/Drainage/NG) drawings approvals (duly stamped)",
+      "type": "html",
+      "layout": {
+        "row": "Row_1u9hf2y",
+        "columns": null
+      },
+      "id": "Field_0l6yvqh"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_1u9hf2y",
+        "columns": null
+      },
+      "id": "Field_072o08f"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1u9hf2y",
+        "columns": null
+      },
+      "id": "Field_1b0ffxk",
+      "key": "f17b1_attach11_doc"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_1u9hf2y",
+        "columns": null
+      },
+      "id": "Field_0zdng3r"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1u9hf2y",
+        "columns": null
+      },
+      "id": "Field_1h91xch",
+      "key": "f17b1_currnet_comments_sm_local_authority"
+    },
+    {
+      "content": "SEWA Account Transfer document on Tenant’s Name",
+      "type": "html",
+      "layout": {
+        "row": "Row_1tx5n7x",
+        "columns": null
+      },
+      "id": "Field_0qhq8jt"
+    },
+    {
+      "content": "Yes",
+      "type": "html",
+      "layout": {
+        "row": "Row_1tx5n7x",
+        "columns": null
+      },
+      "id": "Field_1jci29l"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1tx5n7x",
+        "columns": null
+      },
+      "id": "Field_07c8n3l",
+      "key": "filepicker_b4nc6f"
+    },
+    {
+      "content": "Comments are goes here...",
+      "type": "html",
+      "layout": {
+        "row": "Row_1tx5n7x",
+        "columns": null
+      },
+      "id": "Field_05qsrqf"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1tx5n7x",
+        "columns": null
+      },
+      "id": "Field_0up2hk4",
+      "key": "f17b1_current_comments_sewa_account_trnsf_tenant_name"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1t69sp7",
+        "columns": null
+      },
+      "id": "Field_0wvqq51"
+    },
+    {
+      "text": "#### General Comments",
+      "type": "text",
+      "layout": {
+        "row": "Row_0o82x8e",
+        "columns": null
+      },
+      "id": "Field_1swxj2g"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_10td63h",
+        "columns": null
+      },
+      "id": "Field_0f30gxl"
+    },
+    {
+      "text": "#### Attach",
+      "type": "text",
+      "layout": {
+        "row": "Row_1gn38p0",
+        "columns": null
+      },
+      "id": "Field_06d8nij"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1gn38p0",
+        "columns": null
+      },
+      "id": "Field_1eb8rh4",
+      "key": "f17b1_attach12_doc"
+    },
+    {
+      "text": "####  Comments*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1diwvcr",
+        "columns": null
+      },
+      "id": "Field_16zijqk"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1diwvcr",
+        "columns": null
+      },
+      "id": "Field_15xd0vx",
+      "key": "f17b1_general_comments"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_130bij4",
+        "columns": null
+      },
+      "id": "Field_12k6zkw"
+    },
+    {
+      "label": "Approval",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1wpb9zp",
+        "columns": 4
+      },
+      "id": "Field_0xsn9xf",
+      "key": "form_17A_17B_17C_Approval"
+    }
+  ],
+  "type": "default",
+  "id": "Form_17B1_close_out_doc_units",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

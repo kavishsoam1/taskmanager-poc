@@ -1,0 +1,513 @@
+{
+  "components": [
+    {
+      "text": "## Architectural details design submission",
+      "type": "text",
+      "layout": {
+        "row": "Row_1mroz1w",
+        "columns": null
+      },
+      "id": "Field_158iy0i"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1w6wr63",
+        "columns": null
+      },
+      "id": "Field_1m7xd0c"
+    },
+    {
+      "text": "### Standard required",
+      "type": "text",
+      "layout": {
+        "row": "Row_1qnfxf5",
+        "columns": null
+      },
+      "id": "Field_1d6ay58"
+    },
+    {
+      "text": "### Attachment(pdf,jpg or png-5MB Max)",
+      "type": "text",
+      "layout": {
+        "row": "Row_1qnfxf5",
+        "columns": null
+      },
+      "id": "Field_0vtna4g"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0bw2eyw",
+        "columns": 16
+      },
+      "id": "Field_19ju4v7"
+    },
+    {
+      "text": "#### 1 set of all drawings – softcopy in PDF format",
+      "type": "text",
+      "layout": {
+        "row": "Row_0hvuysu",
+        "columns": null
+      },
+      "id": "Field_18uql63"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0hvuysu",
+        "columns": null
+      },
+      "id": "Field_0r4xhzg",
+      "key": "allDrawing"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_179lqix",
+        "columns": null
+      },
+      "id": "Field_0ecqjfu"
+    },
+    {
+      "text": "#### Tenant variation request (TVR – Form 09)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0oseu0f",
+        "columns": null
+      },
+      "id": "Field_11agqms"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0oseu0f",
+        "columns": null
+      },
+      "id": "Field_0zylj0a",
+      "key": "TVR_form_9"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1bq3v5n",
+        "columns": null
+      },
+      "id": "Field_0f4ctbb"
+    },
+    {
+      "text": "#### Materials are clearly referenced on drawings",
+      "type": "text",
+      "layout": {
+        "row": "Row_16y2zyr",
+        "columns": null
+      },
+      "id": "Field_16p4t4n"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_16y2zyr",
+        "columns": null
+      },
+      "id": "Field_0varc08",
+      "key": "materialsDrwaing"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1pax956",
+        "columns": null
+      },
+      "id": "Field_19vrn4o"
+    },
+    {
+      "text": "#### Sample board doesn’t exceed 50cm X 35cm (use more than 1 if required)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0z3dwfv",
+        "columns": null
+      },
+      "id": "Field_0nyfkr6"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0z3dwfv",
+        "columns": null
+      },
+      "id": "Field_14kmsdt",
+      "key": "sampleBoard"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0w97065",
+        "columns": null
+      },
+      "id": "Field_1iyfg6d"
+    },
+    {
+      "text": "#### Actual material samples to be included – submit 1 set (to keep 1 sample at site)",
+      "type": "text",
+      "layout": {
+        "row": "Row_02eiyds",
+        "columns": null
+      },
+      "id": "Field_1jo66fa"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_02eiyds",
+        "columns": null
+      },
+      "id": "Field_0s8kd92",
+      "key": "sampleMaterial"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1plvc6d",
+        "columns": null
+      },
+      "id": "Field_0f6o688"
+    },
+    {
+      "text": "### CheckList of documents required",
+      "type": "text",
+      "layout": {
+        "row": "Row_1p4i22e",
+        "columns": 8
+      },
+      "id": "Field_149r1vt"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0sfilaj",
+        "columns": null
+      },
+      "id": "Field_1xz2z31"
+    },
+    {
+      "text": "#### Furniture layout plan – with merchandising and services (DB&FAP)*",
+      "type": "text",
+      "layout": {
+        "row": "Row_15g5fq1",
+        "columns": null
+      },
+      "id": "Field_1h4jel8"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_15g5fq1",
+        "columns": null
+      },
+      "id": "Field_0nafjty",
+      "key": "f5Doc1"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_19bn4t8",
+        "columns": null
+      },
+      "id": "Field_1y3og7r"
+    },
+    {
+      "text": "#### Flooring plan*",
+      "type": "text",
+      "layout": {
+        "row": "Row_14x1k22",
+        "columns": null
+      },
+      "id": "Field_0yu24y9"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_14x1k22",
+        "columns": null
+      },
+      "id": "Field_0829l9a",
+      "key": "f5doc2"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_14f20i5",
+        "columns": null
+      },
+      "id": "Field_1dqbmw1"
+    },
+    {
+      "text": "#### Reflected ceiling plan with lighting, AC diffusers, smoke detectors, sprinklers, speakers*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1jgi354",
+        "columns": null
+      },
+      "id": "Field_036c797"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1jgi354",
+        "columns": null
+      },
+      "id": "Field_1y9k5wn",
+      "key": "f5doc3"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_12av0uo",
+        "columns": null
+      },
+      "id": "Field_1cta7yf"
+    },
+    {
+      "text": "#### Interior section elevations (all)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0r73nvu",
+        "columns": null
+      },
+      "id": "Field_1wpc184"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0r73nvu",
+        "columns": null
+      },
+      "id": "Field_090lbxb",
+      "key": "f5doc4"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_077mfpm",
+        "columns": null
+      },
+      "id": "Field_1gjegzv"
+    },
+    {
+      "text": "#### Shop front workshop drawings – Including SIGNAGE installation details & interface details with landlord finishes*",
+      "type": "text",
+      "layout": {
+        "row": "Row_15pqidz",
+        "columns": null
+      },
+      "id": "Field_1g5dxil"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_15pqidz",
+        "columns": null
+      },
+      "id": "Field_0vn97li",
+      "key": "f5doc5"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1aje0sz",
+        "columns": null
+      },
+      "id": "Field_0gwu4k7"
+    },
+    {
+      "text": "#### Signage package (interior, shop front & exterior) – including package for submittal to statutory Authorities for approval",
+      "type": "text",
+      "layout": {
+        "row": "Row_0tsktqi",
+        "columns": null
+      },
+      "id": "Field_1l9nmfn"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0tsktqi",
+        "columns": null
+      },
+      "id": "Field_10blffz",
+      "key": "f5doc6"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0cjvqjm",
+        "columns": null
+      },
+      "id": "Field_0ysecaa"
+    },
+    {
+      "text": "#### Shop front sections (at least 1 through entrance and 1 through window display)*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1iqx6q4",
+        "columns": null
+      },
+      "id": "Field_0oniwo0"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1iqx6q4",
+        "columns": null
+      },
+      "id": "Field_1h7f0kz",
+      "key": "f5doc7"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_16b9hhs",
+        "columns": null
+      },
+      "id": "Field_0ff9w9y"
+    },
+    {
+      "text": "#### Updated shopfront – 3D images in color",
+      "type": "text",
+      "layout": {
+        "row": "Row_0o59zvb",
+        "columns": null
+      },
+      "id": "Field_0vx4wbk"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0o59zvb",
+        "columns": null
+      },
+      "id": "Field_1v67ug0",
+      "key": "f5doc8"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_06yxc7q",
+        "columns": null
+      },
+      "id": "Field_0um7s8b"
+    },
+    {
+      "text": "#### Schedule of material finishes as referenced on the drawings*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1newpqe",
+        "columns": null
+      },
+      "id": "Field_0hdikuo"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1newpqe",
+        "columns": null
+      },
+      "id": "Field_10bq3wd",
+      "key": "f5doc9"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1dlvkgq",
+        "columns": null
+      },
+      "id": "Field_0bpaqb4"
+    },
+    {
+      "text": "#### Updated Interior 3D Images",
+      "type": "text",
+      "layout": {
+        "row": "Row_1m8a5oa",
+        "columns": null
+      },
+      "id": "Field_1ogz2oi"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1m8a5oa",
+        "columns": null
+      },
+      "id": "Field_04ujp31",
+      "key": "f5doc10"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1wawl24",
+        "columns": null
+      },
+      "id": "Field_1sn1i43"
+    },
+    {
+      "text": "### Conditions:",
+      "type": "text",
+      "layout": {
+        "row": "Row_0uqsnk6",
+        "columns": null
+      },
+      "id": "Field_06vjuul"
+    },
+    {
+      "text": "#### 1. Minimum requirements as indicated by an asterisk (*) for a submission to be accepted as per Lease.",
+      "type": "text",
+      "layout": {
+        "row": "Row_0mnozo8",
+        "columns": null
+      },
+      "id": "Field_0dbttli"
+    },
+    {
+      "text": "#### 2. All changes are revised submission to be highlighted.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1k5jqq6",
+        "columns": null
+      },
+      "id": "Field_0nbnj1q"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0tcyx0b",
+        "columns": null
+      },
+      "id": "Field_1lkrzr5"
+    }
+  ],
+  "type": "default",
+  "id": "Form_5_ArchDesign",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

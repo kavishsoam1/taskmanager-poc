@@ -1,0 +1,337 @@
+{
+  "components": [
+    {
+      "text": "### AL Bahar al mutawasit rest llc",
+      "type": "text",
+      "layout": {
+        "row": "Row_0anu5lh",
+        "columns": null
+      },
+      "id": "Field_1yqrp6s"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0sd8p54",
+        "columns": null
+      },
+      "id": "Field_1pwzihj"
+    },
+    {
+      "text": "### Inspection request",
+      "type": "text",
+      "layout": {
+        "row": "Row_14tvfg9",
+        "columns": null
+      },
+      "id": "Field_0tg36b4"
+    },
+    {
+      "content": "We request that Reatils Desigb & Delivery team attend site on following date to carry out the following inspection\n(s).",
+      "type": "html",
+      "layout": {
+        "row": "Row_1wu1cye",
+        "columns": null
+      },
+      "id": "Field_0v8hwhf"
+    },
+    {
+      "content": "*Please note that three(3) working day's notice is to be given for any inspection request.",
+      "type": "html",
+      "layout": {
+        "row": "Row_0j10y5s",
+        "columns": null
+      },
+      "id": "Field_1eh1k1i"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1m4iakt",
+        "columns": null
+      },
+      "id": "Field_033ycbu"
+    },
+    {
+      "text": "#### Items",
+      "type": "text",
+      "layout": {
+        "row": "Row_0t1x88y",
+        "columns": null
+      },
+      "id": "Field_0nc8lgp"
+    },
+    {
+      "text": "#### Inspection Date",
+      "type": "text",
+      "layout": {
+        "row": "Row_0t1x88y",
+        "columns": null
+      },
+      "id": "Field_0qq5dw2"
+    },
+    {
+      "content": "Final Pre-opening inspection",
+      "type": "html",
+      "layout": {
+        "row": "Row_132g7r0",
+        "columns": null
+      },
+      "id": "Field_1vxae3x"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_132g7r0",
+        "columns": null
+      },
+      "id": "Field_0iu75yj",
+      "key": "f15_date"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0sxgceu",
+        "columns": null
+      },
+      "id": "Field_0gxi0lc"
+    },
+    {
+      "text": "### Design based snaglist",
+      "type": "text",
+      "layout": {
+        "row": "Row_0a8wv1y",
+        "columns": null
+      },
+      "id": "Field_1y8i7x3"
+    },
+    {
+      "text": "#### Schedule List",
+      "type": "text",
+      "layout": {
+        "row": "Row_0t05qk0",
+        "columns": null
+      },
+      "id": "Field_07j2h7s"
+    },
+    {
+      "text": "#### Scheduled dates",
+      "type": "text",
+      "layout": {
+        "row": "Row_0t05qk0",
+        "columns": null
+      },
+      "id": "Field_038zs9w"
+    },
+    {
+      "content": "Fitout Completion Date:",
+      "type": "html",
+      "layout": {
+        "row": "Row_0vhgh47",
+        "columns": null
+      },
+      "id": "Field_0xondq4"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0vhgh47",
+        "columns": null
+      },
+      "id": "Field_1491knl",
+      "key": "f15_fitout_date"
+    },
+    {
+      "content": "Projected Opening Date:",
+      "type": "html",
+      "layout": {
+        "row": "Row_0przurz",
+        "columns": null
+      },
+      "id": "Field_0hqf6u8"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0przurz",
+        "columns": null
+      },
+      "id": "Field_1o327cp",
+      "key": "f15_projected_date"
+    },
+    {
+      "content": "Opening as per Lease Date:",
+      "type": "html",
+      "layout": {
+        "row": "Row_0khahxz",
+        "columns": null
+      },
+      "id": "Field_10wlwu3"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0khahxz",
+        "columns": null
+      },
+      "id": "Field_1trkezn",
+      "key": "f15_opening_lease_date"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_12i6x12",
+        "columns": null
+      },
+      "id": "Field_0axykgl"
+    },
+    {
+      "text": "### Snag List",
+      "type": "text",
+      "layout": {
+        "row": "Row_1nhmwyn",
+        "columns": null
+      },
+      "id": "Field_0l879ip"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_19v0gz7",
+        "columns": null
+      },
+      "id": "Field_0s9aaly"
+    },
+    {
+      "content": "List 1",
+      "type": "html",
+      "layout": {
+        "row": "Row_0306qes",
+        "columns": null
+      },
+      "id": "Field_1r0it9x"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0306qes",
+        "columns": null
+      },
+      "id": "Field_1ohy75r",
+      "key": "f15_L1"
+    },
+    {
+      "content": "List 2",
+      "type": "html",
+      "layout": {
+        "row": "Row_06tgd2n",
+        "columns": 8
+      },
+      "id": "Field_02qfltx"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_06tgd2n",
+        "columns": 6
+      },
+      "id": "Field_0wcs414",
+      "key": "f15_L2"
+    },
+    {
+      "label": "Add more",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_06tgd2n",
+        "columns": 2
+      },
+      "id": "Field_0mz7n6r"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_138byq3",
+        "columns": null
+      },
+      "id": "Field_1aw4atf"
+    },
+    {
+      "text": "### General Comments",
+      "type": "text",
+      "layout": {
+        "row": "Row_1yn84pc",
+        "columns": null
+      },
+      "id": "Field_09rz1kr"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0pxep45",
+        "columns": null
+      },
+      "id": "Field_12xruxj"
+    },
+    {
+      "content": "Attach",
+      "type": "html",
+      "layout": {
+        "row": "Row_0g728wg",
+        "columns": null
+      },
+      "id": "Field_0iga08i"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0g728wg",
+        "columns": null
+      },
+      "id": "Field_0x9l3o0",
+      "key": "f15_attach"
+    },
+    {
+      "content": "Comments",
+      "type": "html",
+      "layout": {
+        "row": "Row_1mg6lpf",
+        "columns": null
+      },
+      "id": "Field_0ppz5g4"
+    },
+    {
+      "label": "Comments",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1mg6lpf",
+        "columns": null
+      },
+      "id": "Field_0vy7br3",
+      "key": "f15_GC_comments",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_15_design_based_snaglist",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

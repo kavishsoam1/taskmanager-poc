@@ -1,0 +1,276 @@
+{
+  "components": [
+    {
+      "text": "#### Tenant",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vlk7fk",
+        "columns": null
+      },
+      "id": "Field_083agmc"
+    },
+    {
+      "text": "#### Unit no.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vlk7fk",
+        "columns": null
+      },
+      "id": "Field_081ksjv"
+    },
+    {
+      "text": "#### Unit Name",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vlk7fk",
+        "columns": null
+      },
+      "id": "Field_0gya5lg"
+    },
+    {
+      "text": "#### Unit type",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vlk7fk",
+        "columns": null
+      },
+      "id": "Field_0qss431"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ec6q9c",
+        "columns": null
+      },
+      "id": "Field_0o2nt46",
+      "key": "tenant_name",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ec6q9c",
+        "columns": null
+      },
+      "id": "Field_0hdfyae",
+      "key": "unit_No",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ec6q9c",
+        "columns": null
+      },
+      "id": "Field_00wqtag",
+      "key": "name",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ec6q9c",
+        "columns": null
+      },
+      "id": "Field_1uywdkj",
+      "key": "unit_type",
+      "readonly": true
+    },
+    {
+      "text": "#### Company",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fr7ehq",
+        "columns": null
+      },
+      "id": "Field_03q6272"
+    },
+    {
+      "text": "#### Telephone",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fr7ehq",
+        "columns": null
+      },
+      "id": "Field_0q4musm"
+    },
+    {
+      "text": "#### Mobile",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fr7ehq",
+        "columns": null
+      },
+      "id": "Field_11glqbr"
+    },
+    {
+      "text": "#### Email",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fr7ehq",
+        "columns": null
+      },
+      "id": "Field_1ifswa5"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10t397e",
+        "columns": null
+      },
+      "id": "Field_1vfh48b",
+      "key": "comapany",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10t397e",
+        "columns": null
+      },
+      "id": "Field_0z33dcl",
+      "key": "tel",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10t397e",
+        "columns": null
+      },
+      "id": "Field_0o90vh8",
+      "key": "mob",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10t397e",
+        "columns": null
+      },
+      "id": "Field_0q82tq7",
+      "key": "email",
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1o77ksg",
+        "columns": null
+      },
+      "id": "Field_16xp5ff"
+    },
+    {
+      "text": "#### File summary (as per lease agreement)",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bjkm56",
+        "columns": null
+      },
+      "id": "Field_1dpimzy"
+    },
+    {
+      "text": "#### Penalties",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ybw90n",
+        "columns": null
+      },
+      "id": "Field_1xfdf3v"
+    },
+    {
+      "text": "#### Amount",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ybw90n",
+        "columns": null
+      },
+      "id": "Field_0bibem1"
+    },
+    {
+      "content": "Total late opening penalties",
+      "type": "html",
+      "layout": {
+        "row": "Row_1w3jf3m",
+        "columns": null
+      },
+      "id": "Field_0s6r82x"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1w3jf3m",
+        "columns": null
+      },
+      "id": "Field_0yn7wo2",
+      "key": "f20_total_late_opening_penalites",
+      "readonly": true
+    },
+    {
+      "content": "Other amount due (TVR,etc)",
+      "type": "html",
+      "layout": {
+        "row": "Row_0befi1t",
+        "columns": null
+      },
+      "id": "Field_0jqmuww"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0befi1t",
+        "columns": null
+      },
+      "id": "Field_0tb0tps",
+      "key": "f20_other_amount_due",
+      "readonly": true
+    },
+    {
+      "content": "settlement status",
+      "type": "html",
+      "layout": {
+        "row": "Row_0gk6qf4",
+        "columns": null
+      },
+      "id": "Field_0oueghl"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0gk6qf4",
+        "columns": null
+      },
+      "id": "Field_18h2ywe",
+      "key": "f20_settlement_status",
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1bf9wah",
+        "columns": null
+      },
+      "id": "Field_1tiqk7g"
+    }
+  ],
+  "type": "default",
+  "id": "Approve_By_RDD_SM_Director",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

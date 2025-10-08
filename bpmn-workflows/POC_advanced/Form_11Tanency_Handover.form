@@ -1,0 +1,963 @@
+{
+  "components": [
+    {
+      "text": "## Al Bahar al mutawaist rest llc",
+      "type": "text",
+      "layout": {
+        "row": "Row_0mub257",
+        "columns": null
+      },
+      "id": "Field_0b3st28"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1hxm9yg",
+        "columns": null
+      },
+      "id": "Field_0tn0mfg"
+    },
+    {
+      "text": "### Tanency Handover",
+      "type": "text",
+      "layout": {
+        "row": "Row_0mzpdik",
+        "columns": null
+      },
+      "id": "Field_1f2x7po"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0ylr1n1",
+        "columns": null
+      },
+      "id": "Field_1tuzpvl"
+    },
+    {
+      "text": "### Completed",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lypejc",
+        "columns": 2
+      },
+      "id": "Field_0lqxm38"
+    },
+    {
+      "text": "### Items",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lypejc",
+        "columns": 5
+      },
+      "id": "Field_16e089w"
+    },
+    {
+      "text": "### Outstanding Issues",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lypejc",
+        "columns": 4
+      },
+      "id": "Field_19vvtyu"
+    },
+    {
+      "text": "### Actions",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lypejc",
+        "columns": 3
+      },
+      "id": "Field_1b5k7ye"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_00ed64r",
+        "columns": 2
+      },
+      "id": "Field_09qnu52",
+      "key": "f11_checkbox_demising_walls"
+    },
+    {
+      "text": "#### Demising Walls",
+      "type": "text",
+      "layout": {
+        "row": "Row_00ed64r",
+        "columns": 5
+      },
+      "id": "Field_0e6kmv3"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_00ed64r",
+        "columns": 4
+      },
+      "id": "Field_0kyjlxp",
+      "key": "f11_outstanding_issues_dem_walls",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_00ed64r",
+        "columns": null
+      },
+      "id": "Field_1up9mhn",
+      "key": "f11_actions_demising_walls",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1wfzmmq",
+        "columns": 2
+      },
+      "id": "Field_0myjpa6",
+      "key": "f11_checkbox_demise_caps"
+    },
+    {
+      "text": "#### Demise Caps\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1wfzmmq",
+        "columns": 5
+      },
+      "id": "Field_00hwmqy"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1wfzmmq",
+        "columns": 4
+      },
+      "id": "Field_1nxniid",
+      "key": "f11_outstanding_issues_dem_caps",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1wfzmmq",
+        "columns": null
+      },
+      "id": "Field_05lyiep",
+      "key": "f11_actions_demise_caps",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0l7mg0g",
+        "columns": 2
+      },
+      "id": "Field_0alpy8c",
+      "key": "f11_checkbox_shopfront"
+    },
+    {
+      "text": "#### Shopfront Bulkhead\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0l7mg0g",
+        "columns": 5
+      },
+      "id": "Field_10pkg7m"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0l7mg0g",
+        "columns": 4
+      },
+      "id": "Field_0sf03bo",
+      "key": "f11_outstanding_issues_shopfront",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0l7mg0g",
+        "columns": null
+      },
+      "id": "Field_0l6mik8",
+      "key": "f11_actions_shopfront",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0nf2fis",
+        "columns": 2
+      },
+      "id": "Field_1s6zmgb",
+      "key": "f11_checkbox_flooring"
+    },
+    {
+      "text": "#### Flooring\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0nf2fis",
+        "columns": 5
+      },
+      "id": "Field_1yh2kzh"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0nf2fis",
+        "columns": 4
+      },
+      "id": "Field_0ycf83r",
+      "key": "f11_outstanding_issues_flooring",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0nf2fis",
+        "columns": null
+      },
+      "id": "Field_0com6gq",
+      "key": "f11_actions_flooring",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1sfxb43",
+        "columns": 2
+      },
+      "id": "Field_1hq2tdd",
+      "key": "f11_checkbox_ceiling_slab_soffit"
+    },
+    {
+      "text": "#### Ceiling / Slab Soffit\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1sfxb43",
+        "columns": 5
+      },
+      "id": "Field_06glkkz"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1sfxb43",
+        "columns": 4
+      },
+      "id": "Field_00az7m3",
+      "key": "f11_outstanding_issues_ceiling_slab",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1sfxb43",
+        "columns": null
+      },
+      "id": "Field_1ty5paa",
+      "key": "f11_actions_ceiling_slab",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_01y9xw6",
+        "columns": 2
+      },
+      "id": "Field_0ho8tv0",
+      "key": "f11_checkbox_internal_col"
+    },
+    {
+      "text": "#### Internal Columns\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_01y9xw6",
+        "columns": null
+      },
+      "id": "Field_1u86v53"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_01y9xw6",
+        "columns": 4
+      },
+      "id": "Field_0we4htk",
+      "key": "f11_outstanding_issues_internal_col",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_01y9xw6",
+        "columns": null
+      },
+      "id": "Field_0uql26t",
+      "key": "f11_actions_internal_columns",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_12svc3k",
+        "columns": 2
+      },
+      "id": "Field_1gsmd8q",
+      "key": "f11_checkbox_isolator"
+    },
+    {
+      "text": "#### Isolator",
+      "type": "text",
+      "layout": {
+        "row": "Row_12svc3k",
+        "columns": null
+      },
+      "id": "Field_0d4tfjt"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_12svc3k",
+        "columns": 4
+      },
+      "id": "Field_15tuqip",
+      "key": "f11_outstanding_issues_iso",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_12svc3k",
+        "columns": 5
+      },
+      "id": "Field_04ysl9h",
+      "key": "f11_actions_iso",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1z0u0zy",
+        "columns": 2
+      },
+      "id": "Field_1vt9vhs",
+      "key": "f11_checkbox_chilled_water_tap_off"
+    },
+    {
+      "text": "#### Chilled Water Tap Off\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1z0u0zy",
+        "columns": null
+      },
+      "id": "Field_0eq148k"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1z0u0zy",
+        "columns": 4
+      },
+      "id": "Field_0vuxfyz",
+      "key": "f11_outstanding_issues_chilled_water_tap_off",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1z0u0zy",
+        "columns": null
+      },
+      "id": "Field_0feln8h",
+      "key": "f11_actions_chilled_water_tap_off",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1nxga14",
+        "columns": 2
+      },
+      "id": "Field_0dgmj7y",
+      "key": "f11_checkbox_high_level_sprinklers"
+    },
+    {
+      "text": "#### High Level Sprinklers\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1nxga14",
+        "columns": null
+      },
+      "id": "Field_0sqv3gv"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1nxga14",
+        "columns": 4
+      },
+      "id": "Field_1gjxxum",
+      "key": "f11_outstanding_issues_high_level_sprinklers",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1nxga14",
+        "columns": null
+      },
+      "id": "Field_0cgx5cq",
+      "key": "f11_actions_high_level_sprinklers",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1q60xo7",
+        "columns": 2
+      },
+      "id": "Field_1vdreo6",
+      "key": "f11_checkbox_smoke_detectos_operational"
+    },
+    {
+      "text": "#### Smoke Detectors Operational\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1q60xo7",
+        "columns": null
+      },
+      "id": "Field_06b3wsr"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1q60xo7",
+        "columns": 4
+      },
+      "id": "Field_0v8ffhg",
+      "key": "f11_outstanding_issues_smoke_detectors_operational",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1q60xo7",
+        "columns": null
+      },
+      "id": "Field_1nrwbsj",
+      "key": "f11_actions_smoke_detect_operational",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_08m0mid",
+        "columns": 2
+      },
+      "id": "Field_1yvo8sf",
+      "key": "f11_checkbox_fire_alarm_conected"
+    },
+    {
+      "text": "#### Fire Alarm Connected\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_08m0mid",
+        "columns": null
+      },
+      "id": "Field_04r24gb"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_08m0mid",
+        "columns": 4
+      },
+      "id": "Field_0qj6f57",
+      "key": "f11_outstanding_issues_fire_alarm_connected",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_08m0mid",
+        "columns": null
+      },
+      "id": "Field_0sgktfo",
+      "key": "f11_actions_fire_alarm_connected",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0g94bcr",
+        "columns": 2
+      },
+      "id": "Field_0vih3yx",
+      "key": "f11_checkbox_smoke_ventilation"
+    },
+    {
+      "text": "#### Smoke Extract / Ventilation\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0g94bcr",
+        "columns": null
+      },
+      "id": "Field_07raxmf"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0g94bcr",
+        "columns": 4
+      },
+      "id": "Field_0ldn8m7",
+      "key": "f11_outstanding_issues_smoke_ventilation",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0g94bcr",
+        "columns": null
+      },
+      "id": "Field_0m7rrkz",
+      "key": "f11_actions_smoke_ventilation",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0q879om",
+        "columns": 2
+      },
+      "id": "Field_1t6wvto",
+      "key": "f11_checkbox_tele_jun_box"
+    },
+    {
+      "text": "#### Telephone Junction Box\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0q879om",
+        "columns": null
+      },
+      "id": "Field_1l1iu3w"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0q879om",
+        "columns": 4
+      },
+      "id": "Field_0nll8yp",
+      "key": "f11_outstanding_issues_tele_jun_box",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0q879om",
+        "columns": null
+      },
+      "id": "Field_1ix34rc",
+      "key": "f11_actions_tele_jub_box",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ykvbbz",
+        "columns": 2
+      },
+      "id": "Field_0yzlwvp",
+      "key": "f11_checkbox_cold_water_supply"
+    },
+    {
+      "text": "#### Cold Water Supply\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ykvbbz",
+        "columns": null
+      },
+      "id": "Field_1hm5rxm"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0ykvbbz",
+        "columns": 4
+      },
+      "id": "Field_12sf7uc",
+      "key": "f11_outstanding_issues_cold_water_supply",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0ykvbbz",
+        "columns": null
+      },
+      "id": "Field_0u52zh4",
+      "key": "f11_actions_cold_water_supply",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1ugd8a2",
+        "columns": 2
+      },
+      "id": "Field_0nrz1hr",
+      "key": "f11_checkbox_drainage_point"
+    },
+    {
+      "text": "#### Drainage Point\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ugd8a2",
+        "columns": null
+      },
+      "id": "Field_11bi65v"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1ugd8a2",
+        "columns": 4
+      },
+      "id": "Field_0vdq9sm",
+      "key": "f11_outstanding_issues_drainage_point",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1ugd8a2",
+        "columns": null
+      },
+      "id": "Field_1g6bx4g",
+      "key": "f11_actions_drainage_point",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_01x5twb",
+        "columns": 2
+      },
+      "id": "Field_16wief1",
+      "key": "f11_checkbox_extract_system"
+    },
+    {
+      "text": "#### Extract System\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_01x5twb",
+        "columns": null
+      },
+      "id": "Field_0bximsu"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_01x5twb",
+        "columns": 4
+      },
+      "id": "Field_0fvcso3",
+      "key": "f11_outstanding_issues_extrat_sstem",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_01x5twb",
+        "columns": null
+      },
+      "id": "Field_0bmc2pm",
+      "key": "f11_actions_extract_syatm",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1537892",
+        "columns": 2
+      },
+      "id": "Field_1un5ntf",
+      "key": "f11_checkbox_fresh_air"
+    },
+    {
+      "text": "#### Fresh Air Supply\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1537892",
+        "columns": null
+      },
+      "id": "Field_1of8n12"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1537892",
+        "columns": 4
+      },
+      "id": "Field_02rfo22",
+      "key": "f11_outstanding_issues_fresh_air",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1537892",
+        "columns": null
+      },
+      "id": "Field_1l5fher",
+      "key": "f11_actions_fresh_air",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1nm52tu",
+        "columns": 2
+      },
+      "id": "Field_19yw9qt",
+      "key": "f11_checkbox_lpg"
+    },
+    {
+      "text": "#### LPG\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1nm52tu",
+        "columns": null
+      },
+      "id": "Field_1rva1b8"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1nm52tu",
+        "columns": 4
+      },
+      "id": "Field_06vtbpm",
+      "key": "f11_outstanding_issues_lpg",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1nm52tu",
+        "columns": null
+      },
+      "id": "Field_1sc0q2p",
+      "key": "f11_actions_lpg",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1uuiydv",
+        "columns": 2
+      },
+      "id": "Field_1rcsum6",
+      "key": "f11_checkbox_door_opening"
+    },
+    {
+      "text": "#### Door Opening\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1uuiydv",
+        "columns": null
+      },
+      "id": "Field_0p92mpq"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1uuiydv",
+        "columns": 4
+      },
+      "id": "Field_0hcsgeo",
+      "key": "f11_outstanding_issues_door_opening",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1uuiydv",
+        "columns": null
+      },
+      "id": "Field_0ol9f83",
+      "key": "f11_actions_door_opening",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0lq2k2h",
+        "columns": 2
+      },
+      "id": "Field_0mjhywk",
+      "key": "f11_checkbox_folding_door_opening"
+    },
+    {
+      "text": "#### Folding Door Opening",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lq2k2h",
+        "columns": null
+      },
+      "id": "Field_0tf8bok"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0lq2k2h",
+        "columns": 4
+      },
+      "id": "Field_0vcd35x",
+      "key": "f11_outstanding_issues_folding_door_opening",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0lq2k2h",
+        "columns": null
+      },
+      "id": "Field_072n7bv",
+      "key": "f11_actions_folding_door_opening",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ehv93i",
+        "columns": 2
+      },
+      "id": "Field_01m0pdm",
+      "key": "f11_checkbox_door_lock"
+    },
+    {
+      "text": "#### Door Lock",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ehv93i",
+        "columns": null
+      },
+      "id": "Field_01cuc3b"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0ehv93i",
+        "columns": 4
+      },
+      "id": "Field_0z3xu4k",
+      "key": "f11_outstanding_issues_door_lock",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0ehv93i",
+        "columns": null
+      },
+      "id": "Field_13hn98i",
+      "key": "f11_actions_door_lock",
+      "defaultValue": "Comments..."
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1urx8bo",
+        "columns": 2
+      },
+      "id": "Field_0zbboed",
+      "key": "f11_checkbox_cnf"
+    },
+    {
+      "text": "#### The Tenant hereby confirms that the above is a true and accurate record of the joint insection of the shell and core completed on behalf of the Landloard.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1urx8bo",
+        "columns": 10
+      },
+      "id": "Field_1ky0vgl"
+    }
+  ],
+  "type": "default",
+  "id": "Form_11Tanency_Handover",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

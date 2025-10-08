@@ -1,0 +1,848 @@
+{
+  "components": [
+    {
+      "text": "## MEP design submission",
+      "type": "text",
+      "layout": {
+        "row": "Row_1xzvpqv",
+        "columns": null
+      },
+      "id": "Field_1m12qx3"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_030k0ha",
+        "columns": null
+      },
+      "id": "Field_1jajjz9"
+    },
+    {
+      "text": "### Common drawings required for all units",
+      "type": "text",
+      "layout": {
+        "row": "Row_0qbpo11",
+        "columns": null
+      },
+      "id": "Field_1w08dhm"
+    },
+    {
+      "text": "### Attachments",
+      "type": "text",
+      "layout": {
+        "row": "Row_0qbpo11",
+        "columns": null
+      },
+      "id": "Field_0jzawkh"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0za9oi6",
+        "columns": null
+      },
+      "id": "Field_12lm8kw"
+    },
+    {
+      "text": "#### Reflected Ceiling Plan",
+      "type": "text",
+      "layout": {
+        "row": "Row_1lkl3wl",
+        "columns": null
+      },
+      "id": "Field_1jjjf3f"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1lkl3wl",
+        "columns": null
+      },
+      "id": "Field_15up5he",
+      "dataSource": "=doc1"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_197ypft",
+        "columns": null
+      },
+      "id": "Field_093hwy5"
+    },
+    {
+      "text": "#### Lighting Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0nhi0wr",
+        "columns": null
+      },
+      "id": "Field_1w9ko2d"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0nhi0wr",
+        "columns": null
+      },
+      "id": "Field_02abkym",
+      "dataSource": "=doc2"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1jn43up",
+        "columns": null
+      },
+      "id": "Field_0f89he4"
+    },
+    {
+      "text": "#### Power Layout",
+      "type": "text",
+      "layout": {
+        "row": "Row_0n09xmt",
+        "columns": null
+      },
+      "id": "Field_1q1xf8l"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0n09xmt",
+        "columns": null
+      },
+      "id": "Field_1fhswfp",
+      "dataSource": "=doc3"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0gar9hj",
+        "columns": null
+      },
+      "id": "Field_0zp11cs"
+    },
+    {
+      "text": "#### Load Schedule/ Single Line Drawings\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0c5s4dh",
+        "columns": null
+      },
+      "id": "Field_1b21ujn"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0c5s4dh",
+        "columns": null
+      },
+      "id": "Field_1sk85y4",
+      "dataSource": "=doc4"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_06x5ol9",
+        "columns": null
+      },
+      "id": "Field_1jer6at"
+    },
+    {
+      "text": "#### Telephone/ Data Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ukesfq",
+        "columns": null
+      },
+      "id": "Field_0qggoup"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0ukesfq",
+        "columns": null
+      },
+      "id": "Field_1tpt8qv",
+      "dataSource": "=doc4"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0hthnb0",
+        "columns": null
+      },
+      "id": "Field_1stpvn4"
+    },
+    {
+      "text": "#### Fire Alarm Layout (Above and Below ceiling) and Schematic\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ly1f20",
+        "columns": null
+      },
+      "id": "Field_1b54ixe"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0ly1f20",
+        "columns": null
+      },
+      "id": "Field_1h0fo3f",
+      "dataSource": "=doc6"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1im2z94",
+        "columns": null
+      },
+      "id": "Field_0r0ia5h"
+    },
+    {
+      "text": "#### Emergency Light Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xh7eqd",
+        "columns": null
+      },
+      "id": "Field_0ayymcw"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0xh7eqd",
+        "columns": null
+      },
+      "id": "Field_1gksp3k",
+      "dataSource": "=doc7"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_18eglb9",
+        "columns": null
+      },
+      "id": "Field_173so73"
+    },
+    {
+      "text": "#### HVAC Layout",
+      "type": "text",
+      "layout": {
+        "row": "Row_05ba5pp",
+        "columns": null
+      },
+      "id": "Field_1m3w2y6"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_05ba5pp",
+        "columns": null
+      },
+      "id": "Field_15d1ivn",
+      "dataSource": "=doc8"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0y21pj4",
+        "columns": null
+      },
+      "id": "Field_1na8fem"
+    },
+    {
+      "text": "#### Refrigerant Piping Layout\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1h7yhs0",
+        "columns": null
+      },
+      "id": "Field_1cc565y"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1h7yhs0",
+        "columns": null
+      },
+      "id": "Field_110g03g",
+      "dataSource": "=doc9"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0o3yl2a",
+        "columns": null
+      },
+      "id": "Field_063h92b"
+    },
+    {
+      "text": "#### Heat Load Calculation\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0pxz79x",
+        "columns": null
+      },
+      "id": "Field_0bgxkp8"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0pxz79x",
+        "columns": null
+      },
+      "id": "Field_0mynxjp",
+      "dataSource": "=doc10"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0v1gi1q",
+        "columns": null
+      },
+      "id": "Field_0nckaqc"
+    },
+    {
+      "text": "#### Kitchen Extract Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xo42o1",
+        "columns": null
+      },
+      "id": "Field_05yqllq"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0xo42o1",
+        "columns": null
+      },
+      "id": "Field_068hbpd",
+      "dataSource": "=doc11"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0g86omg",
+        "columns": null
+      },
+      "id": "Field_06y0gel"
+    },
+    {
+      "text": "#### Fresh Air Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_00j2pf2",
+        "columns": null
+      },
+      "id": "Field_14iuwb3"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_00j2pf2",
+        "columns": null
+      },
+      "id": "Field_1tsfwzu",
+      "dataSource": "=doc12"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0t4qx96",
+        "columns": null
+      },
+      "id": "Field_02uwtvr"
+    },
+    {
+      "text": "#### General Ventilation Layout\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hw56zf",
+        "columns": null
+      },
+      "id": "Field_0il7gy8"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1hw56zf",
+        "columns": null
+      },
+      "id": "Field_12kgsg3",
+      "dataSource": "=doc13"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1lfeoif",
+        "columns": null
+      },
+      "id": "Field_1tyggsp"
+    },
+    {
+      "text": "#### Condensate Drain Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1txof3d",
+        "columns": null
+      },
+      "id": "Field_0fstw98"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1txof3d",
+        "columns": null
+      },
+      "id": "Field_0m71vvu",
+      "dataSource": "=doc14"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0ce39eo",
+        "columns": null
+      },
+      "id": "Field_1txjai0"
+    },
+    {
+      "text": "#### AC Equipment Data Sheet\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a5tqtf",
+        "columns": null
+      },
+      "id": "Field_15mrhhg"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1a5tqtf",
+        "columns": null
+      },
+      "id": "Field_1g1mfz2",
+      "dataSource": "=doc15"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0o1uclc",
+        "columns": null
+      },
+      "id": "Field_01we3mj"
+    },
+    {
+      "text": "#### FAHU Data Sheet\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hjhrsy",
+        "columns": null
+      },
+      "id": "Field_1jo2jcc"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1hjhrsy",
+        "columns": null
+      },
+      "id": "Field_01ghfay",
+      "dataSource": "=doc16"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1ksqvj8",
+        "columns": null
+      },
+      "id": "Field_14xvn8n"
+    },
+    {
+      "text": "#### Ecology Unit Data Sheet\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_10aszbj",
+        "columns": null
+      },
+      "id": "Field_17floch"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_10aszbj",
+        "columns": null
+      },
+      "id": "Field_06ncbq6",
+      "dataSource": "=doc17"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0xo16au",
+        "columns": null
+      },
+      "id": "Field_1my37af"
+    },
+    {
+      "text": "#### Kitchen Hood Data Sheet and Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_04mzha2",
+        "columns": null
+      },
+      "id": "Field_19zvg2d"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_04mzha2",
+        "columns": null
+      },
+      "id": "Field_1jzlzzp",
+      "dataSource": "=doc18"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1wav3re",
+        "columns": null
+      },
+      "id": "Field_1reb6lg"
+    },
+    {
+      "text": "#### Ventilation calculation/ Schematic\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_05a5vgr",
+        "columns": null
+      },
+      "id": "Field_1483fo8"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_05a5vgr",
+        "columns": null
+      },
+      "id": "Field_0bbm7ut",
+      "dataSource": "=doc19"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_04p0dse",
+        "columns": null
+      },
+      "id": "Field_1dyt1lj"
+    },
+    {
+      "text": "#### Firefighting Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_17stiev",
+        "columns": null
+      },
+      "id": "Field_0x31e4c"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_17stiev",
+        "columns": null
+      },
+      "id": "Field_0b9evzs",
+      "dataSource": "=doc20"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0cnwl80",
+        "columns": null
+      },
+      "id": "Field_0nmtst2"
+    },
+    {
+      "text": "#### Water Supply Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ee7skn",
+        "columns": null
+      },
+      "id": "Field_04ab660"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1ee7skn",
+        "columns": null
+      },
+      "id": "Field_0kc2gud",
+      "dataSource": "=doc21"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0xs0kv9",
+        "columns": null
+      },
+      "id": "Field_16iwtq7"
+    },
+    {
+      "text": "#### Drainage Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0akmqzi",
+        "columns": null
+      },
+      "id": "Field_0dqp0jt"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0akmqzi",
+        "columns": null
+      },
+      "id": "Field_14yvqm6",
+      "dataSource": "=doc22"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0wgxxdt",
+        "columns": null
+      },
+      "id": "Field_1o4g68c"
+    },
+    {
+      "text": "#### Grease Trap Data Sheet\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0onm2dm",
+        "columns": null
+      },
+      "id": "Field_0wm653v"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0onm2dm",
+        "columns": null
+      },
+      "id": "Field_0m0n8oh",
+      "dataSource": "=doc23"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_01tl2j0",
+        "columns": null
+      },
+      "id": "Field_1ydv0jb"
+    },
+    {
+      "text": "#### Natural Gas Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_03ftkfe",
+        "columns": null
+      },
+      "id": "Field_04y8iow"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_03ftkfe",
+        "columns": null
+      },
+      "id": "Field_0st98jw",
+      "dataSource": "=doc24"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_15xsxjh",
+        "columns": null
+      },
+      "id": "Field_0dnjkk1"
+    },
+    {
+      "text": "#### Fire Suppression Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zti5qo",
+        "columns": null
+      },
+      "id": "Field_1k0ymv3"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0zti5qo",
+        "columns": null
+      },
+      "id": "Field_036nyi4",
+      "dataSource": "=doc25"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1enww6y",
+        "columns": null
+      },
+      "id": "Field_1n84ypp"
+    },
+    {
+      "text": "#### Kitchen Equipment Layout\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_041edd7",
+        "columns": null
+      },
+      "id": "Field_07wu70y"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_041edd7",
+        "columns": null
+      },
+      "id": "Field_13dsjh5",
+      "dataSource": "=doc26"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1wcur5l",
+        "columns": null
+      },
+      "id": "Field_1vx1vjo"
+    },
+    {
+      "text": "#### Smoke Extract System\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0qhjdot",
+        "columns": null
+      },
+      "id": "Field_1nhtswy"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_0qhjdot",
+        "columns": null
+      },
+      "id": "Field_0ccqk1k",
+      "dataSource": "=doc27"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0ne3ql0",
+        "columns": null
+      },
+      "id": "Field_159f287"
+    },
+    {
+      "text": "#### Vendor List Compliance\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1a00fhq",
+        "columns": null
+      },
+      "id": "Field_1yqlo4y"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1a00fhq",
+        "columns": null
+      },
+      "id": "Field_02fm5pj",
+      "dataSource": "=doc28"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1jmj2c7",
+        "columns": null
+      },
+      "id": "Field_114ljt0"
+    },
+    {
+      "text": "### Conditions:",
+      "type": "text",
+      "layout": {
+        "row": "Row_1pehnta",
+        "columns": null
+      },
+      "id": "Field_1pt17rr"
+    },
+    {
+      "text": "#### All changes are revised submission to be highlighted.",
+      "type": "text",
+      "layout": {
+        "row": "Row_07y7fai",
+        "columns": null
+      },
+      "id": "Field_13pupxp"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1twqiym",
+        "columns": null
+      },
+      "id": "Field_18l2res"
+    },
+    {
+      "label": "Approve",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1650v4x",
+        "columns": 2
+      },
+      "id": "Field_1tvyvqx",
+      "key": "form_6_approved"
+    }
+  ],
+  "type": "default",
+  "id": "Form_6MEP_design_submission_approval",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}
