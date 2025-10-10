@@ -1,6 +1,38 @@
-import React from "react";
-
+"use client";
+import React, { useEffect, useState } from "react";
+import {getProcessVariables, getAllTasksOriginal } from '../../../utils/api';
 const TenantDetailsView = () => {
+     const [tenantData, setTenantData] = useState<Record<string, any> | null>(null);
+console.log(tenantData)
+  useEffect(() => {
+    const fetchVariables = async () => {
+      try {
+        const processInstanceKey = 	2251799814858551;
+// const processInstanceKeyStr = processInstanceKey.toString();
+
+        const res = await fetch('/api/proxy/zeebe-variables', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            filter: { processInstanceKey },
+            size: 1000,
+          }),
+        });
+
+        const data = await res.json();
+        console.log('Fetched Camunda/Zeebe Variables:', data);
+
+        setTenantData(data);
+      } catch (err) {
+        console.error('Error fetching process variables:', err);
+      }
+    };
+
+    fetchVariables();
+  }, []);
+  
+
+  // Sample tenant data
   const tenant = {
     development: "Downtown Plaza",
     unit_No: "A-102",
@@ -36,8 +68,8 @@ const TenantDetailsView = () => {
       {/* LOCATION DETAILS */}
       <Section title="Location and Details">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Detail label="Development" value={tenant.development} />
-          <Detail label="Unit No." value={tenant.unit_No} />
+          <Detail label="Development" value={tenantData?.firstName} />
+          <Detail label="Unit No." value={tenantData?.LastName} />
           <Detail label="Tenant" value={tenant.tenant_name} />
           <Detail label="Operating Name" value={tenant.operating_name} />
           <Detail label="Operation Business" value={tenant.operation_bussiness} />
