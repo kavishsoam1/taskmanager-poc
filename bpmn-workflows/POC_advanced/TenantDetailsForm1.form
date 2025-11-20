@@ -1,0 +1,407 @@
+{
+  "components": [
+    {
+      "text": "## Tenant details",
+      "type": "text",
+      "layout": {
+        "row": "Row_132y6i0",
+        "columns": null
+      },
+      "id": "Field_0ullnkj"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1mgxnq1",
+        "columns": null
+      },
+      "id": "Field_0gxh4pv"
+    },
+    {
+      "text": "### Location and details",
+      "type": "text",
+      "layout": {
+        "row": "Row_0h0o6t5",
+        "columns": null
+      },
+      "id": "Field_0hdv376"
+    },
+    {
+      "label": "Development",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0eqxlzd",
+        "columns": 4
+      },
+      "id": "Field_1wckj5u",
+      "key": "development",
+      "disabled": false,
+      "properties": {},
+      "validate": {
+        "required": true,
+        "patternErrorMessage": "",
+        "pattern": "",
+        "minLength": "4",
+        "maxLength": "50"
+      }
+    },
+    {
+      "label": "Unit no.",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0eqxlzd",
+        "columns": 4
+      },
+      "id": "Field_1fxnlbj",
+      "key": "unit_No",
+      "properties": {},
+      "appearance": {}
+    },
+    {
+      "label": "Tenant",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0eqxlzd",
+        "columns": 4
+      },
+      "id": "Field_135uxle",
+      "key": "tenant_name",
+      "validate": {
+        "required": true,
+        "patternErrorMessage": "",
+        "pattern": "",
+        "minLength": "4",
+        "maxLength": "50"
+      }
+    },
+    {
+      "label": "Operating Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0eqxlzd",
+        "columns": null
+      },
+      "id": "Field_0xhqeza",
+      "key": "operating_name"
+    },
+    {
+      "label": "Operation bussiness",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tm5agm",
+        "columns": 4
+      },
+      "id": "Field_1wl0snf",
+      "key": "operation_bussiness"
+    },
+    {
+      "label": "Unit type",
+      "values": [
+        {
+          "label": "Value",
+          "value": "value"
+        },
+        {
+          "label": "Retail",
+          "value": "Retail"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0tm5agm",
+        "columns": 4
+      },
+      "id": "Field_05dcebh",
+      "key": "unit_type"
+    },
+    {
+      "label": "Lease Team",
+      "type": "number",
+      "layout": {
+        "row": "Row_0tm5agm",
+        "columns": null
+      },
+      "id": "Field_06i3dwz",
+      "key": "lease_team",
+      "defaultValue": 0
+    },
+    {
+      "label": "Condition of premises:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tm5agm",
+        "columns": 4
+      },
+      "id": "Field_1s6ngb5",
+      "key": "condition_permises"
+    },
+    {
+      "label": "Design & Fit out Period as per LO:",
+      "type": "number",
+      "layout": {
+        "row": "Row_1p5ati6",
+        "columns": 4
+      },
+      "id": "Field_12mqvhi",
+      "key": "design_fit_out_period",
+      "defaultValue": 0
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Fit Out Start Date as PER LA:",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1p5ati6",
+        "columns": 4
+      },
+      "id": "Field_1m3k7ri",
+      "key": "fit_ot_start_date"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Opening Date as per LA:",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1p5ati6",
+        "columns": 4
+      },
+      "id": "Field_07jemmf",
+      "key": "opening_date_asPer_LA"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0t7kbpb",
+        "columns": null
+      },
+      "id": "Field_0f2tjui"
+    },
+    {
+      "text": "### Contact",
+      "type": "text",
+      "layout": {
+        "row": "Row_1o41xzo",
+        "columns": null
+      },
+      "id": "Field_0ugml8x"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1awinmk",
+        "columns": null
+      },
+      "id": "Field_1fuqpto",
+      "key": "name"
+    },
+    {
+      "label": "Designation",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1awinmk",
+        "columns": null
+      },
+      "id": "Field_0zzup2d",
+      "key": "designation",
+      "validate": {
+        "required": true,
+        "minLength": "4",
+        "maxLength": "50"
+      }
+    },
+    {
+      "label": "Company",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1awinmk",
+        "columns": null
+      },
+      "id": "Field_1exyog3",
+      "key": "comapany",
+      "validate": {
+        "required": true,
+        "minLength": "4",
+        "maxLength": "50"
+      }
+    },
+    {
+      "label": "Address (PO Box)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1awinmk",
+        "columns": null
+      },
+      "id": "Field_0ooinxn",
+      "key": "address_po_box",
+      "validate": {
+        "required": true,
+        "minLength": "4",
+        "maxLength": "50"
+      }
+    },
+    {
+      "label": "Adderss (Physical address)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0xlburc",
+        "columns": 4
+      },
+      "id": "Field_0v6r3z8",
+      "key": "address_phy_add",
+      "validate": {
+        "required": true,
+        "maxLength": "50",
+        "minLength": "4"
+      }
+    },
+    {
+      "label": "Country Code",
+      "values": [
+        {
+          "label": "UAE",
+          "value": "+971"
+        },
+        {
+          "label": "IN",
+          "value": "+91"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0xlburc",
+        "columns": null
+      },
+      "id": "Field_1n2fr3z",
+      "key": "tel_country_code",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Telephone",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0xlburc",
+        "columns": null
+      },
+      "id": "Field_04jyjkq",
+      "key": "tel",
+      "validate": {
+        "required": true,
+        "minLength": "10",
+        "maxLength": "10"
+      }
+    },
+    {
+      "label": "Country Code",
+      "values": [
+        {
+          "label": "UAE",
+          "value": "+971"
+        },
+        {
+          "label": "IN",
+          "value": "+91"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0xlburc",
+        "columns": null
+      },
+      "id": "Field_09l4zhi",
+      "key": "mb_country_code",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Mobile",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0xlburc",
+        "columns": null
+      },
+      "id": "Field_0bf53la",
+      "key": "mob",
+      "validate": {
+        "required": true,
+        "minLength": "10",
+        "maxLength": "10"
+      }
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0xlburc",
+        "columns": 4
+      },
+      "id": "Field_0ol25q2",
+      "key": "email",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0guo3fj",
+        "columns": null
+      },
+      "id": "Field_046qpen"
+    },
+    {
+      "text": "### Special requirements",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x52chw",
+        "columns": null
+      },
+      "id": "Field_1whaa1f"
+    },
+    {
+      "text": "### Attachments",
+      "type": "text",
+      "layout": {
+        "row": "Row_1x52chw",
+        "columns": null
+      },
+      "id": "Field_0qtcrf1"
+    },
+    {
+      "label": "Special requirements",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1xvmdeg",
+        "columns": 8
+      },
+      "id": "Field_0d1ooly",
+      "key": "special_requirements",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1xvmdeg",
+        "columns": null
+      },
+      "id": "Field_17q2o2p",
+      "key": "filepicker_f1_attachment"
+    }
+  ],
+  "type": "default",
+  "id": "TenantDetailsForm1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

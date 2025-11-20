@@ -1,0 +1,1190 @@
+{
+  "components": [
+    {
+      "text": "#### Late opeing penalty summry document",
+      "type": "text",
+      "layout": {
+        "row": "Row_0aiu11d",
+        "columns": null
+      },
+      "id": "Field_0cx540u"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0z6ftos",
+        "columns": null
+      },
+      "id": "Field_11cakyn"
+    },
+    {
+      "text": "#### File summary (as per lease agreement)",
+      "type": "text",
+      "layout": {
+        "row": "Row_14bbcgr",
+        "columns": null
+      },
+      "id": "Field_02th2xw"
+    },
+    {
+      "text": "#### Item",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ntwfcf",
+        "columns": null
+      },
+      "id": "Field_06utrmg"
+    },
+    {
+      "text": "#### Milestone days",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ntwfcf",
+        "columns": null
+      },
+      "id": "Field_17kl6t2"
+    },
+    {
+      "text": "#### Milestone dates",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ntwfcf",
+        "columns": null
+      },
+      "id": "Field_0o5a3m6"
+    },
+    {
+      "text": "#### Actual date(D)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ntwfcf",
+        "columns": null
+      },
+      "id": "Field_0xa9d4u"
+    },
+    {
+      "text": "#### Dlay days(C-D)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ntwfcf",
+        "columns": null
+      },
+      "id": "Field_0lk13fp"
+    },
+    {
+      "text": "#### Penality Amount",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ntwfcf",
+        "columns": null
+      },
+      "id": "Field_09xets0"
+    },
+    {
+      "content": "Conceptual Design Submission",
+      "type": "html",
+      "layout": {
+        "row": "Row_1fhgofz",
+        "columns": null
+      },
+      "id": "Field_04y860z"
+    },
+    {
+      "label": "Days",
+      "type": "number",
+      "layout": {
+        "row": "Row_1fhgofz",
+        "columns": null
+      },
+      "id": "Field_1h07kf0",
+      "key": "number_ci52w",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1fhgofz",
+        "columns": null
+      },
+      "id": "Field_0xwyp3q",
+      "key": "datetime_65n0a4",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1fhgofz",
+        "columns": null
+      },
+      "id": "Field_18salop",
+      "key": "datetime_rrjfh8",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Delay days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1fhgofz",
+        "columns": null
+      },
+      "id": "Field_1sdsmi5",
+      "key": "textfield_oh8tq7",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1fhgofz",
+        "columns": null
+      },
+      "id": "Field_0q2pb43",
+      "key": "textfield_8tcqz",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "content": "MEP Submission",
+      "type": "html",
+      "layout": {
+        "row": "Row_0tzw9su",
+        "columns": null
+      },
+      "id": "Field_1wk8651"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tzw9su",
+        "columns": null
+      },
+      "id": "Field_1o52puw",
+      "key": "textfield_zgvo9o",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0tzw9su",
+        "columns": null
+      },
+      "id": "Field_1bq17qq",
+      "key": "datetime_7ctxwq",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0tzw9su",
+        "columns": null
+      },
+      "id": "Field_0qbwt2x",
+      "key": "datetime_w4okkf",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Delay days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tzw9su",
+        "columns": null
+      },
+      "id": "Field_1hge5k1",
+      "key": "textfield_80cja",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tzw9su",
+        "columns": null
+      },
+      "id": "Field_1t4gvc3",
+      "key": "textfield_9d97i",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "content": "Final Design Submission",
+      "type": "html",
+      "layout": {
+        "row": "Row_0iwfwbh",
+        "columns": null
+      },
+      "id": "Field_07qx6vu"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0iwfwbh",
+        "columns": null
+      },
+      "id": "Field_0qy9nch",
+      "key": "textfield_x9qaii",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0iwfwbh",
+        "columns": null
+      },
+      "id": "Field_0zfil70",
+      "key": "datetime_grntba",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0iwfwbh",
+        "columns": null
+      },
+      "id": "Field_06roijb",
+      "key": "datetime_r3g57b",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0iwfwbh",
+        "columns": null
+      },
+      "id": "Field_00u4c58",
+      "key": "textfield_th0sjt",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0iwfwbh",
+        "columns": null
+      },
+      "id": "Field_03ikrgp",
+      "key": "textfield_qfzis9",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "content": "Permit/ Authority Submission",
+      "type": "html",
+      "layout": {
+        "row": "Row_1vw06ht",
+        "columns": null
+      },
+      "id": "Field_0htpfn6"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1vw06ht",
+        "columns": null
+      },
+      "id": "Field_0aqa9kj",
+      "key": "textfield_cajgz",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1vw06ht",
+        "columns": null
+      },
+      "id": "Field_15l7yxr",
+      "key": "datetime_bty9v9",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1vw06ht",
+        "columns": null
+      },
+      "id": "Field_06dhd9c",
+      "key": "datetime_gg5nw",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1vw06ht",
+        "columns": null
+      },
+      "id": "Field_16j7ol8",
+      "key": "textfield_uvyhmo",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1vw06ht",
+        "columns": null
+      },
+      "id": "Field_01j1rpi",
+      "key": "textfield_2v3n1d",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "content": "Handover",
+      "type": "html",
+      "layout": {
+        "row": "Row_1k0ppu8",
+        "columns": null
+      },
+      "id": "Field_1ohh9tu"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k0ppu8",
+        "columns": null
+      },
+      "id": "Field_1f7qhej",
+      "key": "textfield_upekhd",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1k0ppu8",
+        "columns": null
+      },
+      "id": "Field_1tcq8e5",
+      "key": "datetime_gi59r",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1k0ppu8",
+        "columns": null
+      },
+      "id": "Field_1y2cqix",
+      "key": "datetime_g10p29",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k0ppu8",
+        "columns": null
+      },
+      "id": "Field_0kn14so",
+      "key": "textfield_vs1g2z",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k0ppu8",
+        "columns": null
+      },
+      "id": "Field_1jxqetr",
+      "key": "textfield_h1un4u",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "content": "Mobilization/ Start-on-site",
+      "type": "html",
+      "layout": {
+        "row": "Row_18ymy1a",
+        "columns": null
+      },
+      "id": "Field_0qixays"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18ymy1a",
+        "columns": null
+      },
+      "id": "Field_1y5szcd",
+      "key": "textfield_e6tj2",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_18ymy1a",
+        "columns": null
+      },
+      "id": "Field_1ulscvl",
+      "key": "datetime_k7shdk",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_18ymy1a",
+        "columns": null
+      },
+      "id": "Field_0yx2rvi",
+      "key": "datetime_igjnap",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18ymy1a",
+        "columns": null
+      },
+      "id": "Field_0bagwl9",
+      "key": "textfield_02vdz4",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18ymy1a",
+        "columns": null
+      },
+      "id": "Field_10u2i1c",
+      "key": "textfield_0kpfvp",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "content": "Total Missed Milestone Penalty(a)",
+      "type": "html",
+      "layout": {
+        "row": "Row_10uzor0",
+        "columns": null
+      },
+      "id": "Field_1uv8n56"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10uzor0",
+        "columns": null
+      },
+      "id": "Field_1uixg0q",
+      "key": "textfield_moq0vo"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_10uzor0",
+        "columns": null
+      },
+      "id": "Field_02ufffq",
+      "key": "datetime_vdkrt"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_10uzor0",
+        "columns": null
+      },
+      "id": "Field_0wgmyep",
+      "key": "datetime_ilo6po"
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10uzor0",
+        "columns": null
+      },
+      "id": "Field_1t8g1na",
+      "key": "textfield_c528f"
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10uzor0",
+        "columns": null
+      },
+      "id": "Field_0cwkbss",
+      "key": "textfield_awr92i"
+    },
+    {
+      "content": "Trade Date LOP(b)",
+      "type": "html",
+      "layout": {
+        "row": "Row_16xv0a2",
+        "columns": null
+      },
+      "id": "Field_11mmjos"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_16xv0a2",
+        "columns": null
+      },
+      "id": "Field_0tykk10",
+      "key": "textfield_wce5fj"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_16xv0a2",
+        "columns": null
+      },
+      "id": "Field_03rlzai",
+      "key": "datetime_0gcg0l"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_16xv0a2",
+        "columns": null
+      },
+      "id": "Field_1epktcs",
+      "key": "datetime_otbifiq"
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_16xv0a2",
+        "columns": null
+      },
+      "id": "Field_1iyc35h",
+      "key": "textfield_gjgon"
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_16xv0a2",
+        "columns": null
+      },
+      "id": "Field_1ra8a32",
+      "key": "textfield_dkd8dh"
+    },
+    {
+      "content": "Total Delay Penalty(a+b)",
+      "type": "html",
+      "layout": {
+        "row": "Row_0tjtylx",
+        "columns": null
+      },
+      "id": "Field_1kwbsuz"
+    },
+    {
+      "label": "Days",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tjtylx",
+        "columns": null
+      },
+      "id": "Field_1ijlgd0",
+      "key": "textfield_a5hkup"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0tjtylx",
+        "columns": null
+      },
+      "id": "Field_1ohrw6e",
+      "key": "datetime_gyq35i"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0tjtylx",
+        "columns": null
+      },
+      "id": "Field_0tzd6mc",
+      "key": "datetime_78wmwk"
+    },
+    {
+      "label": "Delay Days(C-D)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tjtylx",
+        "columns": null
+      },
+      "id": "Field_0fg9ano",
+      "key": "textfield_z4tvt8"
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0tjtylx",
+        "columns": null
+      },
+      "id": "Field_1cnj0b2",
+      "key": "textfield_t2hrqp"
+    },
+    {
+      "content": "Chargeable Amount (Milestone Stage Penalty Not Chargeable)",
+      "type": "html",
+      "layout": {
+        "row": "Row_07t962z",
+        "columns": null
+      },
+      "id": "Field_1t3ipam"
+    },
+    {
+      "content": "AED",
+      "type": "html",
+      "layout": {
+        "row": "Row_07t962z",
+        "columns": 2
+      },
+      "id": "Field_1rt09q0"
+    },
+    {
+      "label": "Amount",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_07t962z",
+        "columns": 3
+      },
+      "id": "Field_1l5ukjj",
+      "key": "textfield_9yddz"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0azfq99",
+        "columns": null
+      },
+      "id": "Field_0kgbagl"
+    },
+    {
+      "text": "#### Landlord delay",
+      "type": "text",
+      "layout": {
+        "row": "Row_1r6yisf",
+        "columns": null
+      },
+      "id": "Field_17h7158"
+    },
+    {
+      "text": "#### Item",
+      "type": "text",
+      "layout": {
+        "row": "Row_0qc1d0p",
+        "columns": null
+      },
+      "id": "Field_0rovgeu"
+    },
+    {
+      "text": "#### Amount",
+      "type": "text",
+      "layout": {
+        "row": "Row_0qc1d0p",
+        "columns": null
+      },
+      "id": "Field_1a3142e"
+    },
+    {
+      "text": "#### Days delay",
+      "type": "text",
+      "layout": {
+        "row": "Row_0qc1d0p",
+        "columns": null
+      },
+      "id": "Field_1mu0lx7"
+    },
+    {
+      "content": "Total Amount Deducted As per The Days Delayed By Landlord",
+      "type": "html",
+      "layout": {
+        "row": "Row_0iq48fc",
+        "columns": null
+      },
+      "id": "Field_147wk5z"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0iq48fc",
+        "columns": null
+      },
+      "id": "Field_1jhqqi6",
+      "key": "datetime_wxjkf"
+    },
+    {
+      "label": "Day Delay",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0iq48fc",
+        "columns": null
+      },
+      "id": "Field_1hputgx",
+      "key": "textfield_7mqn5d"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1rnaqeb",
+        "columns": null
+      },
+      "id": "Field_0n0zjjq"
+    },
+    {
+      "text": "#### Delay beyond tenant Control",
+      "type": "text",
+      "layout": {
+        "row": "Row_1u3y1aa",
+        "columns": null
+      },
+      "id": "Field_037nj9i"
+    },
+    {
+      "text": "#### Item",
+      "type": "text",
+      "layout": {
+        "row": "Row_0g7ce9g",
+        "columns": null
+      },
+      "id": "Field_19e1wr3"
+    },
+    {
+      "text": "#### Amount",
+      "type": "text",
+      "layout": {
+        "row": "Row_0g7ce9g",
+        "columns": null
+      },
+      "id": "Field_0ggu46n"
+    },
+    {
+      "text": "#### Days delay",
+      "type": "text",
+      "layout": {
+        "row": "Row_0g7ce9g",
+        "columns": null
+      },
+      "id": "Field_1h8um7k"
+    },
+    {
+      "content": "Total Amount Deducted As Per Delayed Beyound The Tenant's Control",
+      "type": "html",
+      "layout": {
+        "row": "Row_1fiqzlb",
+        "columns": null
+      },
+      "id": "Field_019y7py"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1fiqzlb",
+        "columns": null
+      },
+      "id": "Field_1ixq2zv",
+      "key": "datetime_7ggxkh"
+    },
+    {
+      "label": "Day Delay",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1fiqzlb",
+        "columns": null
+      },
+      "id": "Field_0uyo1w4",
+      "key": "textfield_e6r7p6"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0zovvp2",
+        "columns": null
+      },
+      "id": "Field_1ilstsv"
+    },
+    {
+      "text": "#### Reviewed",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zk5n3n",
+        "columns": null
+      },
+      "id": "Field_0riotvo"
+    },
+    {
+      "text": "#### Item",
+      "type": "text",
+      "layout": {
+        "row": "Row_04d70ra",
+        "columns": null
+      },
+      "id": "Field_0bhidkb"
+    },
+    {
+      "text": "#### Amount",
+      "type": "text",
+      "layout": {
+        "row": "Row_04d70ra",
+        "columns": null
+      },
+      "id": "Field_11418ny"
+    },
+    {
+      "content": "Changeable Penalty Amount B-(C+D)",
+      "type": "html",
+      "layout": {
+        "row": "Row_0n27qzc",
+        "columns": null
+      },
+      "id": "Field_1uug7xk"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Date",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0n27qzc",
+        "columns": null
+      },
+      "id": "Field_0k7kz79",
+      "key": "datetime_ss9mf"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0vlgy28",
+        "columns": null
+      },
+      "id": "Field_0hxlelh"
+    },
+    {
+      "text": "#### Summary",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ngqphs",
+        "columns": null
+      },
+      "id": "Field_0538scs"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0yd7htg",
+        "columns": 2
+      },
+      "id": "Field_17sl3nt",
+      "key": "f19_summary_checck_1"
+    },
+    {
+      "content": "Landlord works (any Landlord services affecting the Tenancy)",
+      "type": "html",
+      "layout": {
+        "row": "Row_0yd7htg",
+        "columns": null
+      },
+      "id": "Field_0i7qvni"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0jm3f3k",
+        "columns": 2
+      },
+      "id": "Field_1msg8yf",
+      "key": "f19_summary_checck_2"
+    },
+    {
+      "content": "Obtaining permits from the Authorities (within Tenants control more than stipulated period in lease).",
+      "type": "html",
+      "layout": {
+        "row": "Row_0jm3f3k",
+        "columns": null
+      },
+      "id": "Field_0y99nrm"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0z9jjux",
+        "columns": 2
+      },
+      "id": "Field_0by3kd6",
+      "key": "f19_summary_checck_3"
+    },
+    {
+      "content": "First retail concept in the region or new Tenant in Arada portfolio",
+      "type": "html",
+      "layout": {
+        "row": "Row_0z9jjux",
+        "columns": null
+      },
+      "id": "Field_03cpcu0"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0i55mu4",
+        "columns": 2
+      },
+      "id": "Field_0f5z5j4",
+      "key": "f19_summary_checck_4"
+    },
+    {
+      "content": "Major disagreement in design with Arada Guidelines and the Tenant / Principal.",
+      "type": "html",
+      "layout": {
+        "row": "Row_0i55mu4",
+        "columns": null
+      },
+      "id": "Field_0pqu9hn"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0bwvtjr",
+        "columns": 2
+      },
+      "id": "Field_10lm7yw",
+      "key": "f19_summary_checck_"
+    },
+    {
+      "content": "Force Majeure (Outside the control of Landlord / Tenant)",
+      "type": "html",
+      "layout": {
+        "row": "Row_0bwvtjr",
+        "columns": null
+      },
+      "id": "Field_1ra9qwx"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_19x1rgl",
+        "columns": 2
+      },
+      "id": "Field_1yvosow",
+      "key": "f19_summary_checck_5"
+    },
+    {
+      "content": "Issues related to the Tenancy / Third Party services affecting the Tenancy (i.e. major leakages etc.)",
+      "type": "html",
+      "layout": {
+        "row": "Row_19x1rgl",
+        "columns": null
+      },
+      "id": "Field_0v0onvm"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1p2t6y5",
+        "columns": 2
+      },
+      "id": "Field_1j6q2s5",
+      "key": "f19_summary_checck_6"
+    },
+    {
+      "content": "Strategic Partner (Leasing to recommend and AMC to approve, irrespective of number of days)",
+      "type": "html",
+      "layout": {
+        "row": "Row_1p2t6y5",
+        "columns": null
+      },
+      "id": "Field_03wb22z"
+    },
+    {
+      "label": "",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0m815tk",
+        "columns": 2
+      },
+      "id": "Field_0q113jz",
+      "key": "f19_summary_checck_7"
+    },
+    {
+      "content": "Change of approved Design / Material requested by the Landlord.",
+      "type": "html",
+      "layout": {
+        "row": "Row_0m815tk",
+        "columns": null
+      },
+      "id": "Field_0ga7t8x"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_16pigly",
+        "columns": null
+      },
+      "id": "Field_0l6a1qq"
+    },
+    {
+      "text": "#### General Comments",
+      "type": "text",
+      "layout": {
+        "row": "Row_0iuqch9",
+        "columns": null
+      },
+      "id": "Field_03iyz0p"
+    },
+    {
+      "content": "Attach",
+      "type": "html",
+      "layout": {
+        "row": "Row_0970eho",
+        "columns": null
+      },
+      "id": "Field_0hayf9d"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0970eho",
+        "columns": null
+      },
+      "id": "Field_14dgt1u",
+      "key": "filepicker_paexn"
+    },
+    {
+      "content": "Comments",
+      "type": "html",
+      "layout": {
+        "row": "Row_1hnyrg1",
+        "columns": null
+      },
+      "id": "Field_0dopxld"
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1hnyrg1",
+        "columns": null
+      },
+      "id": "Field_0hpi3aj",
+      "key": "f19_general_comments",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_19_late_opening_penalty_summary_doc",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

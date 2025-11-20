@@ -1,0 +1,1565 @@
+{
+  "components": [
+    {
+      "label": "Group",
+      "components": [
+        {
+          "text": "#### Tenant",
+          "type": "text",
+          "layout": {
+            "row": "Row_14rz8tt",
+            "columns": null
+          },
+          "id": "Field_0qz0buy"
+        },
+        {
+          "text": "#### Unit no.",
+          "type": "text",
+          "layout": {
+            "row": "Row_14rz8tt",
+            "columns": null
+          },
+          "id": "Field_0bbyr1t"
+        },
+        {
+          "text": "#### Unit Name",
+          "type": "text",
+          "layout": {
+            "row": "Row_14rz8tt",
+            "columns": null
+          },
+          "id": "Field_1nyxjpp"
+        },
+        {
+          "text": "#### Unit type",
+          "type": "text",
+          "layout": {
+            "row": "Row_14rz8tt",
+            "columns": null
+          },
+          "id": "Field_0si4o0u"
+        },
+        {
+          "content": "Al Bahar Al mutawasit Rest llc ",
+          "type": "html",
+          "layout": {
+            "row": "Row_1llrh20",
+            "columns": null
+          },
+          "id": "Field_11kdms5"
+        },
+        {
+          "content": "Unit 201-B",
+          "type": "html",
+          "layout": {
+            "row": "Row_1llrh20",
+            "columns": null
+          },
+          "id": "Field_0ki0dgh"
+        },
+        {
+          "content": "Unit name goes here",
+          "type": "html",
+          "layout": {
+            "row": "Row_1llrh20",
+            "columns": null
+          },
+          "id": "Field_0w7tfkk"
+        },
+        {
+          "content": "Retail",
+          "type": "html",
+          "layout": {
+            "row": "Row_1llrh20",
+            "columns": null
+          },
+          "id": "Field_166rza6"
+        },
+        {
+          "text": "#### Company",
+          "type": "text",
+          "layout": {
+            "row": "Row_10eh3yi",
+            "columns": null
+          },
+          "id": "Field_1x5jeij"
+        },
+        {
+          "text": "#### Telephone",
+          "type": "text",
+          "layout": {
+            "row": "Row_10eh3yi",
+            "columns": null
+          },
+          "id": "Field_19x930q"
+        },
+        {
+          "text": "#### Mobile",
+          "type": "text",
+          "layout": {
+            "row": "Row_10eh3yi",
+            "columns": null
+          },
+          "id": "Field_10zz18s"
+        },
+        {
+          "text": "#### Email",
+          "type": "text",
+          "layout": {
+            "row": "Row_10eh3yi",
+            "columns": null
+          },
+          "id": "Field_0xolrfp"
+        },
+        {
+          "content": "Compmny name goes here",
+          "type": "html",
+          "layout": {
+            "row": "Row_1nhs2tq",
+            "columns": null
+          },
+          "id": "Field_1jhs4ev"
+        },
+        {
+          "content": "+971 4344543444",
+          "type": "html",
+          "layout": {
+            "row": "Row_1nhs2tq",
+            "columns": null
+          },
+          "id": "Field_0gpuinm"
+        },
+        {
+          "content": "+971 2343234343",
+          "type": "html",
+          "layout": {
+            "row": "Row_1nhs2tq",
+            "columns": null
+          },
+          "id": "Field_0o70q24"
+        },
+        {
+          "content": "sample@sample.com",
+          "type": "html",
+          "layout": {
+            "row": "Row_1nhs2tq",
+            "columns": null
+          },
+          "id": "Field_10d3mtz"
+        }
+      ],
+      "showOutline": true,
+      "type": "group",
+      "layout": {
+        "row": "Row_1y20qxq",
+        "columns": null
+      },
+      "id": "Field_1n7vcko"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_04p1unx",
+        "columns": null
+      },
+      "id": "Field_1uvrgzd"
+    },
+    {
+      "text": "#### Close-out Documents checklist for F&B units",
+      "type": "text",
+      "layout": {
+        "row": "Row_0vavq2p",
+        "columns": null
+      },
+      "id": "Field_085gnvb"
+    },
+    {
+      "text": "#### Item",
+      "type": "text",
+      "layout": {
+        "row": "Row_1mnooh6",
+        "columns": 6
+      },
+      "id": "Field_1pne8ai"
+    },
+    {
+      "text": "#### Availablity",
+      "type": "text",
+      "layout": {
+        "row": "Row_1mnooh6",
+        "columns": 4
+      },
+      "id": "Field_1v3odcn"
+    },
+    {
+      "text": "#### Attchments",
+      "type": "text",
+      "layout": {
+        "row": "Row_1mnooh6",
+        "columns": null
+      },
+      "id": "Field_1d49d7j"
+    },
+    {
+      "content": "Design based sang ist",
+      "type": "html",
+      "layout": {
+        "row": "Row_1mi1vj6",
+        "columns": null
+      },
+      "id": "Field_0o1rwrg"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1mi1vj6",
+        "columns": 2
+      },
+      "id": "Field_0f61tqy",
+      "key": "f17a_check1_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1mi1vj6",
+        "columns": 2
+      },
+      "id": "Field_0585ev8",
+      "key": "f17a_check1_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1mi1vj6",
+        "columns": null
+      },
+      "id": "Field_0yy5bvm",
+      "key": "f17a_item1_doc"
+    },
+    {
+      "content": "SM Grease Trap/Drainage NOC\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0ae3vav",
+        "columns": null
+      },
+      "id": "Field_11hpmtg"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ae3vav",
+        "columns": 2
+      },
+      "id": "Field_04dxbms",
+      "key": "f17a_check2_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ae3vav",
+        "columns": 2
+      },
+      "id": "Field_0442rhs",
+      "key": "f17a_check2_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0ae3vav",
+        "columns": null
+      },
+      "id": "Field_0tyoq43",
+      "key": "f17a_item2_doc"
+    },
+    {
+      "content": "Food/Health Inspection Approval Report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1y0ze0i",
+        "columns": null
+      },
+      "id": "Field_0yh4k3s"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1y0ze0i",
+        "columns": 2
+      },
+      "id": "Field_00xoeso",
+      "key": "f17a_check3_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1y0ze0i",
+        "columns": 2
+      },
+      "id": "Field_0v3gs2x",
+      "key": "f17a_check3_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1y0ze0i",
+        "columns": null
+      },
+      "id": "Field_043h5ax",
+      "key": "f17a_item3_doc"
+    },
+    {
+      "content": "Tenancy Contract\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1svq3u8",
+        "columns": null
+      },
+      "id": "Field_1xtfpda"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1svq3u8",
+        "columns": 2
+      },
+      "id": "Field_0gbicm6",
+      "key": "f17a_check4_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1svq3u8",
+        "columns": 2
+      },
+      "id": "Field_12dry8k",
+      "key": "f17a_check4_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1svq3u8",
+        "columns": null
+      },
+      "id": "Field_1f7vsey",
+      "key": "f17a_item4_doc"
+    },
+    {
+      "content": "Trade License\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_185j02o",
+        "columns": null
+      },
+      "id": "Field_0u3crrf"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_185j02o",
+        "columns": 2
+      },
+      "id": "Field_16wad6l",
+      "key": "f17a_check5_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_185j02o",
+        "columns": 2
+      },
+      "id": "Field_05b4n7f",
+      "key": "f17a_check5_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_185j02o",
+        "columns": null
+      },
+      "id": "Field_08931lj",
+      "key": "f1a_item5_doc"
+    },
+    {
+      "content": "SM Décor Completion Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1kt8ytu",
+        "columns": null
+      },
+      "id": "Field_1celp6e"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1kt8ytu",
+        "columns": 2
+      },
+      "id": "Field_0t9lf0d",
+      "key": "f17a_check6_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1kt8ytu",
+        "columns": 2
+      },
+      "id": "Field_1thh9b7",
+      "key": "f17a_check6_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1kt8ytu",
+        "columns": null
+      },
+      "id": "Field_1rrse26",
+      "key": "f17a_item6_doc"
+    },
+    {
+      "content": "SCD Completion Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_13w5zt1",
+        "columns": null
+      },
+      "id": "Field_0xnnzw3"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_13w5zt1",
+        "columns": 2
+      },
+      "id": "Field_1aj2pd4",
+      "key": "f17a_check7_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_13w5zt1",
+        "columns": 2
+      },
+      "id": "Field_1oj7qex",
+      "key": "f17a_check7_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_13w5zt1",
+        "columns": null
+      },
+      "id": "Field_10xqobb",
+      "key": "f17a_item7_doc"
+    },
+    {
+      "content": "SCD/HOE Safety Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0258jo1",
+        "columns": null
+      },
+      "id": "Field_1k5gvts"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0258jo1",
+        "columns": 2
+      },
+      "id": "Field_0jdwmmi",
+      "key": "f17a_check8_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0258jo1",
+        "columns": 2
+      },
+      "id": "Field_1ttlgnv",
+      "key": "f17a_check8_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0258jo1",
+        "columns": null
+      },
+      "id": "Field_1135lxj",
+      "key": "f17a_item8_doc"
+    },
+    {
+      "content": "SEWA Natural Gas (NG) Certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_194tfth",
+        "columns": null
+      },
+      "id": "Field_1pdqq4o"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_194tfth",
+        "columns": 2
+      },
+      "id": "Field_09h3ivi",
+      "key": "f17a_check9_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_194tfth",
+        "columns": 2
+      },
+      "id": "Field_0qk705f",
+      "key": "f17a_check9_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_194tfth",
+        "columns": null
+      },
+      "id": "Field_1ek750q",
+      "key": "f17a_item9_doc"
+    },
+    {
+      "content": "SED Approval (SED Form with Signage approval stamped)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1fouwo9",
+        "columns": null
+      },
+      "id": "Field_1e71x6m"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1fouwo9",
+        "columns": 2
+      },
+      "id": "Field_1ofwhha",
+      "key": "f17a_check10_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1fouwo9",
+        "columns": 2
+      },
+      "id": "Field_0hrxwx7",
+      "key": "checkbox_5umtqk"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1fouwo9",
+        "columns": null
+      },
+      "id": "Field_13vmbvb",
+      "key": "fs17a_ten10_doc"
+    },
+    {
+      "content": "Local Authority (SM/SCD/SEWA/Food Control/Drainage/NG) drawings approvals (duly stamped)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1d3y5a7",
+        "columns": null
+      },
+      "id": "Field_1rwbw29"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1d3y5a7",
+        "columns": 2
+      },
+      "id": "Field_0oibp58",
+      "key": "f17a_check11_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1d3y5a7",
+        "columns": 2
+      },
+      "id": "Field_028503e",
+      "key": "f17a_check11_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1d3y5a7",
+        "columns": null
+      },
+      "id": "Field_1ezqspf",
+      "key": "fs17a_item11_doc"
+    },
+    {
+      "content": "SEWA Account Transfer document on Tenant’s Name\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0esokly",
+        "columns": null
+      },
+      "id": "Field_1obxj0g"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0esokly",
+        "columns": 2
+      },
+      "id": "Field_0yro3rk",
+      "key": "f17a_check12_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0esokly",
+        "columns": 2
+      },
+      "id": "Field_0eon7rw",
+      "key": "f17a_check12_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0esokly",
+        "columns": null
+      },
+      "id": "Field_054u8kl",
+      "key": "fs17a_iem12_doc"
+    },
+     {
+      "text": "#### Availablity",
+      "type": "text",
+      "layout": {
+        "row": "Row_1sw5jeu",
+        "columns": 4
+      },
+      "id": "Field_1pkgo76"
+    },
+    {
+      "text": "#### Attachments",
+      "type": "text",
+      "layout": {
+        "row": "Row_1sw5jeu",
+        "columns": null
+      },
+      "id": "Field_0mmqxnl"
+    },
+    {
+      "content": "Air balancing (3rd Party) Test Report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0m5y1bi",
+        "columns": 5
+      },
+      "id": "Field_1jr4agw"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0m5y1bi",
+        "columns": 2
+      },
+      "id": "Field_15g69c5",
+      "key": "f17b_check1_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0m5y1bi",
+        "columns": 2
+      },
+      "id": "Field_0v5w7mt",
+      "key": "f17b_check1_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0m5y1bi",
+        "columns": null
+      },
+      "id": "Field_1fq1696",
+      "key": "f17b_item1_doc"
+    },
+    {
+      "content": "Live Test (3rd Party) Report (third party)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_104a9rp",
+        "columns": 5
+      },
+      "id": "Field_1g1qv76"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_104a9rp",
+        "columns": 2
+      },
+      "id": "Field_1xo4gqk",
+      "key": "f17b_check2_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_104a9rp",
+        "columns": 2
+      },
+      "id": "Field_0fg3d7x",
+      "key": "f17b_check2_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_104a9rp",
+        "columns": null
+      },
+      "id": "Field_1cmyqvc",
+      "key": "f17b_attach2_doc"
+    },
+    {
+      "content": "Cold Test Report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0ye2i0s",
+        "columns": 5
+      },
+      "id": "Field_1va0yyo"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ye2i0s",
+        "columns": 2
+      },
+      "id": "Field_0a938my",
+      "key": "f17b_check3_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ye2i0s",
+        "columns": 2
+      },
+      "id": "Field_00j7evu",
+      "key": "f17b_check3_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0ye2i0s",
+        "columns": null
+      },
+      "id": "Field_14nexk1",
+      "key": "f17b_attach3_doc"
+    },
+    {
+      "content": "Chlorination Report for CWS (3rd Party)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1dy3e4v",
+        "columns": 5
+      },
+      "id": "Field_01spzx1"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1dy3e4v",
+        "columns": 2
+      },
+      "id": "Field_1ycehe0",
+      "key": "f17b_check4_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1dy3e4v",
+        "columns": 2
+      },
+      "id": "Field_0iszin5",
+      "key": "f17b_check4_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1dy3e4v",
+        "columns": null
+      },
+      "id": "Field_1pw9bt5",
+      "key": "f17b_attach4_doc"
+    },
+    {
+      "content": "Fire Alarm Commissioning Report (by Specialist)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0is9l08",
+        "columns": 5
+      },
+      "id": "Field_1dz8271"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0is9l08",
+        "columns": 2
+      },
+      "id": "Field_1thzrxz",
+      "key": "f17b_check5_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0is9l08",
+        "columns": 2
+      },
+      "id": "Field_10zatn5",
+      "key": "f17b_check5_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0is9l08",
+        "columns": null
+      },
+      "id": "Field_0v4vhcv",
+      "key": "f17b_attach5_doc"
+    },
+    {
+      "content": "Fire Alarm Interface Report (by Specialist)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1fmpkid",
+        "columns": 5
+      },
+      "id": "Field_1o2phd4"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1fmpkid",
+        "columns": 2
+      },
+      "id": "Field_0rq8wg2",
+      "key": "f17b_check6_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1fmpkid",
+        "columns": 2
+      },
+      "id": "Field_1of7qgz",
+      "key": "f17b_check6_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1fmpkid",
+        "columns": null
+      },
+      "id": "Field_0n84kq2",
+      "key": "f17b_attach6_doc"
+    },
+    {
+      "content": "Pressure (Fire Fighting, Cold Water Supply, Refrigerant Piping) Test Reports\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0juj26l",
+        "columns": 5
+      },
+      "id": "Field_18060xs"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0juj26l",
+        "columns": 2
+      },
+      "id": "Field_11b2sam",
+      "key": "f17b_check7_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0juj26l",
+        "columns": 2
+      },
+      "id": "Field_1521et2",
+      "key": "f17b_check7_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0juj26l",
+        "columns": null
+      },
+      "id": "Field_1x2u13g",
+      "key": "f17b_attach7_doc"
+    },
+    {
+      "content": "Drainage Gravity and Slope Test Report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0hghr8t",
+        "columns": 5
+      },
+      "id": "Field_1m5lvzu"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0hghr8t",
+        "columns": 2
+      },
+      "id": "Field_0hnvva1",
+      "key": "f17b_check8_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0hghr8t",
+        "columns": 2
+      },
+      "id": "Field_1g21ylj",
+      "key": "f17b_check8_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0hghr8t",
+        "columns": null
+      },
+      "id": "Field_1upiyp7",
+      "key": "f17b_attach8_doc"
+    },
+    {
+      "content": "Ecology unit & FAHU Commissioning report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1b5vxua",
+        "columns": 5
+      },
+      "id": "Field_1t5d0wm"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1b5vxua",
+        "columns": 2
+      },
+      "id": "Field_1ff4ll7",
+      "key": "f17b_check9_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1b5vxua",
+        "columns": 2
+      },
+      "id": "Field_0qahynb",
+      "key": "f17b_check9_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1b5vxua",
+        "columns": null
+      },
+      "id": "Field_1tr0f6m",
+      "key": "f17b_attach9_doc"
+    },
+    {
+      "content": "Fire suppression system commissioning report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_06pczyc",
+        "columns": 5
+      },
+      "id": "Field_1tyd116"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_06pczyc",
+        "columns": 2
+      },
+      "id": "Field_0lx1of3",
+      "key": "f17b_check10_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_06pczyc",
+        "columns": 2
+      },
+      "id": "Field_0f6r714",
+      "key": "f17b_check10_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_06pczyc",
+        "columns": null
+      },
+      "id": "Field_0d6bsiq",
+      "key": "f17b_atach10_doc"
+    },
+    {
+      "content": "Kitchen hood commissioning report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0zc8fel",
+        "columns": 5
+      },
+      "id": "Field_08x8kp1"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0zc8fel",
+        "columns": 2
+      },
+      "id": "Field_1wfi19f",
+      "key": "f17b_check11_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0zc8fel",
+        "columns": 2
+      },
+      "id": "Field_1sptr7s",
+      "key": "f17b_check11_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0zc8fel",
+        "columns": null
+      },
+      "id": "Field_032h7v6",
+      "key": "f17b_attach11_doc"
+    },
+    {
+      "content": "NG commissioning report (3rd Party)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0akffgc",
+        "columns": 5
+      },
+      "id": "Field_11u5ua3"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0akffgc",
+        "columns": 2
+      },
+      "id": "Field_0v0ii1g",
+      "key": "f17b_check12_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0akffgc",
+        "columns": 2
+      },
+      "id": "Field_1hexwtj",
+      "key": "f17b_check12_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0akffgc",
+        "columns": null
+      },
+      "id": "Field_1p5lpph",
+      "key": "f17b_attach12_doc"
+    },
+    {
+      "content": "Water proofing test report and warranty certificate\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_02hevwj",
+        "columns": 5
+      },
+      "id": "Field_0ls8u7q"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_02hevwj",
+        "columns": 2
+      },
+      "id": "Field_01v4jti",
+      "key": "f17b_check13_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_02hevwj",
+        "columns": 2
+      },
+      "id": "Field_0l43r1j",
+      "key": "f17b_check13_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_02hevwj",
+        "columns": null
+      },
+      "id": "Field_1xxvy3p",
+      "key": "f17b_attach13_doc"
+    },
+    {
+      "content": "Emergency exit light commissioning report\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_139mg78",
+        "columns": 5
+      },
+      "id": "Field_0qobyn2"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_139mg78",
+        "columns": 2
+      },
+      "id": "Field_00k9nc2",
+      "key": "f17b_check14_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_139mg78",
+        "columns": 2
+      },
+      "id": "Field_1ljfa8x",
+      "key": "f17b_check14_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_139mg78",
+        "columns": null
+      },
+      "id": "Field_0fvsare",
+      "key": "f17b_attach14_doc"
+    },
+    {
+      "content": "Annual Maintenance Contract for Life & Safety System attested by SCD\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_17t5bps",
+        "columns": 5
+      },
+      "id": "Field_1uuzod6"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_17t5bps",
+        "columns": 2
+      },
+      "id": "Field_0cxciqk",
+      "key": "f17b_check15_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_17t5bps",
+        "columns": 2
+      },
+      "id": "Field_10361lu",
+      "key": "f17b_check15_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_17t5bps",
+        "columns": null
+      },
+      "id": "Field_0r1c3tl",
+      "key": "f17b_attach15_doc"
+    },
+    {
+      "content": "Confirmation on Activation of Fire Fighting Supervisory Valve (attached photos)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0p1q3j8",
+        "columns": 5
+      },
+      "id": "Field_11nu13s"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0p1q3j8",
+        "columns": 2
+      },
+      "id": "Field_0m16zbq",
+      "key": "f17b_check16_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0p1q3j8",
+        "columns": 2
+      },
+      "id": "Field_1m6xduq",
+      "key": "f17b_check16_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0p1q3j8",
+        "columns": null
+      },
+      "id": "Field_1ys684v",
+      "key": "f17b_attach16_doc"
+    },
+    {
+      "content": "Fire Rated Certificate of any combustible material\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0j9ftgi",
+        "columns": 5
+      },
+      "id": "Field_0iiw5oh"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0j9ftgi",
+        "columns": 2
+      },
+      "id": "Field_0p4mlds",
+      "key": "f17b_check17_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0j9ftgi",
+        "columns": 2
+      },
+      "id": "Field_1lfitgu",
+      "key": "f17b_check17_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0j9ftgi",
+        "columns": null
+      },
+      "id": "Field_0gc1fo7",
+      "key": "f17b_attach17_doc"
+    },
+    {
+      "content": "As-Built drawings – Architectural and MEP - PDF and CAD format\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_02un5fw",
+        "columns": 5
+      },
+      "id": "Field_1paqfzl"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_02un5fw",
+        "columns": 2
+      },
+      "id": "Field_175pk1e",
+      "key": "f17b_check18_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_02un5fw",
+        "columns": 2
+      },
+      "id": "Field_1kkypsm",
+      "key": "f17b_check18_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_02un5fw",
+        "columns": null
+      },
+      "id": "Field_1ctt3vy",
+      "key": "f17b_attach18_doc"
+    },
+    {
+      "content": "Tempered glass stability certificate for the shop front glass façade (If applicable)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1v37dw8",
+        "columns": 5
+      },
+      "id": "Field_1er6xua"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1v37dw8",
+        "columns": 2
+      },
+      "id": "Field_1yd71sp",
+      "key": "f17b_check19_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1v37dw8",
+        "columns": 2
+      },
+      "id": "Field_169i3xb",
+      "key": "f17b_check19_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1v37dw8",
+        "columns": null
+      },
+      "id": "Field_1c88ez5",
+      "key": "f17b_attach19_doc"
+    },
+    {
+      "content": "Structural Load & Design calculation from SM Registration structural consultant letter with and undertaking letter, ***Roof/Heavy Equipment/Stairs\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_0uyrzsh",
+        "columns": 5
+      },
+      "id": "Field_007ou05"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0uyrzsh",
+        "columns": 2
+      },
+      "id": "Field_1syh23x",
+      "key": "f17b_check20_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0uyrzsh",
+        "columns": 2
+      },
+      "id": "Field_0ls8v48",
+      "key": "f17b_check20_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0uyrzsh",
+        "columns": null
+      },
+      "id": "Field_0iueadq",
+      "key": "f17b_attach20_doc"
+    },
+    {
+      "content": "AC Warranty\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_19qbkca",
+        "columns": 5
+      },
+      "id": "Field_1ytg727"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_19qbkca",
+        "columns": 2
+      },
+      "id": "Field_1tb0vil",
+      "key": "f17b_check21_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_19qbkca",
+        "columns": 2
+      },
+      "id": "Field_00jvfy6",
+      "key": "f17b_check21_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_19qbkca",
+        "columns": null
+      },
+      "id": "Field_0crq6uc",
+      "key": "f17b_attach21_no"
+    },
+    {
+      "content": "Restaurant Menu Book (F&B only)\n\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_18swal7",
+        "columns": 5
+      },
+      "id": "Field_0ywqah2"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_18swal7",
+        "columns": 2
+      },
+      "id": "Field_1p8e1br",
+      "key": "f17b_check22_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_18swal7",
+        "columns": 2
+      },
+      "id": "Field_0k67nkj",
+      "key": "f17b_check22_no"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_18swal7",
+        "columns": null
+      },
+      "id": "Field_0qq1o1c",
+      "key": "f17b_attach22_doc"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0ccefhd",
+        "columns": null
+      },
+      "id": "Field_0t88kno"
+    }
+  ],
+  "type": "default",
+  "id": "form_17A_closer_rrd",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

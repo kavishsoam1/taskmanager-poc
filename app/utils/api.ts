@@ -1,6 +1,6 @@
 // API base URL - replace with actual URL when deployed
 /* eslint-disable */
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8082';
 
 // Zeebe API URL
 const ZEEBE_API_URL = 'http://localhost:8080';
@@ -50,7 +50,7 @@ export interface ProcessVariable {
 
 // Camunda API configuration - Direct Access (not used with proxy)
 export const CAMUNDA_API = {
-  baseUrl: 'http://localhost:8085',
+  baseUrl: 'http://localhost:8082',
   inboundEndpoint: '/inbound/fcsrt1265',
   auth: {
     username: 'demo',
@@ -62,7 +62,7 @@ export const CAMUNDA_API = {
 export const PROXY_API = {
   camunda: '/api/proxy/camunda',
   camundaApproval: '/api/proxy/camunda-approval',
-  camundaGetAllList: 'http://localhost:8085/inbound/getAllList',
+  camundaGetAllList: 'http://localhost:8082/inbound/getAllList',
   zeebeProcessInstances: '/api/proxy/zeebe-process-instances',
   zeebeVariables: '/api/proxy/zeebe-variables',
   editResubmit: '/api/proxy/edit-resubmit',
@@ -231,13 +231,13 @@ export async function getAllProcessInstances(): Promise<Task[]> {
   try {
     // Call the Zeebe API through our proxy to get process instances
     const response = await fetch(PROXY_API.zeebeProcessInstances, {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         filter: {
-          bpmnProcessId: "workflow_2"
+          bpmnProcessId: "rdd_workflow"
         },
         size: 1000
       })
@@ -246,9 +246,9 @@ export async function getAllProcessInstances(): Promise<Task[]> {
     if (!response.ok) {
       throw new Error(`Failed to fetch process instances: ${response.status}`);
     }
-
+console.log(response,'dfmmvkflmvklfmvklgfmbvlkgfmbklgfmbklgbgklmbgklmk')
     const data = await response.json();
-    
+    console.log(data,'kdfnvvkjnj')
     // Map all process instances to tasks format
     const processInstances: ProcessInstance[] = data.items || [];
     

@@ -1,0 +1,140 @@
+{
+  "components": [
+    {
+      "text": "### Al Bahar Al Mutawasti Rest LLC SP",
+      "type": "text",
+      "layout": {
+        "row": "Row_0k8yx7j",
+        "columns": null
+      },
+      "id": "Field_0hbzodm"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1e01pxf",
+        "columns": null
+      },
+      "id": "Field_12h4072"
+    },
+    {
+      "text": "### No Objection Submission",
+      "type": "text",
+      "layout": {
+        "row": "Row_139nupr",
+        "columns": 4
+      },
+      "id": "Field_0okikgg"
+    },
+    {
+      "label": "Main Contractor Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1dwg9os",
+        "columns": 4
+      },
+      "id": "Field_0kcsxod",
+      "key": "f12_main_contractor_name"
+    },
+    {
+      "text": "####  No Objection for Site Mobilization",
+      "type": "text",
+      "layout": {
+        "row": "Row_14jjx9b",
+        "columns": null
+      },
+      "id": "Field_0gapo1f"
+    },
+    {
+      "text": "#### To:",
+      "type": "text",
+      "layout": {
+        "row": "Row_0r5cvs4",
+        "columns": 2
+      },
+      "id": "Field_1ypplv3"
+    },
+    {
+      "content": "Aljada Mall Project Manager",
+      "type": "html",
+      "layout": {
+        "row": "Row_0r5cvs4",
+        "columns": null
+      },
+      "id": "Field_0oadd8j"
+    },
+    {
+      "text": "#### Subject:",
+      "type": "text",
+      "layout": {
+        "row": "Row_0clbyld",
+        "columns": 2
+      },
+      "id": "Field_0tis8oq"
+    },
+    {
+      "content": " No Objection for Site Mobilization",
+      "type": "html",
+      "layout": {
+        "row": "Row_0clbyld",
+        "columns": null
+      },
+      "id": "Field_0lswjv6"
+    },
+    {
+      "content": "Dear Sir,",
+      "type": "html",
+      "layout": {
+        "row": "Row_0y5bd8s",
+        "columns": null
+      },
+      "id": "Field_1v45cat"
+    },
+    {
+      "content": "The respective Tenant has appointed Al bahar al mutawasit rest llc as their main contractor to undertake the fit-out decoration within the above-mentioned unit. Retail Design and Delivery has completed their due diligence, and has no objection permitting same. Prior to mobilization, the Tenant’s main contractor and their sub-contractor(s) must complete a compulsory Health & Safety Site Induction undertaken by Aljada Mall main contractor, and must comply with Aljada Mall Health and Safety Policies and Procedures.",
+      "type": "html",
+      "layout": {
+        "row": "Row_1q8ag6x",
+        "columns": null
+      },
+      "id": "Field_0jpnkjn"
+    },
+    {
+      "content": "Yours sincerely,\n",
+      "type": "html",
+      "layout": {
+        "row": "Row_1brgz70",
+        "columns": 2
+      },
+      "id": "Field_0jmkuxd"
+    },
+    {
+      "content": "Arada RDD",
+      "type": "html",
+      "layout": {
+        "row": "Row_1o694x0",
+        "columns": 2
+      },
+      "id": "Field_0sb6unu"
+    },
+    {
+      "label": "Approve",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0k5uyz9",
+        "columns": null
+      },
+      "id": "Field_0hufllo",
+      "key": "form_12_approval"
+    }
+  ],
+  "type": "default",
+  "id": "Form_12_site_mobilzation",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

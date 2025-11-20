@@ -1,351 +1,143 @@
-'use client';
-/* eslint-disable */
-import { useState, FormEvent, ChangeEvent } from 'react';
-// Using correct relative path
-import { createTask } from '../../../utils/api';
-
-export default function NewTaskPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    age: '',
-    gender: '',
-    address: '',
-    aadharNo: '',
-    pdfFile: null as File | null,
-    extraDetails1: '',
-    extraDetails2: '',
-    extraDetails3: '',
-    extraDetails4: '',
-  });
-  
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
-    // Clear error when field is edited
-    if (errors[name]) {
-      setErrors(prev => {
-        const newErrors = { ...prev };
-        delete newErrors[name];
-        return newErrors;
-      });
-    }
-  };
-
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      
-      // Check if file is a PDF
-      if (file.type !== 'application/pdf') {
-        setErrors(prev => ({ 
-          ...prev, 
-          pdfFile: 'Only PDF files are allowed' 
-        }));
-        return;
-      }
-      
-      setFormData(prev => ({ ...prev, pdfFile: file }));
-      
-      // Clear error when file is selected
-      if (errors.pdfFile) {
-        setErrors(prev => {
-          const newErrors = { ...prev };
-          delete newErrors.pdfFile;
-          return newErrors;
-        });
-      }
-    }
-  };
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-    
-    if (!formData.age) {
-      newErrors.age = 'Age is required';
-    } else if (parseInt(formData.age) <= 0) {
-      newErrors.age = 'Age must be a positive number';
-    }
-    
-    if (!formData.gender) {
-      newErrors.gender = 'Please select a gender';
-    }
-    
-    if (!formData.address.trim()) {
-      newErrors.address = 'Address is required';
-    }
-    
-    if (!formData.aadharNo) {
-      newErrors.aadharNo = 'Aadhar number is required';
-    } else if (!/^\d{12}$/.test(formData.aadharNo)) {
-      newErrors.aadharNo = 'Aadhar number must be 12 digits';
-    }
-    
-    // PDF is now optional, so no validation required
-    // if (!formData.pdfFile) {
-    //   newErrors.pdfFile = 'Please upload a PDF document';
-    // }
-    
-    return newErrors;
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    
-    // Validate form
-    const newErrors = validateForm();
-    setErrors(newErrors);
-    
-    // If no errors, proceed with form submission
-    if (Object.keys(newErrors).length === 0) {
-      setIsSubmitting(true);
+"use client";
+import React, { useEffect, useState } from "react";
+import {getProcessVariables, getAllTasksOriginal } from '../../../utils/api';
+const TenantDetailsView = () => {
+     const [tenantData, setTenantData] = useState<Record<string, any> | null>(null);
+console.log(tenantData)
+  useEffect(() => {
+    const fetchVariables = async () => {
       try {
-        // Create task using Camunda API
-        const result = await createTask({
-          name: formData.name,
-          age: formData.age,
-          gender: formData.gender,
-          address: formData.address,
-          aadharNo: formData.aadharNo,
-          pdfFilePath: formData.pdfFile ? `/uploads/${formData.pdfFile.name}` : '',
-          extraDetails1: formData.extraDetails1,
-          extraDetails2: formData.extraDetails2,
-          extraDetails3: formData.extraDetails3,
-          extraDetails4: formData.extraDetails4,
+        const processInstanceKey = 	2251799814858551;
+// const processInstanceKeyStr = processInstanceKey.toString();
+
+        const res = await fetch('/api/proxy/zeebe-variables', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            filter: { processInstanceKey },
+            size: 1000,
+          }),
         });
-        
-        console.log('Task created successfully:', result);
-        
-        // Show success message
-        setSubmitSuccess(true);
-        
-        // Reset form
-        setFormData({
-          name: '',
-          age: '',
-          gender: '',
-          address: '',
-          aadharNo: '',
-          pdfFile: null,
-          extraDetails1: '',
-          extraDetails2: '',
-          extraDetails3: '',
-          extraDetails4: '',
-        });
-      } catch (error) {
-        console.error('Error creating task:', error);
-        setSubmitError('Failed to create task. Please try again.');
-      } finally {
-        setIsSubmitting(false);
+
+        const data = await res.json();
+        console.log('Fetched Camunda/Zeebe Variables:', data);
+
+        setTenantData(data);
+      } catch (err) {
+        console.error('Error fetching process variables:', err);
       }
-    }
+    };
+
+    fetchVariables();
+  }, []);
+  
+
+  // Sample tenant data
+  const tenant = {
+    development: "Downtown Plaza",
+    unit_No: "A-102",
+    tenant_name: "ABC Trading LLC",
+    operating_name: "ABC Retail",
+    operation_bussiness: "Retail - Clothing",
+    unit_type: "Retail",
+    lease_team: 2,
+    condition_permises: "Good",
+    design_fit_out_period: 30,
+    fit_ot_start_date: "2025-09-01",
+    opening_date_asPer_LA: "2025-11-01",
+    name: "John Doe",
+    designation: "Manager",
+    comapany: "ABC Group",
+    address_po_box: "P.O. Box 12345",
+    address_phy_add: "Business Bay, Dubai",
+    tel_country_code: "+971",
+    tel: "045678900",
+    mb_country_code: "+971",
+    mob: "0501234567",
+    email: "john.doe@abc.com",
+    special_requirements: "Need extended working hours approval.",
+    filepicker_f1_attachment: "lease-agreement.pdf",
   };
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Create New Task</h1>
-      
-      {submitSuccess && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6" role="alert">
-          <strong className="font-bold">Success! </strong>
-          <span className="block sm:inline">Task created successfully.</span>
-          <button 
-            className="absolute top-0 bottom-0 right-0 px-4 py-3"
-            onClick={() => setSubmitSuccess(false)}
-          >
-            <span className="text-2xl">&times;</span>
-          </button>
-        </div>
-      )}
-      
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-            Name <span className="text-red-500">*</span>
-          </label>
-          <input
-            className={`shadow appearance-none border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-          />
-          {errors.name && <p className="text-red-500 text-xs italic mt-1">{errors.name}</p>}
-        </div>
-        
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="age">
-            Age <span className="text-red-500">*</span>
-          </label>
-          <input
-            className={`shadow appearance-none border ${errors.age ? 'border-red-500' : 'border-gray-300'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="age"
-            type="number"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-            placeholder="Enter your age"
-            min="1"
-          />
-          {errors.age && <p className="text-red-500 text-xs italic mt-1">{errors.age}</p>}
-        </div>
-        
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="gender">
-            Gender <span className="text-red-500">*</span>
-          </label>
-          <select
-            className={`shadow appearance-none border ${errors.gender ? 'border-red-500' : 'border-gray-300'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="gender"
-            name="gender"
-            value={formData.gender}
-            onChange={handleChange}
-          >
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            {/* <option value="prefer_not_to_say">Prefer not to say</option> */}
-          </select>
-          {errors.gender && <p className="text-red-500 text-xs italic mt-1">{errors.gender}</p>}
-        </div>
-        
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="address">
-            Address <span className="text-red-500">*</span>
-          </label>
-          <textarea
-            className={`shadow appearance-none border ${errors.address ? 'border-red-500' : 'border-gray-300'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="address"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            placeholder="Enter your address"
-            rows={4}
-          />
-          {errors.address && <p className="text-red-500 text-xs italic mt-1">{errors.address}</p>}
-        </div>
-        
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="aadharNo">
-            Aadhar Number <span className="text-red-500">*</span>
-          </label>
-          <input
-            className={`shadow appearance-none border ${errors.aadharNo ? 'border-red-500' : 'border-gray-300'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="aadharNo"
-            type="text"
-            name="aadharNo"
-            value={formData.aadharNo}
-            onChange={handleChange}
-            placeholder="12-digit Aadhar number"
-            maxLength={12}
-            pattern="[0-9]{12}"
-          />
-          {errors.aadharNo && <p className="text-red-500 text-xs italic mt-1">{errors.aadharNo}</p>}
-        </div>
-        
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="file">
-            Upload Document (PDF) <span className="text-red-500">*</span>
-          </label>
-          <input
-            className={`shadow appearance-none border ${errors.file ? 'border-red-500' : 'border-gray-300'} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100`}
-            id="file"
-            type="file"
-            name="file"
-            onChange={handleFileChange}
-            accept="application/pdf"
-          />
-          {errors.pdfFile && <p className="text-red-500 text-xs italic mt-1">{errors.pdfFile}</p>}
-        </div>
+    <div className="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-2xl p-8 border border-gray-200">
+      <h2 className="text-3xl font-semibold text-green-700 text-center mb-6">
+        Tenant Details
+      </h2>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails1">
-            Extra Details 1
-          </label>
-          <textarea
-            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="extraDetails1"
-            name="extraDetails1"
-            value={formData.extraDetails1}
-            onChange={handleChange}
-            placeholder="Enter extra details 1"
-            rows={2}
+      {/* LOCATION DETAILS */}
+      <Section title="Location and Details">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Detail label="Development" value={tenantData?.firstName} />
+          <Detail label="Unit No." value={tenantData?.LastName} />
+          <Detail label="Tenant" value={tenant.tenant_name} />
+          <Detail label="Operating Name" value={tenant.operating_name} />
+          <Detail label="Operation Business" value={tenant.operation_bussiness} />
+          <Detail label="Unit Type" value={tenant.unit_type} />
+          <Detail label="Lease Team" value={tenant.lease_team} />
+          <Detail label="Condition of Premises" value={tenant.condition_permises} />
+          <Detail
+            label="Design & Fit Out Period"
+            value={`${tenant.design_fit_out_period} days`}
           />
+          <Detail label="Fit Out Start Date" value={tenant.fit_ot_start_date} />
+          <Detail label="Opening Date as per LA" value={tenant.opening_date_asPer_LA} />
         </div>
+      </Section>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails2">
-            Extra Details 2
-          </label>
-          <textarea
-            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="extraDetails2"
-            name="extraDetails2"
-            value={formData.extraDetails2}
-            onChange={handleChange}
-            placeholder="Enter extra details 2"
-            rows={2}
+      {/* CONTACT */}
+      <Section title="Contact">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Detail label="Name" value={tenant.name} />
+          <Detail label="Designation" value={tenant.designation} />
+          <Detail label="Company" value={tenant.comapany} />
+          <Detail label="Address (PO Box)" value={tenant.address_po_box} />
+          <Detail label="Physical Address" value={tenant.address_phy_add} />
+          <Detail
+            label="Telephone"
+            value={`${tenant.tel_country_code} ${tenant.tel}`}
           />
+          <Detail label="Mobile" value={`${tenant.mb_country_code} ${tenant.mob}`} />
+          <Detail label="Email" value={tenant.email} />
         </div>
+      </Section>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails3">
-            Extra Details 3
-          </label>
-          <textarea
-            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="extraDetails3"
-            name="extraDetails3"
-            value={formData.extraDetails3}
-            onChange={handleChange}
-            placeholder="Enter extra details 3"
-            rows={2}
-          />
+      {/* SPECIAL REQUIREMENTS */}
+      <Section title="Special Requirements">
+        <div className="border border-gray-300 rounded-lg p-4 bg-gray-50 text-gray-700">
+          {tenant.special_requirements}
         </div>
+      </Section>
 
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="extraDetails4">
-            Extra Details 4
-          </label>
-          <textarea
-            className={`shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500`}
-            id="extraDetails4"
-            name="extraDetails4"
-            value={formData.extraDetails4}
-            onChange={handleChange}
-            placeholder="Enter extra details 4"
-            rows={2}
-          />
-        </div>
-        
-        <div className="flex items-center justify-end">
-          <button
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center disabled:opacity-50"
-            type="submit"
-            disabled={isSubmitting}
-          >
-            {isSubmitting && (
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-            )}
-            {isSubmitting ? 'Submitting...' : 'Submit'}
-          </button>
-        </div>
-      </form>
+      {/* ATTACHMENT */}
+      <Section title="Attachment">
+        <a
+          href={`/${tenant.filepicker_f1_attachment}`}
+          target="_blank"
+          rel="noreferrer"
+          className="text-green-700 font-medium hover:underline flex items-center gap-1"
+        >
+          📎 {tenant.filepicker_f1_attachment}
+        </a>
+      </Section>
     </div>
   );
-}
+};
+
+const Section = ({ title, children } : any) => (
+  <section className="mb-8 border-t border-gray-200 pt-4">
+    <h3 className="text-lg font-semibold text-gray-800 mb-3 border-b pb-1 border-gray-200">
+      {title}
+    </h3>
+    {children}
+  </section>
+);
+
+const Detail = ({ label, value }: any) => (
+  <div className="border border-gray-300 rounded-lg p-3 bg-gray-50 hover:bg-gray-100 transition">
+    <p className="text-sm text-gray-500">{label}</p>
+    <p className="text-base font-medium text-gray-800">{value || "-"}</p>
+  </div>
+);
+
+export default TenantDetailsView;

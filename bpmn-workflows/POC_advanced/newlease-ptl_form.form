@@ -1,0 +1,658 @@
+{
+  "components": [
+    {
+      "text": "### NEW LEASE PTL FORM",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fteo20",
+        "columns": null
+      },
+      "id": "Field_1sm0a9k"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1dv1q67",
+        "columns": null
+      },
+      "id": "Field_1qj0duv"
+    },
+    {
+      "text": "#### Location Details",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hn92kk",
+        "columns": null
+      },
+      "id": "Field_0kdif5b"
+    },
+    {
+      "content": "Label",
+      "type": "html",
+      "layout": {
+        "row": "Row_02bbha5",
+        "columns": 5
+      },
+      "id": "Field_0idowzq"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_02bbha5",
+        "columns": 8
+      },
+      "id": "Field_1ta3vfj",
+      "key": "label",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Unit no.",
+      "type": "html",
+      "layout": {
+        "row": "Row_16trbun",
+        "columns": 5
+      },
+      "id": "Field_0ga0nnx"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_16trbun",
+        "columns": 8
+      },
+      "id": "Field_0ebkxjo",
+      "key": "unit_No",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Ground Floor",
+      "type": "html",
+      "layout": {
+        "row": "Row_068pu65",
+        "columns": 5
+      },
+      "id": "Field_0i02gnp"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_068pu65",
+        "columns": 8
+      },
+      "id": "Field_0ogceg3",
+      "key": "ground_floor",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Outdoor Area - GF",
+      "type": "html",
+      "layout": {
+        "row": "Row_0pqa8e6",
+        "columns": 5
+      },
+      "id": "Field_1x2tvwo"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pqa8e6",
+        "columns": 8
+      },
+      "id": "Field_1adtjkg",
+      "key": "outdoor_area_gf",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Outdoor Area - Mezz",
+      "type": "html",
+      "layout": {
+        "row": "Row_0k1rx01",
+        "columns": 5
+      },
+      "id": "Field_13cv8jf"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0k1rx01",
+        "columns": 8
+      },
+      "id": "Field_0koy72s",
+      "key": "outdoor_area_mezz",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Contact details",
+      "type": "html",
+      "layout": {
+        "row": "Row_02wc2no",
+        "columns": 5
+      },
+      "id": "Field_04u8p2t"
+    },
+    {
+      "label": "Counrty Code",
+      "values": [
+        {
+          "label": "UAE",
+          "value": "+971"
+        },
+        {
+          "label": "IN",
+          "value": "+91"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_02wc2no",
+        "columns": 3
+      },
+      "id": "Field_0idxcam",
+      "key": "contact"
+    },
+    {
+      "label": "Contact",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_02wc2no",
+        "columns": 5
+      },
+      "id": "Field_0w6upbs",
+      "key": "Contact",
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1t3m79g",
+        "columns": 16
+      },
+      "id": "Field_0mjrowh"
+    },
+    {
+      "content": "Tenant",
+      "type": "html",
+      "layout": {
+        "row": "Row_073fvco",
+        "columns": 5
+      },
+      "id": "Field_18c4y3u",
+      "properties": {}
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_073fvco",
+        "columns": 8
+      },
+      "id": "Field_0dcmvzm",
+      "key": "tenant_name",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Proposed Shop",
+      "type": "html",
+      "layout": {
+        "row": "Row_0bgn3rv",
+        "columns": 5
+      },
+      "id": "Field_1y03pra"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0bgn3rv",
+        "columns": 8
+      },
+      "id": "Field_1kjhndi",
+      "key": "proposed_shop",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Permitted Use",
+      "type": "html",
+      "layout": {
+        "row": "Row_1dwi602",
+        "columns": 5
+      },
+      "id": "Field_00zg5xk"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1dwi602",
+        "columns": 8
+      },
+      "id": "Field_1dudx7v",
+      "key": "permitted_use",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Lease Term",
+      "type": "html",
+      "layout": {
+        "row": "Row_0ugx77y",
+        "columns": 5
+      },
+      "id": "Field_0catqkq"
+    },
+    {
+      "label": "",
+      "type": "number",
+      "layout": {
+        "row": "Row_0ugx77y",
+        "columns": 8
+      },
+      "id": "Field_0bva6i9",
+      "key": "lease_team",
+      "defaultValue": 0,
+      "readonly": true
+    },
+    {
+      "content": "Contact Person",
+      "type": "html",
+      "layout": {
+        "row": "Row_19cwiau",
+        "columns": 5
+      },
+      "id": "Field_1h7kbqi"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_19cwiau",
+        "columns": 8
+      },
+      "id": "Field_022cm71",
+      "key": "mob_",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Designation",
+      "type": "html",
+      "layout": {
+        "row": "Row_0cmocry",
+        "columns": 5
+      },
+      "id": "Field_0p6pevo"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0cmocry",
+        "columns": 8
+      },
+      "id": "Field_1eak2qh",
+      "key": "designation",
+      "defaultValue": "placeholder",
+      "readonly": true,
+      "disabled": false
+    },
+    {
+      "content": "Address (Physical Address)",
+      "type": "html",
+      "layout": {
+        "row": "Row_040qwi9",
+        "columns": 5
+      },
+      "id": "Field_1lz1iab"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_040qwi9",
+        "columns": 8
+      },
+      "id": "Field_0oh8rit",
+      "key": "address_phy_add",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "content": "Telephone",
+      "type": "html",
+      "layout": {
+        "row": "Row_0c444v3",
+        "columns": 5
+      },
+      "id": "Field_14aaunj"
+    },
+    {
+      "label": "",
+      "values": [
+        {
+          "label": "UAE",
+          "value": "+971"
+        },
+        {
+          "label": "IN",
+          "value": "+91"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0c444v3",
+        "columns": 2
+      },
+      "id": "Field_0uuuwoq",
+      "key": "f2_tel_code",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0c444v3",
+        "columns": 6
+      },
+      "id": "Field_13v1dvn",
+      "key": "tel",
+      "readonly": true
+    },
+    {
+      "content": "Mobile",
+      "type": "html",
+      "layout": {
+        "row": "Row_0ys4axo",
+        "columns": 5
+      },
+      "id": "Field_0ztlbm5"
+    },
+    {
+      "label": "",
+      "values": [
+        {
+          "label": "IN",
+          "value": "+91"
+        },
+        {
+          "label": "UAE",
+          "value": "+971"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0ys4axo",
+        "columns": 2
+      },
+      "id": "Field_0pm020t",
+      "key": "f2_mob_code",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ys4axo",
+        "columns": 6
+      },
+      "id": "Field_17vpm27",
+      "key": "mob",
+      "readonly": true
+    },
+    {
+      "content": "Email",
+      "type": "html",
+      "layout": {
+        "row": "Row_0vgkzwg",
+        "columns": 5
+      },
+      "id": "Field_02wf6ys"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0vgkzwg",
+        "columns": 8
+      },
+      "id": "Field_1qzhngt",
+      "key": "email",
+      "defaultValue": "placeholder",
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0kho81b",
+        "columns": 16
+      },
+      "id": "Field_1r0247a"
+    },
+    {
+      "text": "#### Key Dates as per offer letter",
+      "type": "text",
+      "layout": {
+        "row": "Row_02xzmja",
+        "columns": 5
+      },
+      "id": "Field_1c0y3qd"
+    },
+    {
+      "content": "Fit our Commencement Date",
+      "type": "html",
+      "layout": {
+        "row": "Row_0uosnsf",
+        "columns": 5
+      },
+      "id": "Field_1xetnbf"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0uosnsf",
+        "columns": 8
+      },
+      "id": "Field_0y4yynw",
+      "key": "fit_ot_start_date",
+      "readonly": true
+    },
+    {
+      "content": "Concept Design Submssion Date",
+      "type": "html",
+      "layout": {
+        "row": "Row_1xvegyw",
+        "columns": 5
+      },
+      "id": "Field_0q8otag"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1xvegyw",
+        "columns": 8
+      },
+      "id": "Field_01svzyo",
+      "key": "f2_CDS_date",
+      "readonly": true
+    },
+    {
+      "content": "Fit-out Period",
+      "type": "html",
+      "layout": {
+        "row": "Row_0ht0syz",
+        "columns": 5
+      },
+      "id": "Field_18zoyir"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0ht0syz",
+        "columns": 8
+      },
+      "id": "Field_1yft92q",
+      "key": "design_fit_out_period",
+      "readonly": true
+    },
+    {
+      "content": "Detail Design Submission Date",
+      "type": "html",
+      "layout": {
+        "row": "Row_181v5xv",
+        "columns": 5
+      },
+      "id": "Field_1uxqhdy"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_181v5xv",
+        "columns": 8
+      },
+      "id": "Field_1lvft23",
+      "key": "f2_DDS_date",
+      "readonly": true
+    },
+    {
+      "content": "Trade Start Date",
+      "type": "html",
+      "layout": {
+        "row": "Row_0dz47b5",
+        "columns": 5
+      },
+      "id": "Field_0pqohxl"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0dz47b5",
+        "columns": 8
+      },
+      "id": "Field_04iithh",
+      "key": "f2_TSD_date",
+      "readonly": true
+    },
+    {
+      "content": "Late Opening",
+      "type": "html",
+      "layout": {
+        "row": "Row_09y0tz8",
+        "columns": 5
+      },
+      "id": "Field_0s5f71c"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_09y0tz8",
+        "columns": 8
+      },
+      "id": "Field_1crdvuw",
+      "key": "opening_date_asPer_LA",
+      "readonly": true
+    },
+    {
+      "content": "Comments",
+      "type": "html",
+      "layout": {
+        "row": "Row_08xs5rw",
+        "columns": 5
+      },
+      "id": "Field_1xjs5yf"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_08xs5rw",
+        "columns": 8
+      },
+      "id": "Field_1fjkg9b",
+      "key": "f2_comments",
+      "defaultValue": "placeholder..."
+    },
+    {
+      "content": "Special requirements",
+      "type": "html",
+      "layout": {
+        "row": "Row_18ukv3z",
+        "columns": 5
+      },
+      "id": "Field_0tak5ej"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_18ukv3z",
+        "columns": 8
+      },
+      "id": "Field_1fc2rvi",
+      "key": "f2_special_requirements",
+      "defaultValue": "placeholder..."
+    },
+    {
+      "content": "Attach",
+      "type": "html",
+      "layout": {
+        "row": "Row_1hmfmga",
+        "columns": 5
+      },
+      "id": "Field_1edotb1"
+    },
+    {
+      "label": "",
+      "type": "documentPreview",
+      "layout": {
+        "row": "Row_1hmfmga",
+        "columns": null
+      },
+      "id": "Field_1j552es",
+      "dataSource": "=filepicker_f1_attachment"
+    },
+    {
+      "label": "Is Form Verified",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1me6b3g",
+        "columns": null
+      },
+      "id": "Field_1mqcj03",
+      "key": "verification",
+      "readonly": false,
+      "disabled": false
+    }
+  ],
+  "type": "default",
+  "id": "newlease-ptl_form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

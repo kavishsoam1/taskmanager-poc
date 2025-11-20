@@ -1,112 +1,50 @@
+// app/api/proxy/zeebe-variables/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 
 const ZEEBE_API = {
   baseUrl: 'http://localhost:8080',
-  variablesEndpoint: '/v1/variables/search'
+  variablesEndpoint: '/v1/variables/search',
 };
 
 export async function POST(request: NextRequest) {
-  console.log('🚀 Zeebe Variables proxy called');
-  
   try {
-    const body = await request.json();
-    const url = `${ZEEBE_API.baseUrl}${ZEEBE_API.variablesEndpoint}`;
-    
-    console.log('📤 Proxying variables request to:', url);
-    console.log('📤 Request headers from client:', Object.fromEntries(request.headers.entries()));
-    console.log('📤 Original request body:', JSON.stringify(body, null, 2));
-
-    // Create headers
-    const headers = {
-      'Content-Type': 'application/json',
-      'User-Agent': 'Node.js'
-    };
-    
-    console.log('📤 Request headers to Zeebe:', headers);
-
-    // Forward the request to Zeebe API
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(body)
-    });
-
-    console.log('📥 Zeebe response status:', response);
-    console.log('📥 Zeebe response statusText:', response.statusText);
-    console.log('📥 Zeebe response headers:', Object.fromEntries(response.headers.entries()));
-
-    // Try to get response body regardless of content type
-    let data;
-    let responseText = '';
-    
+    // Parse JSON body safely
+    let body = {};
     try {
-      responseText = await response.text();
-      console.log('📥 Zeebe raw response text:', responseText);
-      
-      if (responseText) {
-        try {
-          data = JSON.parse(responseText);
-          console.log('📥 Zeebe parsed JSON:', JSON.stringify(data, null, 2));
-        } catch (e) {
-          console.log('⚠️ Response is not JSON, treating as text',e);
-          data = { message: responseText, status: response.status };
-        }
-      } else {
-        console.log('⚠️ Empty response body from Zeebe');
-        data = { 
-          message: 'Empty response from Zeebe', 
-          status: response.status,
-          statusText: response.statusText 
-        };
-      }
-    } catch (e) {
-      console.error('❌ Error reading response:', e);
-      data = { 
-        error: 'Failed to read Zeebe response',
-        status: response.status,
-        statusText: response.statusText 
-      };
+      body = await request.json();
+    } catch {
+      console.warn('No JSON body sent, using empty filter.');
     }
 
-    // Return response with CORS headers
-    return NextResponse.json(data, {
-      status: response.status,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-      },
+    const url = `${ZEEBE_API.baseUrl}${ZEEBE_API.variablesEndpoint}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
     });
 
-  } catch (error) {
-    console.error('❌ Proxy error:', error);
-    
-    return NextResponse.json(
-      { 
-        error: 'Failed to proxy variables request to Zeebe API',
-        details: error instanceof Error ? error.message : 'Unknown error',
-        zeebeUrl: `${ZEEBE_API.baseUrl}${ZEEBE_API.variablesEndpoint}`
-      },
-      { 
-        status: 500,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-        },
-      }
-    );
+    const data = await res.json();
+
+    // Transform Zeebe variables into an easy object: { name: value }
+    const formatted: Record<string, any> = {};
+    if (data.items) {
+      data.items.forEach((item: any) => {
+        try {
+          formatted[item.name] = JSON.parse(item.value);
+        } catch {
+          formatted[item.name] = item.value;
+        }
+      });
+    }
+
+    return NextResponse.json(formatted);
+  } catch (err) {
+    console.error('Proxy error:', err);
+    return NextResponse.json({ error: 'Failed to fetch Zeebe variables' }, { status: 500 });
   }
 }
 
-// Handle OPTIONS requests for CORS
-export async function OPTIONS() {
-  return new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  });
+// Optional GET handler (safe fallback)
+export async function GET() {
+  return NextResponse.json({ message: 'Send a POST request with filter JSON.' });
 }

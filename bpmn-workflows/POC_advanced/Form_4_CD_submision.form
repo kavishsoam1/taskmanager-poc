@@ -1,0 +1,457 @@
+{
+  "components": [
+    {
+      "content": "<h3 style='color:#2c7a7b; margin-bottom:8px;'>Tenant Details</h3>",
+      "text": "## Tenant Details",
+      "type": "html",
+      "layout": {
+        "row": "Row_05y0wj3",
+        "columns": null
+      },
+      "id": "Field_0djwikm"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0jbt15j",
+        "columns": null
+      },
+      "id": "Field_1481zhu"
+    },
+    {
+      "text": "#### Tenant",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ni8hnw",
+        "columns": null
+      },
+      "id": "Field_1980d2h"
+    },
+    {
+      "text": "#### Unit no.",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ni8hnw",
+        "columns": null
+      },
+      "id": "Field_0rdqq5e"
+    },
+    {
+      "text": "#### Unit Name",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ni8hnw",
+        "columns": null
+      },
+      "id": "Field_0ey1ayr"
+    },
+    {
+      "text": "#### Unit Type",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ni8hnw",
+        "columns": null
+      },
+      "id": "Field_1ushuyd"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pkuztr",
+        "columns": null
+      },
+      "id": "Field_13v2c1h",
+      "key": "tenant_name",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pkuztr",
+        "columns": null
+      },
+      "id": "Field_089o5pp",
+      "key": "unit_No",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pkuztr",
+        "columns": null
+      },
+      "id": "Field_0ls46f8",
+      "key": "name",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pkuztr",
+        "columns": null
+      },
+      "id": "Field_1bojwmj",
+      "key": "unit_type",
+      "readonly": true
+    },
+    {
+      "text": "#### Company Name",
+      "type": "text",
+      "layout": {
+        "row": "Row_0757s4x",
+        "columns": null
+      },
+      "id": "Field_1n4p0px"
+    },
+    {
+      "text": "#### Telepone",
+      "type": "text",
+      "layout": {
+        "row": "Row_0757s4x",
+        "columns": null
+      },
+      "id": "Field_1ofog1w"
+    },
+    {
+      "text": "#### Mobile",
+      "type": "text",
+      "layout": {
+        "row": "Row_0757s4x",
+        "columns": null
+      },
+      "id": "Field_13b9c7m"
+    },
+    {
+      "text": "#### Email",
+      "type": "text",
+      "layout": {
+        "row": "Row_0757s4x",
+        "columns": null
+      },
+      "id": "Field_167ftbr"
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b1wx3n",
+        "columns": null
+      },
+      "id": "Field_18ebzra",
+      "key": "comapany",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b1wx3n",
+        "columns": null
+      },
+      "id": "Field_07i8axb",
+      "key": "tel",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b1wx3n",
+        "columns": null
+      },
+      "id": "Field_1h95bym",
+      "key": "mob",
+      "readonly": true
+    },
+    {
+      "label": "",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b1wx3n",
+        "columns": null
+      },
+      "id": "Field_1qkzj1i",
+      "key": "email",
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0di0f39",
+        "columns": null
+      },
+      "id": "Field_15d52p6"
+    },
+    {
+      "text": "### Conceptual design Submission",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ilg9co",
+        "columns": null
+      },
+      "id": "Field_1ut3koo"
+    },
+    {
+      "text": "#### Submittal checklist",
+      "type": "text",
+      "layout": {
+        "row": "Row_0i1kd24",
+        "columns": null
+      },
+      "id": "Field_017io6d"
+    },
+    {
+      "text": "#### Attachement(pdf,jpg or png-20MB Max)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0i1kd24",
+        "columns": null
+      },
+      "id": "Field_1gn9yj2"
+    },
+    {
+      "text": "#### 1 set of all drawings - softcopy in PDF format",
+      "type": "text",
+      "layout": {
+        "row": "Row_0c76rtc",
+        "columns": null
+      },
+      "id": "Field_0md4bxe"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0c76rtc",
+        "columns": null
+      },
+      "id": "Field_1r262yc",
+      "key": "drawing",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_10l4xip",
+        "columns": null
+      },
+      "id": "Field_0rzudin"
+    },
+    {
+      "text": "#### Furniture layout plan-with merchandising and services",
+      "type": "text",
+      "layout": {
+        "row": "Row_1muemud",
+        "columns": null
+      },
+      "id": "Field_0m1wq5w"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1muemud",
+        "columns": null
+      },
+      "id": "Field_0moxa9m",
+      "key": "furniture_layout_plan",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0nq6zfy",
+        "columns": null
+      },
+      "id": "Field_1bioc3x"
+    },
+    {
+      "text": "#### Shop front Elevation-with SIGNAGE",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bishar",
+        "columns": null
+      },
+      "id": "Field_0qs0685"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1bishar",
+        "columns": null
+      },
+      "id": "Field_1rbbve2",
+      "key": "sign",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0fwjwmn",
+        "columns": null
+      },
+      "id": "Field_1e5iyt7"
+    },
+    {
+      "text": "#### Photos of previous shops or anything that helps explain the concept\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1bvulrn",
+        "columns": null
+      },
+      "id": "Field_0hyfhvy"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1bvulrn",
+        "columns": null
+      },
+      "id": "Field_0kbiecq",
+      "key": "photoOfShop"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1nb567w",
+        "columns": null
+      },
+      "id": "Field_04zwokf"
+    },
+    {
+      "text": "#### Tenant Variation Request (TVR - Form 09)\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ivnf3u",
+        "columns": null
+      },
+      "id": "Field_0fbl7wy"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0ivnf3u",
+        "columns": null
+      },
+      "id": "Field_1hwxr9j",
+      "key": "tvrForm_9"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1kxfz3e",
+        "columns": null
+      },
+      "id": "Field_0ks893v"
+    },
+    {
+      "text": "#### Shop front -with signage-3D image-in colour\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_18g7al8",
+        "columns": null
+      },
+      "id": "Field_07inlpc"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_18g7al8",
+        "columns": null
+      },
+      "id": "Field_1tktv3j",
+      "key": "shopFront_3deimage",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_05xm0is",
+        "columns": null
+      },
+      "id": "Field_0kxlu3a"
+    },
+    {
+      "text": "#### Shop front Elevation-with SIGNAGE\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_1f7ptlf",
+        "columns": null
+      },
+      "id": "Field_19wiwlq"
+    },
+    {
+      "label": "Uplaod",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1f7ptlf",
+        "columns": null
+      },
+      "id": "Field_0x3ihr0",
+      "key": "shopFront_Elevation",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1mpggfn",
+        "columns": null
+      },
+      "id": "Field_1felcfb"
+    },
+    {
+      "text": "### Conditions:",
+      "type": "text",
+      "layout": {
+        "row": "Row_1e8dwup",
+        "columns": null
+      },
+      "id": "Field_098npdp"
+    },
+    {
+      "text": "#### 1. Minimum requirements as indicatesby an asterik(*) for a submission to be accepted as per Lease.",
+      "type": "text",
+      "layout": {
+        "row": "Row_13pvwq4",
+        "columns": null
+      },
+      "id": "Field_1ygmsl8"
+    },
+    {
+      "text": "#### 2.All changes are revised Submission to be highlighted.",
+      "type": "text",
+      "layout": {
+        "row": "Row_02qzl7p",
+        "columns": null
+      },
+      "id": "Field_0nlwz1t"
+    }
+  ],
+  "type": "default",
+  "id": "Form_4_CD_submision",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}

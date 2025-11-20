@@ -1,0 +1,700 @@
+{
+  "components": [
+    {
+      "text": "## Tenant details",
+      "type": "text",
+      "layout": {
+        "row": "Row_0e3eg9r",
+        "columns": null
+      },
+      "id": "Field_0rxffvo"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1qxk9tz",
+        "columns": null
+      },
+      "id": "Field_1k0xbwf"
+    },
+    {
+      "text": "### Tenants",
+      "type": "text",
+      "layout": {
+        "row": "Row_1akqqax",
+        "columns": null
+      },
+      "id": "Field_1fe5jt3"
+    },
+    {
+      "text": "### Unit no.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1akqqax",
+        "columns": null
+      },
+      "id": "Field_08q9zzd"
+    },
+    {
+      "text": "### Unit name",
+      "type": "text",
+      "layout": {
+        "row": "Row_1akqqax",
+        "columns": null
+      },
+      "id": "Field_1a0x10t"
+    },
+    {
+      "text": "### Unit type",
+      "type": "text",
+      "layout": {
+        "row": "Row_1akqqax",
+        "columns": null
+      },
+      "id": "Field_1yiy7qp"
+    },
+    {
+      "content": "Al Bahar Al Mutawasit Rest LLC SP",
+      "type": "html",
+      "layout": {
+        "row": "Row_0he80pr",
+        "columns": null
+      },
+      "id": "Field_080w90w"
+    },
+    {
+      "content": "Unit 201-B",
+      "type": "html",
+      "layout": {
+        "row": "Row_0he80pr",
+        "columns": null
+      },
+      "id": "Field_0wi9v3r"
+    },
+    {
+      "content": "Unit name goes here",
+      "type": "html",
+      "layout": {
+        "row": "Row_0he80pr",
+        "columns": null
+      },
+      "id": "Field_0ij8r7k"
+    },
+    {
+      "content": "Retail",
+      "type": "html",
+      "layout": {
+        "row": "Row_0he80pr",
+        "columns": null
+      },
+      "id": "Field_1fwib0f"
+    },
+    {
+      "text": "### Company name",
+      "type": "text",
+      "layout": {
+        "row": "Row_1i5mcc3",
+        "columns": null
+      },
+      "id": "Field_0z72yq6"
+    },
+    {
+      "text": "### Telephone",
+      "type": "text",
+      "layout": {
+        "row": "Row_1i5mcc3",
+        "columns": null
+      },
+      "id": "Field_16jty0n"
+    },
+    {
+      "text": "### Mobile",
+      "type": "text",
+      "layout": {
+        "row": "Row_1i5mcc3",
+        "columns": null
+      },
+      "id": "Field_07gy0r9"
+    },
+    {
+      "text": "### Email",
+      "type": "text",
+      "layout": {
+        "row": "Row_1i5mcc3",
+        "columns": null
+      },
+      "id": "Field_1y8ukdz"
+    },
+    {
+      "content": "Company name goes here",
+      "type": "html",
+      "layout": {
+        "row": "Row_15xtlqp",
+        "columns": null
+      },
+      "id": "Field_10vswvw"
+    },
+    {
+      "content": "+971 2343234345",
+      "type": "html",
+      "layout": {
+        "row": "Row_15xtlqp",
+        "columns": null
+      },
+      "id": "Field_1qisl5z"
+    },
+    {
+      "content": "+971 2343234345",
+      "type": "html",
+      "layout": {
+        "row": "Row_15xtlqp",
+        "columns": null
+      },
+      "id": "Field_1e53vit"
+    },
+    {
+      "content": "sample@sample.com",
+      "type": "html",
+      "layout": {
+        "row": "Row_15xtlqp",
+        "columns": null
+      },
+      "id": "Field_1pfn87b"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_10kovvo",
+        "columns": null
+      },
+      "id": "Field_0sndea3"
+    },
+    {
+      "text": "### Pre-mobilization requirements list",
+      "type": "text",
+      "layout": {
+        "row": "Row_15g8o67",
+        "columns": null
+      },
+      "id": "Field_0h0gyj5"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0rdj1p6",
+        "columns": null
+      },
+      "id": "Field_1rcwgyr"
+    },
+    {
+      "text": "### CheckList",
+      "type": "text",
+      "layout": {
+        "row": "Row_0sauahu",
+        "columns": null
+      },
+      "id": "Field_1y9donp"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0i6jl79",
+        "columns": 16
+      },
+      "id": "Field_0gzngno"
+    },
+    {
+      "text": "### Items",
+      "type": "text",
+      "layout": {
+        "row": "Row_1pij1a7",
+        "columns": 7
+      },
+      "id": "Field_12qaclu"
+    },
+    {
+      "text": "### Attachments",
+      "type": "text",
+      "layout": {
+        "row": "Row_1pij1a7",
+        "columns": 5
+      },
+      "id": "Field_1g43wf2"
+    },
+    {
+      "text": "### Availability",
+      "type": "text",
+      "layout": {
+        "row": "Row_1pij1a7",
+        "columns": null
+      },
+      "id": "Field_11pdz22"
+    },
+    {
+      "text": "#### Design Approval*",
+      "type": "text",
+      "layout": {
+        "row": "Row_0p25fyn",
+        "columns": 7
+      },
+      "id": "Field_0q75mx7"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0p25fyn",
+        "columns": 5
+      },
+      "id": "Field_0i8avpj",
+      "key": "pre_mobDoc1"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0p25fyn",
+        "columns": 2
+      },
+      "id": "Field_1lymcvt",
+      "key": "f8_check_design_appr_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0p25fyn",
+        "columns": null
+      },
+      "id": "Field_1qiyoqo",
+      "key": "f8_check_design_appr_no"
+    },
+    {
+      "text": "#### Contractor’s All Risks Insurance with TPL and Workmen’s Compensation Certificate Copy*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ykebku",
+        "columns": 7
+      },
+      "id": "Field_0zwdpbh"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1ykebku",
+        "columns": 5
+      },
+      "id": "Field_1o0hm0i",
+      "key": "pre_mobDoc2"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1ykebku",
+        "columns": 2
+      },
+      "id": "Field_1ugrdk5",
+      "key": "f8_check_contractor_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1ykebku",
+        "columns": 2
+      },
+      "id": "Field_1lyja1z",
+      "key": "f8_check_contractor_no"
+    },
+    {
+      "text": "#### Fit-out Work Method Statement and Risks Assessment – MSRA (full scope)*",
+      "type": "text",
+      "layout": {
+        "row": "Row_0lkgrc7",
+        "columns": 7
+      },
+      "id": "Field_0m0dbjv"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0lkgrc7",
+        "columns": 5
+      },
+      "id": "Field_01k5ash",
+      "key": "pre_mobDoc3"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0lkgrc7",
+        "columns": null
+      },
+      "id": "Field_0vvdw9a",
+      "key": "f8_check_risk_assessment_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0lkgrc7",
+        "columns": null
+      },
+      "id": "Field_1yuniwr",
+      "key": "f8_check_risk_assessment_no"
+    },
+    {
+      "text": "#### HSE Safety Induction Certificate",
+      "type": "text",
+      "layout": {
+        "row": "Row_07xwx7a",
+        "columns": 7
+      },
+      "id": "Field_16hkmlr"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_07xwx7a",
+        "columns": 5
+      },
+      "id": "Field_0k1afmg",
+      "key": "pre_mobDoc4"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_07xwx7a",
+        "columns": null
+      },
+      "id": "Field_1oss87u",
+      "key": "f8_check_hse_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_07xwx7a",
+        "columns": null
+      },
+      "id": "Field_1u9nns5",
+      "key": "f8_check_hse_no"
+    },
+    {
+      "text": "#### Contractor’s HSE Plan*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hk2cxq",
+        "columns": 7
+      },
+      "id": "Field_0vcgohz"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1hk2cxq",
+        "columns": 5
+      },
+      "id": "Field_0kmaz4z",
+      "key": "pre_mobDoc5"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1hk2cxq",
+        "columns": null
+      },
+      "id": "Field_115y89s",
+      "key": "f8_check_hse_plan_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1hk2cxq",
+        "columns": null
+      },
+      "id": "Field_0qqvk22",
+      "key": "f8_check_hse_plan_no"
+    },
+    {
+      "text": "#### HSE Certified Personnel’s Valid ID or Certificate",
+      "type": "text",
+      "layout": {
+        "row": "Row_0ifn8dc",
+        "columns": 7
+      },
+      "id": "Field_09khkgc"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0ifn8dc",
+        "columns": 5
+      },
+      "id": "Field_0rvzdfu",
+      "key": "pre_mobDoc6"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ifn8dc",
+        "columns": null
+      },
+      "id": "Field_00jbxm4",
+      "key": "f8_check_hse_certificate_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ifn8dc",
+        "columns": null
+      },
+      "id": "Field_1ep8p7b",
+      "key": "f8_check_hse_certificate_no"
+    },
+    {
+      "text": "#### Program of Works*",
+      "type": "text",
+      "layout": {
+        "row": "Row_04l90qo",
+        "columns": 7
+      },
+      "id": "Field_1lr663z"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_04l90qo",
+        "columns": 5
+      },
+      "id": "Field_11fu3vv",
+      "key": "premobDoc7"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_04l90qo",
+        "columns": null
+      },
+      "id": "Field_1kkc9hb",
+      "key": "f8_check_prog_work_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_04l90qo",
+        "columns": null
+      },
+      "id": "Field_16yh0ky",
+      "key": "f8_check_prog_work_no"
+    },
+    {
+      "text": "#### Temporary power and water for fit-out use (to advise applicable fees, if any)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0zkbkun",
+        "columns": 7
+      },
+      "id": "Field_1dds0t7"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0zkbkun",
+        "columns": 5
+      },
+      "id": "Field_0psm6eh",
+      "key": "pre_mobDoc8"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0zkbkun",
+        "columns": null
+      },
+      "id": "Field_0o82009",
+      "key": "f8_check_temp_power_water_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0zkbkun",
+        "columns": null
+      },
+      "id": "Field_1guf3qp",
+      "key": "f8_check_temp_power_water_no"
+    },
+    {
+      "text": "#### Landlord’s Work Permit Application (Fit-out Work Permit and Hot-work*",
+      "type": "text",
+      "layout": {
+        "row": "Row_1g05mpe",
+        "columns": 7
+      },
+      "id": "Field_1rjm9og"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1g05mpe",
+        "columns": 5
+      },
+      "id": "Field_0hbu4hc",
+      "key": "pre_mobDoc9"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1g05mpe",
+        "columns": null
+      },
+      "id": "Field_0s0auhe",
+      "key": "f8_check_permit_landlord_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1g05mpe",
+        "columns": null
+      },
+      "id": "Field_031q9xg",
+      "key": "f8_check_permit_landlord_no"
+    },
+    {
+      "text": "#### Municipality/Civil Defence Approved Drawings (Submission Reference No./Proof of Application to provide for preliminary works to proceed)",
+      "type": "text",
+      "layout": {
+        "row": "Row_0xhvljy",
+        "columns": 7
+      },
+      "id": "Field_0bxnfy8"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0xhvljy",
+        "columns": 5
+      },
+      "id": "Field_1l5y5m0",
+      "key": "pre_mobDoc10"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0xhvljy",
+        "columns": null
+      },
+      "id": "Field_1q83kxy",
+      "key": "f8_check_municipality_approval_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0xhvljy",
+        "columns": null
+      },
+      "id": "Field_1q1s5zl",
+      "key": "f8_check_municipality_approval_no"
+    },
+    {
+      "text": "#### Others",
+      "type": "text",
+      "layout": {
+        "row": "Row_1v3az79",
+        "columns": 7
+      },
+      "id": "Field_1f2x47p"
+    },
+    {
+      "label": "Upload",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1v3az79",
+        "columns": 5
+      },
+      "id": "Field_1fm3o38",
+      "key": "pre_mobDoc11"
+    },
+    {
+      "label": "Yes",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1v3az79",
+        "columns": null
+      },
+      "id": "Field_1um37yi",
+      "key": "f8_check_othes_yes"
+    },
+    {
+      "label": "No",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1v3az79",
+        "columns": null
+      },
+      "id": "Field_1mqohc4",
+      "key": "f8_check_othes_no"
+    },
+    {
+      "text": "#### Comments",
+      "type": "text",
+      "layout": {
+        "row": "Row_06iiusa",
+        "columns": 7
+      },
+      "id": "Field_0dpa3bw"
+    },
+    {
+      "label": "",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_06iiusa",
+        "columns": 5
+      },
+      "id": "Field_1km9zyx",
+      "key": "f8_comments",
+      "defaultValue": "Comments..."
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1ng7wm0",
+        "columns": null
+      },
+      "id": "Field_0pu3nk2"
+    }
+  ],
+  "type": "default",
+  "id": "Form_8Pre-mob_list",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.39.0"
+  },
+  "schemaVersion": 19
+}
